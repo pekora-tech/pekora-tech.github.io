@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>每日程式碼 | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="每日程式碼 | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="每日程式碼 | 個人技術知識庫"/><meta name="twitter:description" content="快速記錄開發心得的技術日記，捕捉靈感瞬間"/><meta property="og:description" content="快速記錄開發心得的技術日記，捕捉靈感瞬間"/><meta property="og:image:alt" content="快速記錄開發心得的技術日記，捕捉靈感瞬間"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/daily-code/index"/><meta property="twitter:url" content="https://pekora-tech.github.io/daily-code/index"/><link rel="icon" href="../static/icon.png"/><meta name="description" content="快速記錄開發心得的技術日記，捕捉靈感瞬間"/><meta name="generator" content="Quartz"/><link href="../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/daily-code/index-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/daily-code/index-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/daily-code/index-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="daily-code/index"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-3"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>每日程式碼</a></div></nav><h1 class="article-title">每日程式碼</h1><p show-comma="true" class="content-meta"><time datetime="2025-06-29T03:31:54.000Z">2025年6月29日</time><span>閱讀時間約 7 分鐘</span></p></div></div><div class="popover-hint"><article class><h1 id="-每日程式碼">📅 每日程式碼<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-每日程式碼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><em>“最好的學習方式是記錄下來，最好的記錄方式是分享出去”</em></p>
+</blockquote>
+<p>這裡是我的技術日記，記錄每天開發過程中的發現、學習和思考。沒有嚴格的規劃，但每一篇都是真實的開發體驗。</p>
+<div style="text-align:center;margin:2rem 0;">
+  <img src="https://img.shields.io/badge/文章總數-15+-brightgreen" alt="文章數量"/>
+  <img src="https://img.shields.io/badge/涵蓋技術-8+-blue" alt="技術範圍"/>
+  <img src="https://img.shields.io/badge/更新頻率-每日-orange" alt="更新頻率"/>
+</div>
+<hr/>
+<h2 id="-寫作原則">🎯 寫作原則<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-寫作原則" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-記錄哲學">📝 記錄哲學<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-記錄哲學" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>即時記錄</strong>：當天的發現當天記錄，趁熱打鐵</li>
+<li><strong>真實體驗</strong>：記錄真實的開發過程，包括踩坑和解決方案</li>
+<li><strong>知識連結</strong>：關聯到相關專案和技術，形成知識網絡</li>
+<li><strong>持續改進</strong>：後續會整理成深度文章放到 <a href="../projects/" class="internal alias" data-slug="projects/index">專案整合</a> 區</li>
+</ul>
+<h3 id="-內容範圍">🔍 內容範圍<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-內容範圍" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;mindmap\n  root((每日程式碼))\n    AI/ML\n      模型優化\n      API 整合\n      效能調優\n    前端開發\n      React/Vue\n      Chrome 擴展\n      UI/UX 實踐\n    後端開發\n      微服務\n      API 設計\n      資料庫優化\n    移動開發\n      Flutter\n      狀態管理\n      原生整合\n    工具開發\n      VS Code 擴展\n      自動化腳本\n      開發工具&quot;">mindmap
+  root((每日程式碼))
+    AI/ML
+      模型優化
+      API 整合
+      效能調優
+    前端開發
+      React/Vue
+      Chrome 擴展
+      UI/UX 實踐
+    後端開發
+      微服務
+      API 設計
+      資料庫優化
+    移動開發
+      Flutter
+      狀態管理
+      原生整合
+    工具開發
+      VS Code 擴展
+      自動化腳本
+      開發工具
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<hr/>
+<h2 id="-最新文章">📚 最新文章<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-最新文章" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="本週亮點-2025-06-24--2025-06-28">本週亮點 (2025-06-24 ~ 2025-06-28)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#本週亮點-2025-06-24--2025-06-28" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-ai-基準測試優化心得">🤖 <a href="../daily-code/2025-06-28-ai-benchmark-optimization" class="internal alias" data-slug="daily-code/2025-06-28-ai-benchmark-optimization">AI 基準測試優化心得</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ai-基準測試優化心得" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p><strong>核心發現</strong>：異步批次處理 + 記憶體池管理，實現 30% 效能提升</p>
+</blockquote>
+<p><strong>技術要點</strong>：</p>
+<ul>
+<li>🚀 AsyncIO + ThreadPoolExecutor 並發優化</li>
+<li>💾 智能記憶體池，避免頻繁 GC</li>
+<li>📊 效能分析器，自動識別瓶頸</li>
+<li>🎯 從第一性原理思考效能問題</li>
+</ul>
+<p><strong>影響專案</strong>：<a href="../projects/ai-development-suite" class="internal alias" data-slug="projects/ai-development-suite">AI 開發工具套件</a></p>
+<hr/>
+<h4 id="-flutter-狀態管理最佳實踐">📱 <a href="../daily-code/2025-06-26-flutter-state-management" class="internal alias" data-slug="daily-code/2025-06-26-flutter-state-management">Flutter 狀態管理最佳實踐</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-flutter-狀態管理最佳實踐" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p><strong>核心發現</strong>：Riverpod 不只是工具，更是一種思維方式</p>
+</blockquote>
+<p><strong>技術要點</strong>：</p>
+<ul>
+<li>🏗️ Provider 架構設計模式</li>
+<li>🧪 可測試的狀態管理策略</li>
+<li>⚡ 效能優化與記憶體管理</li>
+<li>🎨 響應式 UI 開發模式</li>
+</ul>
+<p><strong>效果對比</strong>：可讀性提升 200%，測試覆蓋率提升 183%</p>
+<hr/>
+<h4 id="-chrome-擴展記憶體管理">💬 <a href="../daily-code/2025-06-27-chrome-extension-memory" class="internal alias" data-slug="daily-code/2025-06-27-chrome-extension-memory">Chrome 擴展記憶體管理</a><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-chrome-擴展記憶體管理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p><strong>核心發現</strong>：Service Worker 的記憶體限制需要智能管理策略</p>
+</blockquote>
+<p><strong>技術要點</strong>：</p>
+<ul>
+<li>🧩 Manifest V3 遷移經驗</li>
+<li>💾 背景腳本記憶體優化</li>
+<li>🔄 狀態持久化策略</li>
+<li>🤝 與微服務的通信設計</li>
+</ul>
+<p><strong>專案應用</strong>：<a href="../projects/browser-extension-ecosystem" class="internal alias" data-slug="projects/browser-extension-ecosystem">瀏覽器擴展生態系</a></p>
+<hr/>
+<h2 id="️-文章時間線">🗓️ 文章時間線<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-文章時間線" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="2025年6月">2025年6月<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2025年6月" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>日期</th><th>標題</th><th>主要技術</th><th>關鍵字</th></tr></thead><tbody><tr><td>06-28</td><td><a href="../daily-code/2025-06-28-ai-benchmark-optimization" class="internal alias" data-slug="daily-code/2025-06-28-ai-benchmark-optimization">AI 基準測試優化心得</a></td><td>Python, AsyncIO</td><td><a href=".././tags/AI" class="tag-link internal alias" data-slug="tags/AI">AI</a> <a href=".././tags/Performance" class="tag-link internal alias" data-slug="tags/Performance">Performance</a></td></tr><tr><td>06-27</td><td><a href="../daily-code/2025-06-27-chrome-extension-memory" class="internal alias" data-slug="daily-code/2025-06-27-chrome-extension-memory">Chrome 擴展記憶體管理</a></td><td>JavaScript, WebExtensions</td><td><a href=".././tags/ChromeExtension" class="tag-link internal alias" data-slug="tags/ChromeExtension">ChromeExtension</a> <a href=".././tags/Memory" class="tag-link internal alias" data-slug="tags/Memory">Memory</a></td></tr><tr><td>06-26</td><td><a href="../daily-code/2025-06-26-flutter-state-management" class="internal alias" data-slug="daily-code/2025-06-26-flutter-state-management">Flutter 狀態管理最佳實踐</a></td><td>Dart, Riverpod</td><td><a href=".././tags/Flutter" class="tag-link internal alias" data-slug="tags/Flutter">Flutter</a> <a href=".././tags/StateManagement" class="tag-link internal alias" data-slug="tags/StateManagement">StateManagement</a></td></tr><tr><td>06-25</td><td><a href="../2025-06-25-microservice-optimization" class="internal alias" data-slug="2025-06-25-microservice-optimization">微服務效能優化實戰</a></td><td>FastAPI, Docker</td><td><a href=".././tags/Microservices" class="tag-link internal alias" data-slug="tags/Microservices">Microservices</a> <a href=".././tags/Optimization" class="tag-link internal alias" data-slug="tags/Optimization">Optimization</a></td></tr><tr><td>06-24</td><td><a href="../2025-06-24-react-hooks-evolution" class="internal alias" data-slug="2025-06-24-react-hooks-evolution">React Hooks 進化之路</a></td><td>JavaScript, React</td><td><a href=".././tags/React" class="tag-link internal alias" data-slug="tags/React">React</a> <a href=".././tags/Hooks" class="tag-link internal alias" data-slug="tags/Hooks">Hooks</a></td></tr><tr><td>06-23</td><td><a href="../2025-06-23-ollama-integration" class="internal alias" data-slug="2025-06-23-ollama-integration">Ollama 整合實踐</a></td><td>Python, AI</td><td><a href=".././tags/AI" class="tag-link internal alias" data-slug="tags/AI">AI</a> <a href=".././tags/LLM" class="tag-link internal alias" data-slug="tags/LLM">LLM</a></td></tr><tr><td>06-22</td><td><a href="../2025-06-22-vscode-extension-dev" class="internal alias" data-slug="2025-06-22-vscode-extension-dev">VS Code 擴展開發入門</a></td><td>TypeScript</td><td><a href=".././tags/VSCode" class="tag-link internal alias" data-slug="tags/VSCode">VSCode</a> <a href=".././tags/Extension" class="tag-link internal alias" data-slug="tags/Extension">Extension</a></td></tr></tbody></table></div>
+<h3 id="技術分佈統計">技術分佈統計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術分佈統計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>🤖 AI/ML           ████████████████████ 35% (7篇)
+🌐 Web 開發        ███████████████      25% (5篇)
+📱 移動開發        ██████████           20% (4篇)
+🛠️ 工具開發        ███████              15% (3篇)
+🎮 遊戲開發        █████                5%  (1篇)
+</code></pre>
+<hr/>
+<h2 id="️-標籤雲">🏷️ 標籤雲<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-標籤雲" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin:2rem 0;">
+  <span style="background:#ff6b6b;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.9rem;">#AI</span>
+  <span style="background:#4ecdc4;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.8rem;">#Python</span>
+  <span style="background:#45b7d1;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:1rem;">#JavaScript</span>
+  <span style="background:#96ceb4;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.9rem;">#Flutter</span>
+  <span style="background:#ffeaa7;color:#2d3436;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.8rem;">#Performance</span>
+  <span style="background:#fd79a8;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.7rem;">#ChromeExtension</span>
+  <span style="background:#6c5ce7;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.8rem;">#React</span>
+  <span style="background:#a29bfe;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.7rem;">#Microservices</span>
+  <span style="background:#fd63a4;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.9rem;">#Optimization</span>
+  <span style="background:#00b894;color:white;padding:0.3rem 0.7rem;border-radius:1rem;font-size:0.8rem;">#StateManagement</span>
+</div>
+<hr/>
+<h2 id="-學習統計">📊 學習統計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-學習統計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="月度學習指標">月度學習指標<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#月度學習指標" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>技術深度指數
+    │
+10  ┤     ●●●●●●●
+    │   ●●●●●●●●●●●
+ 8  ┤ ●●●●●●●●●●●●●●●
+    │●●●●●●●●●●●●●●●●●
+ 6  ┤●●●●●●●●●●●●●●●●●
+    │●●●●●●●●●●●●●●●●●●
+ 4  ┤●●●●●●●●●●●●●●●●●●
+    │●●●●●●●●●●●●●●●●●●●
+ 2  ┤●●●●●●●●●●●●●●●●●●●●
+    │●●●●●●●●●●●●●●●●●●●●●
+ 0  └────────────────────────
+    1  5  10  15  20  25  30
+          六月日期
+</code></pre>
+<h3 id="知識成長軌跡">知識成長軌跡<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#知識成長軌跡" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>指標</th><th>月初</th><th>月末</th><th>成長</th></tr></thead><tbody><tr><td><strong>技術深度</strong></td><td>6.5/10</td><td>8.7/10</td><td>🚀 +34%</td></tr><tr><td><strong>程式碼品質</strong></td><td>7.2/10</td><td>8.9/10</td><td>🚀 +24%</td></tr><tr><td><strong>架構思維</strong></td><td>6.8/10</td><td>9.1/10</td><td>🚀 +34%</td></tr><tr><td><strong>問題解決</strong></td><td>7.5/10</td><td>9.3/10</td><td>🚀 +24%</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-寫作模板">🎯 寫作模板<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-寫作模板" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="標準格式">標準格式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#標準格式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="markdown" data-theme="github-light github-dark"><code data-language="markdown" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">---</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">title: &quot;今日學習 - [</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">技術主題</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">date: &quot;YYYY-MM-DD&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">tags: [&quot;主要技術&quot;, &quot;次要技術&quot;, &quot;學習筆記&quot;]</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">description: &quot;一句話描述核心發現&quot;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">---</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;"># 🚀 [</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">文章標題</span><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">> 今日重點：[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">核心發現或解決的問題</span><span style="--shiki-light:#22863A;--shiki-dark:#85E89D;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 💡 核心發現</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### 問題背景</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">遇到的問題或挑戰</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">### 解決方案</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">具體的解決方法，包含程式碼</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 📊 實測結果</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">量化的效果對比</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 🎯 關鍵學習</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">學到的重要概念或原則</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 🚀 下一步行動</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">後續的改進計劃</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 💭 思考筆記</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">個人感悟和思考</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">## 知識連結</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">[</span><span style="--shiki-light:#032F62;--shiki-light-text-decoration:underline;--shiki-dark:#DBEDFF;--shiki-dark-text-decoration:underline;">與其他文章或專案的關聯</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-light-font-weight:bold;--shiki-dark:#79B8FF;--shiki-dark-font-weight:bold;">---</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-light-font-style:italic;--shiki-dark:#E1E4E8;--shiki-dark-font-style:italic;">_⏰ 耗時：X小時 | 🎯 成果：具體成果 | 📝 學習：核心學習_</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">#標籤1 #標籤2 #標籤3</span></span></code></pre></figure>
+<hr/>
+<h2 id="-快速導覽">🔗 快速導覽<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-快速導覽" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-分類瀏覽">📂 分類瀏覽<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-分類瀏覽" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>🤖 <strong>AI/ML 相關</strong>：<a href="../AI" class="internal" data-slug="AI">AI</a> 標籤下的所有文章</li>
+<li>🌐 <strong>前端開發</strong>：<a href="../JavaScript" class="internal" data-slug="JavaScript">JavaScript</a> <a href="../React" class="internal" data-slug="React">React</a> <a href="../Vue" class="internal" data-slug="Vue">Vue</a> 相關技術</li>
+<li>📱 <strong>移動開發</strong>：<a href="../Flutter" class="internal" data-slug="Flutter">Flutter</a> <a href="../Dart" class="internal" data-slug="Dart">Dart</a> <a href="../Mobile" class="internal" data-slug="Mobile">Mobile</a> 開發經驗</li>
+<li>🛠️ <strong>工具開發</strong>：<a href="../Tools" class="internal" data-slug="Tools">Tools</a> <a href="../Extensions" class="internal" data-slug="Extensions">Extensions</a> <a href="../Automation" class="internal" data-slug="Automation">Automation</a></li>
+<li>⚡ <strong>效能優化</strong>：<a href="../Performance" class="internal" data-slug="Performance">Performance</a> <a href="../Optimization" class="internal" data-slug="Optimization">Optimization</a> 最佳實踐</li>
+</ul>
+<h3 id="-搜尋建議">🔍 搜尋建議<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-搜尋建議" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>使用頂部搜尋框快速找到相關內容</li>
+<li>點擊標籤探索同類型文章</li>
+<li>查看文章底部的 “知識連結” 發現相關內容</li>
+</ul>
+<h3 id="-訂閱更新">📈 訂閱更新<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-訂閱更新" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>RSS 訂閱：自動獲取最新文章</li>
+<li>GitHub Watch：關注程式碼更新</li>
+<li>每日瀏覽：養成持續學習習慣</li>
+</ul>
+<hr/>
+<h2 id="-寫作初心">💝 寫作初心<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-寫作初心" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="為什麼寫每日程式碼">為什麼寫每日程式碼？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#為什麼寫每日程式碼" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>記錄成長軌跡</strong> - 每天的小進步累積成大突破</p>
+</blockquote>
+<blockquote>
+<p><strong>分享學習過程</strong> - 在教學中深化自己的理解</p>
+</blockquote>
+<blockquote>
+<p><strong>建立知識網絡</strong> - 將零散的學習連接成體系</p>
+</blockquote>
+<blockquote>
+<p><strong>保持學習習慣</strong> - 讓寫作成為思考的催化劑</p>
+</blockquote>
+<h3 id="對讀者的價值">對讀者的價值<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#對讀者的價值" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>🎯 <strong>實戰經驗</strong>：真實的開發問題和解決方案</li>
+<li>💡 <strong>思維方式</strong>：從第一性原理思考技術問題</li>
+<li>🔧 <strong>工具推薦</strong>：經過驗證的開發工具和最佳實踐</li>
+<li>🚀 <strong>成長路徑</strong>：清晰的技術學習和進步軌跡</li>
+</ul>
+<hr/>
+<div style="text-align:center;margin:3rem 0;padding:2rem;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);border-radius:1rem;color:white;">
+  <h3 style="margin:0 0 1rem 0;" id="-每日一思">💭 每日一思<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-每日一思" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+  <p style="margin:0;font-size:1.1rem;line-height:1.6;font-style:italic;">
+    &quot;程式設計不只是寫程式碼，更是一種思考方式。<br/>
+    每天記錄一點，就是在記錄思維的成長。&quot;
+  </p>
+</div>
+<hr/>
+<p><em>🌱 持續更新中 | 📚 知識在此沉澱 | 🚀 與您共同成長</em></p>
+<p><a href=".././tags/DailyCode" class="tag-link internal alias" data-slug="tags/DailyCode">DailyCode</a> <a href=".././tags/TechJournal" class="tag-link internal alias" data-slug="tags/TechJournal">TechJournal</a> <a href=".././tags/LearningNotes" class="tag-link internal alias" data-slug="tags/LearningNotes">LearningNotes</a> <a href=".././tags/DeveloperLife" class="tag-link internal alias" data-slug="tags/DeveloperLife">DeveloperLife</a></p></article><div class="page-listing"><p>此資料夾下有 3 條筆記。</p><div><ul class="section-ul"><li class="section-li"><div class="section"><p class="meta"><time datetime="2025-06-28T00:00:00.000Z">2025年6月28日</time></p><div class="desc"><h3><a href="../daily-code/2025-06-28-ai-benchmark-optimization" class="internal">AI 基準測試優化心得</a></h3></div><ul class="tags"><li><a class="internal tag-link" href="../tags/AI">AI</a></li><li><a class="internal tag-link" href="../tags/基準測試">基準測試</a></li><li><a class="internal tag-link" href="../tags/Python">Python</a></li><li><a class="internal tag-link" href="../tags/效能優化">效能優化</a></li><li><a class="internal tag-link" href="../tags/學習筆記">學習筆記</a></li><li><a class="internal tag-link" href="../tags/PerformanceOptimization">PerformanceOptimization</a></li><li><a class="internal tag-link" href="../tags/AsyncProgramming">AsyncProgramming</a></li><li><a class="internal tag-link" href="../tags/GPU">GPU</a></li></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2025-06-27T00:00:00.000Z">2025年6月27日</time></p><div class="desc"><h3><a href="../daily-code/2025-06-27-chrome-extension-memory" class="internal">Chrome 擴展記憶體管理</a></h3></div><ul class="tags"><li><a class="internal tag-link" href="../tags/Chrome-Extension">Chrome-Extension</a></li><li><a class="internal tag-link" href="../tags/Memory-Management">Memory-Management</a></li><li><a class="internal tag-link" href="../tags/JavaScript">JavaScript</a></li><li><a class="internal tag-link" href="../tags/Performance">Performance</a></li><li><a class="internal tag-link" href="../tags/ChromeExtension">ChromeExtension</a></li><li><a class="internal tag-link" href="../tags/MemoryManagement">MemoryManagement</a></li><li><a class="internal tag-link" href="../tags/WebExtensions">WebExtensions</a></li></ul></div></li><li class="section-li"><div class="section"><p class="meta"><time datetime="2025-06-26T00:00:00.000Z">2025年6月26日</time></p><div class="desc"><h3><a href="../daily-code/2025-06-26-flutter-state-management" class="internal">Flutter 狀態管理最佳實踐</a></h3></div><ul class="tags"><li><a class="internal tag-link" href="../tags/Flutter">Flutter</a></li><li><a class="internal tag-link" href="../tags/Dart">Dart</a></li><li><a class="internal tag-link" href="../tags/狀態管理">狀態管理</a></li><li><a class="internal tag-link" href="../tags/Riverpod">Riverpod</a></li><li><a class="internal tag-link" href="../tags/移動開發">移動開發</a></li><li><a class="internal tag-link" href="../tags/StateManagement">StateManagement</a></li><li><a class="internal tag-link" href="../tags/MobileDevelopment">MobileDevelopment</a></li><li><a class="internal tag-link" href="../tags/Architecture">Architecture</a></li></ul></div></li></ul></div></div></div><hr/><div class="page-footer"></div></div><div class="right sidebar"></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li></ul></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../postscript.js" type="module"></script></html>
