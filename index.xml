@@ -6,11 +6,53 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>技術組件庫</title>
+    <title>開發日記</title>
+    <link>https://pekora-tech.github.io/daily-code/</link>
+    <guid>https://pekora-tech.github.io/daily-code/</guid>
+    <description>以時間軸組織的日常開發記錄，透過MCP自動化管理</description>
+    <pubDate>Sat, 05 Jul 2025 16:38:52 GMT</pubDate>
+  </item><item>
+    <title>MCP Git分析器</title>
+    <link>https://pekora-tech.github.io/projects/mcp-git-analyzer</link>
+    <guid>https://pekora-tech.github.io/projects/mcp-git-analyzer</guid>
+    <description>基於MCP協議的Git專案理解工具，專為SA工作流程設計</description>
+    <pubDate>Sat, 05 Jul 2025 16:38:52 GMT</pubDate>
+  </item><item>
+    <title>mcp-development-framework</title>
+    <link>https://pekora-tech.github.io/component/mcp-development-framework</link>
+    <guid>https://pekora-tech.github.io/component/mcp-development-framework</guid>
+    <description>MCP開發框架 - SA工具快速建構模式 組件類型: 開發框架模式 重用價值: 極高 技術等級: 中高級 維護狀態: 活躍開發中 框架概述 基於MCP Git Analyzer專案實戰經驗，萃取出的可重複使用MCP開發框架。此框架專為系統分析師工具開發優化，遵循KISS原則與高內聚低耦合設計。 核心組件架構 1.</description>
+    <pubDate>Sat, 05 Jul 2025 14:36:15 GMT</pubDate>
+  </item><item>
+    <title>可重用技術元件庫</title>
     <link>https://pekora-tech.github.io/component/</link>
     <guid>https://pekora-tech.github.io/component/</guid>
-    <description>從專案經驗中提煉的可重用技術組件與設計模式</description>
-    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
+    <description>從專案經驗中提煉的標準化技術元件與設計模式</description>
+    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
+  </item><item>
+    <title>操作指南</title>
+    <link>https://pekora-tech.github.io/doc/guides/</link>
+    <guid>https://pekora-tech.github.io/doc/guides/</guid>
+    <description>實用的技術操作指南和最佳實踐</description>
+    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
+  </item><item>
+    <title>技術文件中心</title>
+    <link>https://pekora-tech.github.io/doc/</link>
+    <guid>https://pekora-tech.github.io/doc/</guid>
+    <description>標準化技術文件與操作程序庫</description>
+    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
+  </item><item>
+    <title>SelfPageSource 技術文件化專案</title>
+    <link>https://pekora-tech.github.io/</link>
+    <guid>https://pekora-tech.github.io/</guid>
+    <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
+    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
+  </item><item>
+    <title>專案建置與分析</title>
+    <link>https://pekora-tech.github.io/projects/</link>
+    <guid>https://pekora-tech.github.io/projects/</guid>
+    <description>深度技術分析與專案經驗整合，從實踐中提煉架構智慧</description>
+    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
   </item><item>
     <title>內容命名與組織規範</title>
     <link>https://pekora-tech.github.io/doc/guides/content-naming-standards</link>
@@ -23,48 +65,6 @@
     <guid>https://pekora-tech.github.io/doc/guides/knowledge-graph-building</guid>
     <description>如何有效地建立內容間的關聯性，發揮 Obsidian 的最大價值</description>
     <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
-  </item><item>
-    <title>文件</title>
-    <link>https://pekora-tech.github.io/doc/</link>
-    <guid>https://pekora-tech.github.io/doc/</guid>
-    <description>技術文檔與操作指南</description>
-    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
-  </item><item>
-    <title>作業系統控制</title>
-    <link>https://pekora-tech.github.io/doc/os-control/</link>
-    <guid>https://pekora-tech.github.io/doc/os-control/</guid>
-    <description>Windows/Linux/macOS 系統管理與自動化技術</description>
-    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
-  </item><item>
-    <title>Windows 目錄鏡像技術</title>
-    <link>https://pekora-tech.github.io/doc/os-control/windows-directory-mirroring</link>
-    <guid>https://pekora-tech.github.io/doc/os-control/windows-directory-mirroring</guid>
-    <description>使用符號連結統一開發環境路徑管理</description>
-    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
-  </item><item>
-    <title>GitHub 開發者精要指南</title>
-    <link>https://pekora-tech.github.io/doc/guides/github-development-guide</link>
-    <guid>https://pekora-tech.github.io/doc/guides/github-development-guide</guid>
-    <description>專精收斂而非擴散 - 聚焦最實用的 GitHub 工作流程</description>
-    <pubDate>Sun, 29 Jun 2025 13:06:44 GMT</pubDate>
-  </item><item>
-    <title>GitHub Pages 自動部署 SOP</title>
-    <link>https://pekora-tech.github.io/doc/guides/github-pages-deployment</link>
-    <guid>https://pekora-tech.github.io/doc/guides/github-pages-deployment</guid>
-    <description>從手動到自動：建立專業級的 GitHub Pages 部署流程</description>
-    <pubDate>Sun, 29 Jun 2025 13:06:44 GMT</pubDate>
-  </item><item>
-    <title>操作指南</title>
-    <link>https://pekora-tech.github.io/doc/guides/</link>
-    <guid>https://pekora-tech.github.io/doc/guides/</guid>
-    <description>實用的技術操作指南和最佳實踐</description>
-    <pubDate>Sun, 29 Jun 2025 13:06:44 GMT</pubDate>
-  </item><item>
-    <title>Quartz 導航中文化指南</title>
-    <link>https://pekora-tech.github.io/doc/guides/quartz-localization-guide</link>
-    <guid>https://pekora-tech.github.io/doc/guides/quartz-localization-guide</guid>
-    <description>完整的 Quartz 導航名稱中文化解決方案</description>
-    <pubDate>Sun, 29 Jun 2025 13:06:44 GMT</pubDate>
   </item>
     </channel>
   </rss>

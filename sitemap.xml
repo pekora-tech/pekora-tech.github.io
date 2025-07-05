@@ -1,6 +1,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://pekora-tech.github.io/component/</loc>
-    <lastmod>2025-07-05T07:03:46.000Z</lastmod>
+    <lastmod>2025-07-05T11:31:23.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/component/mcp-development-framework</loc>
+    <lastmod>2025-07-05T14:36:15.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/daily-code/2025-06-26-flutter-state-management</loc>
     <lastmod>2025-06-26T00:00:00.000Z</lastmod>
@@ -11,8 +14,11 @@
     <loc>https://pekora-tech.github.io/daily-code/2025-06-28-ai-benchmark-optimization</loc>
     <lastmod>2025-06-28T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://pekora-tech.github.io/daily-code/2025-07-05-git-mcp-analyzer</loc>
+    <lastmod>2025-07-05T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://pekora-tech.github.io/daily-code/</loc>
-    <lastmod>2025-06-29T03:31:54.000Z</lastmod>
+    <lastmod>2025-07-05T16:38:52.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/guides/content-naming-standards</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
@@ -24,16 +30,19 @@
     <lastmod>2025-06-29T13:06:44.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/guides/</loc>
-    <lastmod>2025-06-29T13:06:44.000Z</lastmod>
+    <lastmod>2025-07-05T11:31:23.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/guides/knowledge-graph-building</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/doc/guides/mcp-development-guide</loc>
+    <lastmod>2025-07-05T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/guides/quartz-localization-guide</loc>
     <lastmod>2025-06-29T13:06:44.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/</loc>
-    <lastmod>2025-07-05T07:03:46.000Z</lastmod>
+    <lastmod>2025-07-05T11:31:23.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/os-control/</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
@@ -41,23 +50,26 @@
     <loc>https://pekora-tech.github.io/doc/os-control/windows-directory-mirroring</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
   </url><url>
-    <loc>https://pekora-tech.github.io/doc/sop/sop-github-page-backup</loc>
-    <lastmod>2025-06-29T13:06:44.000Z</lastmod>
-  </url><url>
-    <loc>https://pekora-tech.github.io/doc/sop/sop-github-use-backup</loc>
-    <lastmod>2025-06-29T13:06:44.000Z</lastmod>
-  </url><url>
     <loc>https://pekora-tech.github.io/index-backup</loc>
     <lastmod>2025-06-29T12:42:35.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/</loc>
-    <lastmod>2025-06-29T12:42:35.000Z</lastmod>
+    <lastmod>2025-07-05T11:31:23.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/projects/browser-extension-ecosystem</loc>
     <lastmod>2025-06-28T00:00:00.000Z</lastmod>
   </url><url>
+    <loc>https://pekora-tech.github.io/projects/calu-app-gradio-toolkit</loc>
+    <lastmod>2025-07-05T00:00:00.000Z</lastmod>
+  </url><url>
     <loc>https://pekora-tech.github.io/projects/</loc>
-    <lastmod>2025-06-29T03:31:54.000Z</lastmod>
+    <lastmod>2025-07-05T11:31:23.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/projects/mcp-git-analyzer-project</loc>
+    <lastmod>2025-07-05T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/projects/mcp-git-analyzer</loc>
+    <lastmod>2025-07-05T16:38:52.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/projects/project-index</loc>
     <lastmod>2025-06-28T00:00:00.000Z</lastmod>
