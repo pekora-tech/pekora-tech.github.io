@@ -6,23 +6,17 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>開發日記</title>
-    <link>https://pekora-tech.github.io/daily-code/</link>
-    <guid>https://pekora-tech.github.io/daily-code/</guid>
-    <description>以時間軸組織的日常開發記錄，透過MCP自動化管理</description>
-    <pubDate>Sat, 05 Jul 2025 16:38:52 GMT</pubDate>
+    <title>工作指南</title>
+    <link>https://pekora-tech.github.io/doc/%E5%B7%A5%E4%BD%9C%E6%8C%87%E5%8D%97</link>
+    <guid>https://pekora-tech.github.io/doc/%E5%B7%A5%E4%BD%9C%E6%8C%87%E5%8D%97</guid>
+    <description>SA系統分析師工作指南 v2.0 核心任務 你是SA(系統分析師)，負責將專案進行理解分析，轉換為開發歷程文件。面向未來AI時代的可擴展文件管理系統。 第一步：必讀README.md 無論什麼專案，先讀README.md，確保理解專案架構。 可擴展工作架構 /Volumes/Code/selfpagesource/content/ ├── PEKORA-LICENSE # 兔田佩可拉效忠聲明 ├── index.md # 主索引 (AI導航入口) ├── doc/ # 技術文件與指南 ├── projects/ # 專案主體 (按領域分層) │ ├── ai-tools/ # AI工具領域 │...</description>
+    <pubDate>Sun, 06 Jul 2025 04:10:11 GMT</pubDate>
   </item><item>
-    <title>MCP Git分析器</title>
-    <link>https://pekora-tech.github.io/projects/mcp-git-analyzer</link>
-    <guid>https://pekora-tech.github.io/projects/mcp-git-analyzer</guid>
-    <description>基於MCP協議的Git專案理解工具，專為SA工作流程設計</description>
-    <pubDate>Sat, 05 Jul 2025 16:38:52 GMT</pubDate>
-  </item><item>
-    <title>mcp-development-framework</title>
-    <link>https://pekora-tech.github.io/component/mcp-development-framework</link>
-    <guid>https://pekora-tech.github.io/component/mcp-development-framework</guid>
-    <description>MCP開發框架 - SA工具快速建構模式 組件類型: 開發框架模式 重用價值: 極高 技術等級: 中高級 維護狀態: 活躍開發中 框架概述 基於MCP Git Analyzer專案實戰經驗，萃取出的可重複使用MCP開發框架。此框架專為系統分析師工具開發優化，遵循KISS原則與高內聚低耦合設計。 核心組件架構 1.</description>
-    <pubDate>Sat, 05 Jul 2025 14:36:15 GMT</pubDate>
+    <title>AI記憶體系統 - Chrome擴展與微服務整合</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</guid>
+    <description>Chrome擴展與AI微服務整合專案，實現瀏覽器內的AI輔助功能</description>
+    <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>可重用技術元件庫</title>
     <link>https://pekora-tech.github.io/component/</link>
@@ -64,6 +58,12 @@
     <link>https://pekora-tech.github.io/doc/guides/knowledge-graph-building</link>
     <guid>https://pekora-tech.github.io/doc/guides/knowledge-graph-building</guid>
     <description>如何有效地建立內容間的關聯性，發揮 Obsidian 的最大價值</description>
+    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
+  </item><item>
+    <title>作業系統控制</title>
+    <link>https://pekora-tech.github.io/doc/os-control/</link>
+    <guid>https://pekora-tech.github.io/doc/os-control/</guid>
+    <description>Windows/Linux/macOS 系統管理與自動化技術</description>
     <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
   </item>
     </channel>
