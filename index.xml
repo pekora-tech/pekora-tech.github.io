@@ -9,13 +9,13 @@
     <title>README</title>
     <link>https://pekora-tech.github.io/README</link>
     <guid>https://pekora-tech.github.io/README</guid>
-    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-05 v2.1 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05 領域分類結構 projects/ ├── ai-tools/ # AI工具領域 ├── game-systems/ # 遊戲系統領域 ├── browser-exte...</description>
-    <pubDate>Sun, 06 Jul 2025 07:59:10 GMT</pubDate>
+    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-06 v2.2 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
+    <pubDate>Sun, 06 Jul 2025 10:18:16 GMT</pubDate>
   </item><item>
-    <title>AI記憶體系統 - Chrome擴展與微服務整合</title>
+    <title>AI記憶體系統研究平台 - 長期記憶與智能交互的突破</title>
     <link>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</link>
     <guid>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</guid>
-    <description>Chrome擴展與AI微服務整合專案，實現瀏覽器內的AI輔助功能</description>
+    <description>AI長期記憶系統研究平台，突破性實現AI持久記憶、Chrome擴展智能整合與微服務架構</description>
     <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>可重用技術元件庫</title>
