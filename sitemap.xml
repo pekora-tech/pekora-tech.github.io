@@ -1,4 +1,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
+    <loc>https://pekora-tech.github.io/README</loc>
+    <lastmod>2025-07-06T07:59:10.000Z</lastmod>
+  </url><url>
     <loc>https://pekora-tech.github.io/component/</loc>
     <lastmod>2025-07-05T11:31:23.000Z</lastmod>
   </url><url>
@@ -32,9 +35,6 @@
     <loc>https://pekora-tech.github.io/doc/os-control/windows-directory-mirroring</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
   </url><url>
-    <loc>https://pekora-tech.github.io/doc/%E5%B7%A5%E4%BD%9C%E6%8C%87%E5%8D%97</loc>
-    <lastmod>2025-07-06T04:10:11.000Z</lastmod>
-  </url><url>
     <loc>https://pekora-tech.github.io/index-backup</loc>
     <lastmod>2025-06-29T12:42:35.000Z</lastmod>
   </url><url>
@@ -47,7 +47,7 @@
     <loc>https://pekora-tech.github.io/projects/browser-extension-ecosystem</loc>
     <lastmod>2025-06-28T00:00:00.000Z</lastmod>
   </url><url>
-    <loc>https://pekora-tech.github.io/projects/calu-app-gradio-toolkit</loc>
+    <loc>https://pekora-tech.github.io/projects/development-tools/calu-app-gradio-toolkit</loc>
     <lastmod>2025-07-05T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/projects/</loc>

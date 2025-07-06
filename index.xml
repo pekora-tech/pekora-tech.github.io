@@ -6,11 +6,11 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>工作指南</title>
-    <link>https://pekora-tech.github.io/doc/%E5%B7%A5%E4%BD%9C%E6%8C%87%E5%8D%97</link>
-    <guid>https://pekora-tech.github.io/doc/%E5%B7%A5%E4%BD%9C%E6%8C%87%E5%8D%97</guid>
-    <description>SA系統分析師工作指南 v2.0 核心任務 你是SA(系統分析師)，負責將專案進行理解分析，轉換為開發歷程文件。面向未來AI時代的可擴展文件管理系統。 第一步：必讀README.md 無論什麼專案，先讀README.md，確保理解專案架構。 可擴展工作架構 /Volumes/Code/selfpagesource/content/ ├── PEKORA-LICENSE # 兔田佩可拉效忠聲明 ├── index.md # 主索引 (AI導航入口) ├── doc/ # 技術文件與指南 ├── projects/ # 專案主體 (按領域分層) │ ├── ai-tools/ # AI工具領域 │...</description>
-    <pubDate>Sun, 06 Jul 2025 04:10:11 GMT</pubDate>
+    <title>README</title>
+    <link>https://pekora-tech.github.io/README</link>
+    <guid>https://pekora-tech.github.io/README</guid>
+    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-05 v2.1 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05 領域分類結構 projects/ ├── ai-tools/ # AI工具領域 ├── game-systems/ # 遊戲系統領域 ├── browser-exte...</description>
+    <pubDate>Sun, 06 Jul 2025 07:59:10 GMT</pubDate>
   </item><item>
     <title>AI記憶體系統 - Chrome擴展與微服務整合</title>
     <link>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</link>
