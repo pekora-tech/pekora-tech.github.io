@@ -184,6 +184,7 @@ pre:hover > .expand-button {
 <li><strong>📊 記憶管理介面</strong>：完整的CRUD操作和分析工具</li>
 <li><strong>🌐 API服務化</strong>：FastAPI驅動的RESTful介面</li>
 </ul>
+<p><img src="../../projects/ai-tools/attachments/Pasted-image-20250707101104.png" width="auto" height="auto" alt/></p>
 <h3 id="記憶系統架構">記憶系統架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#記憶系統架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 記憶核心實現</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> MemoryManager</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
@@ -242,6 +243,10 @@ pre:hover > .expand-button {
 <li><strong>💬 上下文對話</strong>：結合網頁內容的深度交互</li>
 <li><strong>🤖 動態模型選擇</strong>：自動獲取Ollama可用模型</li>
 </ul>
+<p>對選擇的文章文字片段，能自動摘要
+<img src="../../projects/ai-tools/attachments/Pasted-image-20250707101252.png" width="auto" height="auto" alt/></p>
+<p>面對摘要可以進行對話
+<img src="../../projects/ai-tools/attachments/Pasted-image-20250707103257.png" width="auto" height="auto" alt/></p>
 <h3 id="技術實現亮點">技術實現亮點<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術實現亮點" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="typescript" data-theme="github-light github-dark"><code data-language="typescript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 背景腳本 - 右鍵選單整合</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">chrome.contextMenus.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">create</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">({</span></span>
@@ -283,7 +288,7 @@ pre:hover > .expand-button {
 </ul>
 <h2 id="3-test-microservice-summary---跨環境ai服務">3. test-microservice-summary - 跨環境AI服務<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-test-microservice-summary---跨環境ai服務" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <blockquote>
-<p><strong>架構設計典範</strong> - 微服務AI的完整實現</p>
+<p><strong>架構設計典範</strong> - 微服務AI的完整實現，目前發現 Ollama 的 python sdk ，在互動的效果不錯</p>
 </blockquote>
 <h3 id="核心價值">核心價值<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心價值" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <ul>
@@ -292,6 +297,7 @@ pre:hover > .expand-button {
 <li><strong>🎨 Gradio驗證介面</strong>：可視化測試環境</li>
 <li><strong>📚 完整文檔</strong>：Swagger自動生成API文檔</li>
 </ul>
+<p><img src="../../projects/ai-tools/attachments/Pasted-image-20250707104128.png" width="auto" height="auto" alt/></p>
 <h3 id="微服務架構設計">微服務架構設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#微服務架構設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># FastAPI微服務核心</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">from</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> fastapi </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">import</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> FastAPI, UploadFile, File</span></span>
