@@ -42,29 +42,29 @@
     <description>Flutter 客服移動應用基礎模板，尚未開始實際開發</description>
     <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
+    <title>GitLab CI Peko - AI驅動配置生成器</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</guid>
+    <description>基於 AI 的 GitLab CI/CD 配置生成器，智能分析專案並生成最佳化配置</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
     <title>Test-Helper-Memory-System - AI客服記憶系統</title>
     <link>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</link>
     <guid>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</guid>
     <description>基於 test-ai-memory 架構的客服系統實驗，嘗試將記憶系統轉化為技術支援平台</description>
     <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>AI記憶體系統研究平台 - 長期記憶與智能交互的突破</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</guid>
-    <description>AI長期記憶系統研究平台，突破性實現AI持久記憶、Chrome擴展智能整合與微服務架構</description>
-    <pubDate>Sun, 06 Jul 2025 00:00:00 GMT</pubDate>
+    <title>Test Node.js API Example - RESTful API 範例專案</title>
+    <link>https://pekora-tech.github.io/projects/development-tools/test-nodejs-api-example</link>
+    <guid>https://pekora-tech.github.io/projects/development-tools/test-nodejs-api-example</guid>
+    <description>標準化的 Node.js RESTful API 範例專案，提供完整的 API 設計模板</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
-    <title>可重用技術元件庫</title>
-    <link>https://pekora-tech.github.io/component/</link>
-    <guid>https://pekora-tech.github.io/component/</guid>
-    <description>從專案經驗中提煉的標準化技術元件與設計模式</description>
-    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
-  </item><item>
-    <title>操作指南</title>
-    <link>https://pekora-tech.github.io/doc/guides/</link>
-    <guid>https://pekora-tech.github.io/doc/guides/</guid>
-    <description>實用的技術操作指南和最佳實踐</description>
-    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
+    <title>Workflow Builder - 跨平台工作流程編輯器</title>
+    <link>https://pekora-tech.github.io/projects/development-tools/workflow-builder</link>
+    <guid>https://pekora-tech.github.io/projects/development-tools/workflow-builder</guid>
+    <description>基於 Electron 的可視化工作流程編輯器，支援 API 測試和檔案操作自動化</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
   </rss>
