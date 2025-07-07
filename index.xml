@@ -7,6 +7,12 @@
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
     <title>README</title>
+    <link>https://pekora-tech.github.io/README</link>
+    <guid>https://pekora-tech.github.io/README</guid>
+    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-07 v2.3 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
+    <pubDate>Mon, 07 Jul 2025 11:21:35 GMT</pubDate>
+  </item><item>
+    <title>README</title>
     <link>https://pekora-tech.github.io/component/README</link>
     <guid>https://pekora-tech.github.io/component/README</guid>
     <description>可重用元件庫 從各專案提取的核心功能元件，便於快速開發新應用 元件清單 AI長期記憶系統 檔案: ai-long-term-memory-system.md 技術: Python, SQLite, OpenAI API 用途: 為AI應用加入長期記憶能力 來源: test-love-memory-system 應用場景: Helpdesk、客服系統、個人助理 使用指南 選擇元件: 根據需求選擇合適的元件 複製程式碼: 從元件文檔中複製所需程式碼 客製化調整: 根據專案需求調整參數和邏輯 整合測試: 確保元件正確整合到你的應用 元件標準 每個元件都應包含： 核心價值說明 完整的程式碼實作 整合範...</description>
@@ -24,11 +30,23 @@
     <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
     <pubDate>Mon, 07 Jul 2025 03:11:23 GMT</pubDate>
   </item><item>
-    <title>README</title>
-    <link>https://pekora-tech.github.io/README</link>
-    <guid>https://pekora-tech.github.io/README</guid>
-    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-06 v2.2 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
-    <pubDate>Sun, 06 Jul 2025 10:18:16 GMT</pubDate>
+    <title>Help-Agnet - 智能客服系統</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/help-agnet</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/help-agnet</guid>
+    <description>基於 OpenAI Function Calling 的企業級智能客服系統</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Help_app - Flutter客服移動應用</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/help_app</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/help_app</guid>
+    <description>Flutter 客服移動應用基礎模板，尚未開始實際開發</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
+    <title>Test-Helper-Memory-System - AI客服記憶系統</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</guid>
+    <description>基於 test-ai-memory 架構的客服系統實驗，嘗試將記憶系統轉化為技術支援平台</description>
+    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item><item>
     <title>AI記憶體系統研究平台 - 長期記憶與智能交互的突破</title>
     <link>https://pekora-tech.github.io/projects/ai-tools/test-ai-memory</link>
@@ -47,24 +65,6 @@
     <guid>https://pekora-tech.github.io/doc/guides/</guid>
     <description>實用的技術操作指南和最佳實踐</description>
     <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
-  </item><item>
-    <title>技術文件中心</title>
-    <link>https://pekora-tech.github.io/doc/</link>
-    <guid>https://pekora-tech.github.io/doc/</guid>
-    <description>標準化技術文件與操作程序庫</description>
-    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
-  </item><item>
-    <title>專案建置與分析</title>
-    <link>https://pekora-tech.github.io/projects/</link>
-    <guid>https://pekora-tech.github.io/projects/</guid>
-    <description>深度技術分析與專案經驗整合，從實踐中提煉架構智慧</description>
-    <pubDate>Sat, 05 Jul 2025 11:31:23 GMT</pubDate>
-  </item><item>
-    <title>內容命名與組織規範</title>
-    <link>https://pekora-tech.github.io/doc/guides/content-naming-standards</link>
-    <guid>https://pekora-tech.github.io/doc/guides/content-naming-standards</guid>
-    <description>統一的檔案路徑、標題命名與分類標準</description>
-    <pubDate>Sat, 05 Jul 2025 07:03:46 GMT</pubDate>
   </item>
     </channel>
   </rss>
