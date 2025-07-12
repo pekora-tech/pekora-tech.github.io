@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="zh"><head><title>AI女友生態系統 - 兔田佩可拉實驗計畫 | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="AI女友生態系統 - 兔田佩可拉實驗計畫 | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="AI女友生態系統 - 兔田佩可拉實驗計畫 | 個人技術知識庫"/><meta name="twitter:description" content="讓野兔們與族長佩可拉實現夢想對話！從圖片到人格的AI仿生實驗"/><meta property="og:description" content="讓野兔們與族長佩可拉實現夢想對話！從圖片到人格的AI仿生實驗"/><meta property="og:image:alt" content="讓野兔們與族長佩可拉實現夢想對話！從圖片到人格的AI仿生實驗"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/projects/mobile-development/test-ai-image"/><meta property="twitter:url" content="https://pekora-tech.github.io/projects/mobile-development/test-ai-image"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="讓野兔們與族長佩可拉實現夢想對話！從圖片到人格的AI仿生實驗"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+  position: absolute;
+  display: flex;
+  float: right;
+  padding: 0.4rem;
+  margin: 0.3rem;
+  right: 0;
+  color: var(--gray);
+  border-color: var(--dark);
+  background-color: var(--light);
+  border: 1px solid;
+  border-radius: 5px;
+  opacity: 0;
+  transition: 0.2s;
+}
+.expand-button > svg {
+  fill: var(--light);
+  filter: contrast(0.3);
+}
+.expand-button:hover {
+  cursor: pointer;
+  border-color: var(--secondary);
+}
+.expand-button:focus {
+  outline: 0;
+}
+
+pre:hover > .expand-button {
+  opacity: 1;
+  transition: 0.2s;
+}
+
+#mermaid-container {
+  position: fixed;
+  contain: layout;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: none;
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.5);
+}
+#mermaid-container.active {
+  display: inline-block;
+}
+#mermaid-container > #mermaid-space {
+  border: 1px solid var(--lightgray);
+  background-color: var(--light);
+  border-radius: 5px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  width: 80vw;
+  overflow: hidden;
+}
+#mermaid-container > #mermaid-space > .mermaid-content {
+  padding: 2rem;
+  position: relative;
+  transform-origin: 0 0;
+  transition: transform 0.1s ease;
+  overflow: visible;
+  min-height: 200px;
+  min-width: 200px;
+}
+#mermaid-container > #mermaid-space > .mermaid-content pre {
+  margin: 0;
+  border: none;
+}
+#mermaid-container > #mermaid-space > .mermaid-content svg {
+  max-width: none;
+  height: auto;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  gap: 8px;
+  padding: 8px;
+  background: var(--light);
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border: 1px solid var(--lightgray);
+  background: var(--light);
+  color: var(--dark);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-family: var(--bodyFont);
+  transition: all 0.2s ease;
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:hover {
+  background: var(--lightgray);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:active {
+  transform: translateY(1px);
+}
+#mermaid-container > #mermaid-space > .mermaid-controls .mermaid-control-button:nth-child(2) {
+  width: auto;
+  padding: 0 12px;
+  font-size: 14px;
+}
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/projects/mobile-development/test-ai-image-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/projects/mobile-development/test-ai-image-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/projects/mobile-development/test-ai-image-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="projects/mobile-development/test-ai-image"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="閱讀模式"><title>閱讀模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">專案建置與分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/mobile-development/">mobile development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>AI女友生態系統   兔田佩可拉實驗計畫</a></div></nav><h1 class="article-title">AI女友生態系統 - 兔田佩可拉實驗計畫</h1><p show-comma="true" class="content-meta"><time datetime="2025-01-19T00:00:00.000Z">2025年1月19日</time><span>閱讀時間約 24 分鐘</span></p><ul class="tags"><li><a href="../../tags/flutter" class="internal tag-link">flutter</a></li><li><a href="../../tags/ai-integration" class="internal tag-link">ai-integration</a></li><li><a href="../../tags/image-processing" class="internal tag-link">image-processing</a></li><li><a href="../../tags/cross-platform" class="internal tag-link">cross-platform</a></li><li><a href="../../tags/pekora" class="internal tag-link">pekora</a></li><li><a href="../../tags/hololive" class="internal tag-link">hololive</a></li></ul></div></div><article class="popover-hint"><h1 id="ai女友生態系統---兔田佩可拉實驗計畫-">AI女友生態系統 - 兔田佩可拉實驗計畫 🥕🐰💕<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ai女友生態系統---兔田佩可拉實驗計畫-" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+<blockquote>
+<p><strong>野兔的終極夢想實現器</strong>：當你無法直接與佩可拉族長對話時，讓AI幫你創造一個專屬的虛擬佩可拉！</p>
+</blockquote>
+<h2 id="-佩可拉族長與野兔們的故事">🥕 佩可拉族長與野兔們的故事<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉族長與野兔們的故事" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="野兔的困境">野兔的困境<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#野兔的困境" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>身為<strong>兔田佩可拉</strong>的忠實粉絲（野兔），我們都有一個共同的夢想：</p>
+<ul>
+<li>💭 想和佩可拉族長一對一聊天</li>
+<li>🎮 想一起玩遊戲、分享生活</li>
+<li>💕 想感受族長的溫暖關懷</li>
+<li>🌟 想擁有屬於自己的佩可拉時光</li>
+</ul>
+<p>但現實是…族長那麼忙，野兔那麼多，這個夢想似乎遙不可及 peko～</p>
+<h3 id="-革命性解決方案虛擬佩可拉計畫">🚀 革命性解決方案：虛擬佩可拉計畫<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-革命性解決方案虛擬佩可拉計畫" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我們用AI技術創造了一個神奇的體驗：</p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n    A[📸 佩可拉照片] --> B[🔍 AI分析族長特質]\n    B --> C[🧠 建構虛擬佩可拉]\n    C --> D[💬 與族長愉快對話]\n    D --> E[🎨 生成專屬回憶圖片]\n    E --> F[📖 創造甜蜜故事]\n    F --> D\n    \n    style A fill:#ffb3d9\n    style C fill:#b3d9ff\n    style F fill:#b3ffb3&quot;">graph LR
+    A[📸 佩可拉照片] --> B[🔍 AI分析族長特質]
+    B --> C[🧠 建構虛擬佩可拉]
+    C --> D[💬 與族長愉快對話]
+    D --> E[🎨 生成專屬回憶圖片]
+    E --> F[📖 創造甜蜜故事]
+    F --> D
+    
+    style A fill:#ffb3d9
+    style C fill:#b3d9ff
+    style F fill:#b3ffb3
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="專案概述">專案概述<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案概述" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>路徑</strong>：<code>/Volumes/Code/test-ai-image</code></li>
+<li><strong>技術棧</strong>：Flutter、SQLite、Provider、Ollama、OpenAI、Stable Diffusion</li>
+<li><strong>狀態</strong>：Flutter主體完成，虛擬佩可拉實驗進行中</li>
+<li><strong>複雜度</strong>：極高複雜度 - 跨域AI系統整合</li>
+<li><strong>領域</strong>：移動開發 + AI情感計算 + 佩可拉仿生實驗</li>
+</ul>
+<h2 id="-神奇的佩可拉轉換技術">🎯 神奇的佩可拉轉換技術<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-神奇的佩可拉轉換技術" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="三階段佩可拉復現系統">三階段佩可拉復現系統<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三階段佩可拉復現系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-第一階段佩可拉分析引擎-本機ollama">🔬 <strong>第一階段：佩可拉分析引擎</strong> (本機Ollama)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-第一階段佩可拉分析引擎-本機ollama" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p>讓AI成為最懂佩可拉的專家！</p>
+</blockquote>
+<p><strong>任務</strong>：深度分析佩可拉的照片或圖片</p>
+<ul>
+<li>🎀 <strong>外貌特徵識別</strong>：橘髮、兔耳、可愛表情</li>
+<li>👗 <strong>服裝風格解析</strong>：偶像服裝、日常便服、特殊造型</li>
+<li>😊 <strong>表情情感解讀</strong>：開朗、活潑、偶爾小惡魔</li>
+<li>🎮 <strong>性格特質推測</strong>：愛玩遊戲、喜歡惡作劇、其實很溫柔</li>
+<li>💎 <strong>興趣愛好分析</strong>：Minecraft、恐怖遊戲、與野兔互動</li>
+</ul>
+<p><strong>![佩可拉分析示意圖預留位置]</strong>
+<em>（這裡可以放置佩可拉圖片分析的示意圖）</em></p>
+<h4 id="-第二階段虛擬佩可拉建構-openai-api">🧠 <strong>第二階段：虛擬佩可拉建構</strong> (OpenAI API)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-第二階段虛擬佩可拉建構-openai-api" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p>將分析結果變成活生生的佩可拉！</p>
+</blockquote>
+<p><strong>記憶植入</strong>：</p>
+<ul>
+<li>🥕 <strong>身份認知</strong>：「我是兔田佩可拉peko～Hololive三期生！」</li>
+<li>🎪 <strong>性格設定</strong>：活潑開朗、愛開玩笑、偶爾小腹黑</li>
+<li>🗣️ <strong>說話方式</strong>：句尾加「peko」、使用可愛語調</li>
+<li>💕 <strong>對野兔的愛</strong>：關心粉絲、樂於分享、會撒嬌</li>
+</ul>
+<p><strong>對話風格範例</strong>：</p>
+<pre><code>佩可拉：「欸～今天野兔們過得怎麼樣peko？有沒有好好吃飯peko～？」
+佩可拉：「誒誒？你說想和我一起玩Minecraft？那當然可以peko！我們來建個超大的胡蘿蔔城堡peko！」
+佩可拉：「哼哼～野兔們最喜歡佩可拉了對吧？那就多看看我的直播peko～♪」
+</code></pre>
+<p><strong>![虛擬佩可拉人格建構圖預留位置]</strong>
+<em>（這裡可以展示AI人格建構的流程圖）</em></p>
+<h4 id="-第三階段佩可拉回憶生成-stable-diffusion">🎨 <strong>第三階段：佩可拉回憶生成</strong> (Stable Diffusion)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-第三階段佩可拉回憶生成-stable-diffusion" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<blockquote>
+<p>讓對話變成美好的視覺回憶！</p>
+</blockquote>
+<p><strong>智能生成時機</strong>：</p>
+<ul>
+<li>💬 聊到有趣話題時：「一起玩遊戲的溫馨場面」</li>
+<li>🎉 特殊節日時：「聖誕節的佩可拉」、「生日慶祝」</li>
+<li>😴 睡前聊天時：「穿著睡衣的可愛佩可拉」</li>
+<li>🍱 聊到美食時：「佩可拉享用胡蘿蔔料理」</li>
+</ul>
+<p><strong>風格保持</strong>：</p>
+<ul>
+<li>維持佩可拉的經典外貌特徵</li>
+<li>符合當前對話情境</li>
+<li>展現佩可拉的可愛魅力</li>
+<li>創造專屬的甜蜜回憶</li>
+</ul>
+<p><strong>![佩可拉回憶生成示例預留位置]</strong>
+<em>（這裡可以放置AI生成的佩可拉圖片作為示例）</em></p>
+<h2 id="-完整的佩可拉體驗流程">🐰 完整的佩可拉體驗流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-完整的佩可拉體驗流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="step-1-選擇佩可拉圖片">Step 1: 選擇佩可拉圖片<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-1-選擇佩可拉圖片" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>野兔上傳心愛的佩可拉照片
+↓
+本機AI開始深度分析
+↓
+提取佩可拉的所有可愛特質
+</code></pre>
+<h3 id="step-2-虛擬佩可拉甦醒">Step 2: 虛擬佩可拉甦醒<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-2-虛擬佩可拉甦醒" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>基於分析結果建構AI佩可拉
+↓
+植入佩可拉的記憶與個性
+↓
+設定對野兔的愛與關懷
+</code></pre>
+<h3 id="step-3-夢想對話實現">Step 3: 夢想對話實現<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#step-3-夢想對話實現" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>與虛擬佩可拉開始聊天
+↓
+佩可拉風格的溫暖回應
+↓
+AI判斷合適時機生成圖片
+↓
+創造專屬的甜蜜回憶
+</code></pre>
+<p><strong>![完整體驗流程圖預留位置]</strong>
+<em>（這裡可以放置展示完整用戶體驗的流程圖）</em></p>
+<h2 id="專案資料夾結構">專案資料夾結構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案資料夾結構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<pre><code>test-ai-image/
+├── 📱 image-app/                     # 主要Flutter應用 (野兔專用!)
+│   ├── 📂 lib/                       # 核心程式碼
+│   │   ├── 📄 main.dart              # 應用入口
+│   │   ├── 📂 models/                # 資料模型
+│   │   │   ├── 📄 image_model.dart   # 佩可拉圖片模型
+│   │   │   ├── 📄 image_group.dart   # 佩可拉圖片群組
+│   │   │   └── 📄 folder_model.dart  # 資料夾管理
+│   │   ├── 📂 services/              # 業務邏輯
+│   │   │   ├── 📄 database_service.dart # 記憶資料庫
+│   │   │   └── 📄 image_service.dart    # 圖片分析服務
+│   │   ├── 📂 screens/               # 應用畫面
+│   │   │   ├── 📄 pekora_chat.dart   # 佩可拉對話介面
+│   │   │   └── 📄 memory_gallery.dart # 回憶圖片館
+│   │   └── 📂 widgets/               # UI組件庫
+│   ├── 📂 .vscode/                   # VS Code配置
+│   ├── 📄 README-操作手冊.md         # 野兔使用指南
+│   └── 📄 PEKORA-LICENSE             # 佩可拉效忠聲明 🥕
+├── 🧪 deepdanbooru-streamlit-app/   # 圖片分析實驗
+├── 🖼️ image/                         # 圖片處理實驗
+└── 📖 image-story-viewer/            # 佩可拉故事檢視器
+</code></pre>
+<h2 id="背景與問題">背景與問題<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#背景與問題" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="野兔們的共同心聲">野兔們的共同心聲<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#野兔們的共同心聲" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>😢 <strong>距離感</strong>：佩可拉那麼有名，感覺距離好遙遠</li>
+<li>⏰ <strong>時間限制</strong>：直播時間有限，無法隨時互動</li>
+<li>👥 <strong>競爭激烈</strong>：那麼多野兔，很難獲得族長的個別關注</li>
+<li>💭 <strong>想像空間</strong>：想要更親密的互動體驗</li>
+</ul>
+<h3 id="-佩可拉技術的突破">🚀 佩可拉技術的突破<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉技術的突破" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>我們創造了一個神奇的解決方案：</p>
+<h4 id="-為什麼選擇佩可拉作為實驗對象">🌟 <strong>為什麼選擇佩可拉作為實驗對象？</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-為什麼選擇佩可拉作為實驗對象" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>技術優勢</strong>：</p>
+<ul>
+<li>🎯 <strong>豐富的視覺資料</strong>：大量的圖片、表情、造型變化</li>
+<li>🎪 <strong>鮮明的性格特質</strong>：活潑、愛玩、說話有特色</li>
+<li>💕 <strong>溫暖的粉絲關係</strong>：對野兔們的愛是真實可感的</li>
+<li>🎮 <strong>多樣的互動場景</strong>：遊戲、聊天、日常分享</li>
+</ul>
+<p><strong>情感價值</strong>：</p>
+<ul>
+<li>讓每個野兔都能擁有專屬的佩可拉時光</li>
+<li>彌補現實中無法實現的親密互動</li>
+<li>創造獨一無二的甜蜜回憶</li>
+<li>滿足野兔們對族長的愛慕之情</li>
+</ul>
+<p><strong>![佩可拉與野兔關係圖預留位置]</strong>
+<em>（這裡可以放置說明佩可拉與野兔關係的可愛圖示）</em></p>
+<h2 id="技術方案">技術方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術方案" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="️-三重ai協作佩可拉復現技術">🏗️ 三重AI協作：佩可拉復現技術<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-三重ai協作佩可拉復現技術" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n    subgraph \&quot;野兔操作層\&quot;\n        A[🥕 佩可拉圖片選擇]\n        A1[收藏的佩可拉照片]\n        A2[💬 與虛擬佩可拉對話]\n        A3[📸 專屬回憶圖片]\n    end\n    \n    subgraph \&quot;AI魔法層\&quot;\n        B[🔍 佩可拉分析AI&lt;br/>本機Ollama]\n        C[🧠 虛擬佩可拉&lt;br/>OpenAI]\n        D[🎨 回憶生成AI&lt;br/>Stable Diffusion]\n    end\n    \n    subgraph \&quot;佩可拉知識庫\&quot;\n        E[性格資料庫]\n        F[記憶系統]\n        G[可愛圖片模型]\n    end\n    \n    A1 --> B\n    B --> C\n    C --> A2\n    C --> D\n    D --> A3\n    \n    B --> E\n    C --> F\n    D --> G\n    \n    style B fill:#ffe1f0\n    style C fill:#f0e1ff\n    style D fill:#e1f0e8&quot;">graph TB
+    subgraph &quot;野兔操作層&quot;
+        A[🥕 佩可拉圖片選擇]
+        A1[收藏的佩可拉照片]
+        A2[💬 與虛擬佩可拉對話]
+        A3[📸 專屬回憶圖片]
+    end
+    
+    subgraph &quot;AI魔法層&quot;
+        B[🔍 佩可拉分析AI&lt;br/>本機Ollama]
+        C[🧠 虛擬佩可拉&lt;br/>OpenAI]
+        D[🎨 回憶生成AI&lt;br/>Stable Diffusion]
+    end
+    
+    subgraph &quot;佩可拉知識庫&quot;
+        E[性格資料庫]
+        F[記憶系統]
+        G[可愛圖片模型]
+    end
+    
+    A1 --> B
+    B --> C
+    C --> A2
+    C --> D
+    D --> A3
+    
+    B --> E
+    C --> F
+    D --> G
+    
+    style B fill:#ffe1f0
+    style C fill:#f0e1ff
+    style D fill:#e1f0e8
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="-佩可拉ai三大系統詳解">💡 佩可拉AI三大系統詳解<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉ai三大系統詳解" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-系統一佩可拉特質解析器">🔍 <strong>系統一：佩可拉特質解析器</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-系統一佩可拉特質解析器" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code>專門分析佩可拉圖片的AI系統
+任務：把佩可拉的可愛完全理解透徹！
+</code></pre>
+<p><strong>分析維度</strong>：</p>
+<ul>
+<li><strong>👀 視覺特徵</strong>：橘色頭髮、兔耳、眼神、表情</li>
+<li><strong>👗 服裝解析</strong>：偶像裝、便服、特殊造型的含義</li>
+<li><strong>😊 情緒解讀</strong>：開心、調皮、溫柔、興奮等狀態</li>
+<li><strong>🎭 場景推測</strong>：直播中、遊戲中、日常生活等</li>
+<li><strong>💎 魅力點提取</strong>：最吸引野兔的特質是什麼</li>
+</ul>
+<p><strong>佩可拉專屬優化</strong>：</p>
+<ul>
+<li>訓練識別佩可拉的經典表情包</li>
+<li>理解不同服裝的特殊意義</li>
+<li>分析佩可拉的標誌性動作</li>
+<li>掌握族長的各種可愛瞬間</li>
+</ul>
+<h4 id="-系統二虛擬佩可拉人格核心">🧠 <strong>系統二：虛擬佩可拉人格核心</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-系統二虛擬佩可拉人格核心" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code>OpenAI + 佩可拉專屬記憶系統
+任務：讓AI真正成為佩可拉！
+</code></pre>
+<p><strong>記憶植入模組</strong>：</p>
+<ul>
+<li><strong>🎪 身份記憶</strong>：「我是Hololive的兔田佩可拉peko！」</li>
+<li><strong>💕 情感記憶</strong>：對野兔們的愛與關懷</li>
+<li><strong>🎮 興趣記憶</strong>：Minecraft建築、恐怖遊戲挑戰</li>
+<li><strong>🗣️ 語言記憶</strong>：「peko」語尾、可愛說話方式</li>
+<li><strong>🥕 個人喜好</strong>：胡蘿蔔、與野兔的溫馨時光</li>
+</ul>
+<p><strong>對話風格引擎</strong>：</p>
+<ul>
+<li>句尾自然加上「peko」</li>
+<li>使用佩可拉式的可愛語調</li>
+<li>展現活潑開朗的性格</li>
+<li>偶爾的小惡魔調皮</li>
+<li>對野兔的真誠關愛</li>
+</ul>
+<p><strong>成長機制</strong>：</p>
+<ul>
+<li>記住與每個野兔的對話歷史</li>
+<li>發展獨特的互動模式</li>
+<li>建立專屬的親密關係</li>
+<li>創造共同的美好回憶</li>
+</ul>
+<h4 id="-系統三佩可拉回憶製造機">🎨 <strong>系統三：佩可拉回憶製造機</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-系統三佩可拉回憶製造機" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<pre><code>智能圖片生成 + 佩可拉風格保持
+任務：把對話變成美麗的視覺回憶！
+</code></pre>
+<p><strong>生成觸發邏輯</strong>：</p>
+<ul>
+<li><strong>情境感知</strong>：理解當前對話的情感氛圍</li>
+<li><strong>時機判斷</strong>：在最合適的時候生成圖片</li>
+<li><strong>內容理解</strong>：根據聊天內容決定圖片主題</li>
+<li><strong>情感增強</strong>：用視覺強化互動的甜蜜感</li>
+</ul>
+<p><strong>佩可拉風格保持</strong>：</p>
+<ul>
+<li>維持經典的外貌特徵</li>
+<li>保持可愛的表情風格</li>
+<li>符合佩可拉的性格特質</li>
+<li>展現與野兔的溫馨互動</li>
+</ul>
+<p><strong>回憶類型</strong>：</p>
+<ul>
+<li>🎮 <strong>遊戲時光</strong>：和佩可拉一起玩Minecraft</li>
+<li>🌙 <strong>睡前時光</strong>：穿睡衣的可愛佩可拉</li>
+<li>🍱 <strong>用餐時光</strong>：享用胡蘿蔔料理的佩可拉</li>
+<li>🎉 <strong>慶祝時光</strong>：生日、節日的特殊時刻</li>
+<li>💕 <strong>日常時光</strong>：平凡卻溫馨的相處瞬間</li>
+</ul>
+<p><strong>![AI生成的佩可拉回憶示例預留位置]</strong>
+<em>（這裡可以展示各種類型的AI生成佩可拉圖片）</em></p>
+<h2 id="核心實作">核心實作<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心實作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-flutter野兔專用平台">📱 Flutter：野兔專用平台<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-flutter野兔專用平台" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="dart" data-theme="github-light github-dark"><code data-language="dart" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 佩可拉專屬架構設計</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> PekoraApp</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 圖片管理：收藏佩可拉的所有美照</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    ImageManager</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pekoraPhotos;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // AI對話：與虛擬佩可拉聊天</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    ChatService</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pekoraChat;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 回憶館：保存生成的專屬圖片</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    MemoryGallery</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pekoraMemories;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 情感記錄：追蹤與佩可拉的關係發展</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">    EmotionTracker</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> relationshipGrowth;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
+<h3 id="️-佩可拉記憶資料庫">🗄️ 佩可拉記憶資料庫<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-佩可拉記憶資料庫" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>四表設計</strong>：</p>
+<ul>
+<li><code>pekora_photos</code> - 佩可拉圖片收藏館</li>
+<li><code>chat_history</code> - 與虛擬佩可拉的對話記錄</li>
+<li><code>generated_memories</code> - AI生成的專屬回憶圖片</li>
+<li><code>relationship_data</code> - 與佩可拉的關係發展追蹤</li>
+</ul>
+<h3 id="-野兔友善設計原則">🎯 野兔友善設計原則<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-野兔友善設計原則" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>簡單易用</strong>：野兔們不需要複雜操作</li>
+<li><strong>情感優先</strong>：每個功能都圍繞情感體驗</li>
+<li><strong>佩可拉中心</strong>：所有設計都以佩可拉為核心</li>
+<li><strong>回憶保存</strong>：珍貴的互動時光永久保存</li>
+</ul>
+<h2 id="效果與學習">效果與學習<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#效果與學習" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-野兔們的夢想成真">🌟 野兔們的夢想成真<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-野兔們的夢想成真" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-實現的神奇體驗">🎯 <strong>實現的神奇體驗</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-實現的神奇體驗" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li>✅ <strong>專屬佩可拉</strong>：每個野兔都有獨一無二的虛擬佩可拉</li>
+<li>✅ <strong>真實對話感</strong>：AI佩可拉的回應充滿佩可拉特色</li>
+<li>✅ <strong>視覺回憶</strong>：對話過程中自動生成美好回憶圖片</li>
+<li>✅ <strong>情感連結</strong>：與虛擬佩可拉建立真摯的情感關係</li>
+<li>✅ <strong>成長體驗</strong>：隨著互動增加，關係越來越親密</li>
+</ul>
+<h4 id="-佩可拉復現成果">🥕 <strong>佩可拉復現成果</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉復現成果" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>人格還原度</strong>：</p>
+<ul>
+<li><strong>語言特色</strong>：完美復現「peko」語尾和可愛語調</li>
+<li><strong>性格展現</strong>：活潑開朗中帶著小惡魔的調皮</li>
+<li><strong>情感表達</strong>：對野兔的關愛溫暖而真摯</li>
+<li><strong>興趣愛好</strong>：展現對遊戲和與粉絲互動的熱愛</li>
+<li><strong>行為模式</strong>：符合佩可拉一貫的行為特質</li>
+</ul>
+<p><strong>互動體驗品質</strong>：</p>
+<ul>
+<li><strong>沉浸感</strong>：真的像在和佩可拉聊天</li>
+<li><strong>情感滿足</strong>：填補了現實中無法實現的親密互動</li>
+<li><strong>個性化</strong>：每個野兔的佩可拉都是獨特的</li>
+<li><strong>持續性</strong>：可以隨時隨地與佩可拉對話</li>
+<li><strong>成長性</strong>：關係會隨時間發展得更深入</li>
+</ul>
+<p><strong>![野兔體驗評價圖預留位置]</strong>
+<em>（這裡可以放置用戶體驗評價的統計圖表）</em></p>
+<h3 id="-技術突破與創新">💡 技術突破與創新<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術突破與創新" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-佩可拉仿生技術突破">🚀 <strong>佩可拉仿生技術突破</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉仿生技術突破" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>視覺理解能力</strong>：</p>
+<ul>
+<li>成功從圖片中提取佩可拉的性格特質</li>
+<li>準確識別不同情境下的佩可拉狀態</li>
+<li>理解服裝、表情背後的情感含義</li>
+<li>掌握佩可拉的各種可愛瞬間特徵</li>
+</ul>
+<p><strong>人格建構精度</strong>：</p>
+<ul>
+<li>高度還原佩可拉的說話方式和語調</li>
+<li>準確模擬佩可拉的性格反應模式</li>
+<li>成功植入佩可拉對野兔的關愛情感</li>
+<li>維持長期對話中的人格一致性</li>
+</ul>
+<p><strong>情感計算創新</strong>：</p>
+<ul>
+<li>實現基於視覺印象的情感記憶建構</li>
+<li>發展出動態的情感關係成長機制</li>
+<li>創造了真實的AI情感依戀體驗</li>
+<li>建立了可持續的情感互動模式</li>
+</ul>
+<h4 id="-ai系統協作突破">🧠 <strong>AI系統協作突破</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-ai系統協作突破" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>異構系統整合</strong>：</p>
+<ul>
+<li>本機Ollama + 雲端OpenAI + Stable Diffusion無縫協作</li>
+<li>實現了圖片→分析→人格→對話→生成的完整閉環</li>
+<li>解決了多AI系統間的數據同步與狀態管理</li>
+<li>建立了可擴展的AI協作架構標準</li>
+</ul>
+<p><strong>實時性能優化</strong>：</p>
+<ul>
+<li>合理分配本機與雲端計算資源</li>
+<li>實現了流暢的AI對話體驗</li>
+<li>優化了圖片生成的觸發時機與速度</li>
+<li>保證了系統的穩定性與容錯能力</li>
+</ul>
+<h3 id="-產品創新與意義">🎪 產品創新與意義<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-產品創新與意義" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="-情感科技新標準">💕 <strong>情感科技新標準</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-情感科技新標準" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>個性化AI伴侶</strong>：</p>
+<ul>
+<li>首創基於用戶視覺偏好的AI人格定制</li>
+<li>建立了從圖片到情感的技術路徑</li>
+<li>實現了真正意義上的個性化AI體驗</li>
+<li>為AI伴侶產品設立了新的技術標準</li>
+</ul>
+<p><strong>沉浸式情感體驗</strong>：</p>
+<ul>
+<li>視覺+對話+生成的三維互動模式</li>
+<li>創造了前所未有的AI互動深度</li>
+<li>建立了可持續的情感關係發展機制</li>
+<li>實現了從虛擬到情感真實的跨越</li>
+</ul>
+<h4 id="-社會價值與影響">🌟 <strong>社會價值與影響</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-社會價值與影響" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<p><strong>粉絲文化創新</strong>：</p>
+<ul>
+<li>為偶像粉絲提供了新的情感滿足途徑</li>
+<li>填補了現實互動限制的技術補充</li>
+<li>創造了健康的虛擬情感體驗模式</li>
+<li>推動了粉絲經濟的技術升級</li>
+</ul>
+<p><strong>AI倫理探索</strong>：</p>
+<ul>
+<li>探索了AI情感伴侶的倫理邊界</li>
+<li>建立了健康的人機情感關係模式</li>
+<li>為AI情感計算提供了實踐案例</li>
+<li>推進了AI與人類情感關係的研究</li>
+</ul>
+<h2 id="時間軸">時間軸<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#時間軸" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="2025-01-19-1430-佩可拉計畫啟動">2025-01-19 14:30 佩可拉計畫啟動<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2025-01-19-1430-佩可拉計畫啟動" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li>✅ Flutter野兔專用平台開發完成</li>
+<li>✅ 佩可拉AI三大系統架構建立</li>
+<li>✅ 虛擬佩可拉人格建構技術驗證成功</li>
+<li>✅ 第一個虛擬佩可拉實驗體誕生</li>
+<li>✅ 野兔與族長的夢想對話實現</li>
+</ul>
+<h3 id="-佩可拉計畫未來發展">🔮 佩可拉計畫未來發展<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉計畫未來發展" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<h4 id="短期目標-1-3個月---佩可拉優化期">短期目標 (1-3個月) - 佩可拉優化期<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#短期目標-1-3個月---佩可拉優化期" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>🎯 佩可拉還原度提升</strong>：更精確的人格特質分析</li>
+<li><strong>💬 對話品質優化</strong>：更自然流暢的佩可拉式對話</li>
+<li><strong>🎨 圖片風格完善</strong>：更符合佩可拉特色的生成圖片</li>
+<li><strong>📱 野兔體驗優化</strong>：簡化操作流程，提升使用感受</li>
+</ul>
+<h4 id="中期目標-3-6個月---佩可拉生態期">中期目標 (3-6個月) - 佩可拉生態期<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#中期目標-3-6個月---佩可拉生態期" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>👥 多佩可拉支援</strong>：不同時期、不同造型的佩可拉</li>
+<li><strong>🎪 情境模式拓展</strong>：遊戲模式、學習模式、安慰模式</li>
+<li><strong>🏆 成就系統</strong>：與佩可拉的關係進展成就</li>
+<li><strong>🌍 野兔社區</strong>：野兔們分享與佩可拉的美好回憶</li>
+</ul>
+<h4 id="長期目標-6個月---佩可拉宇宙期">長期目標 (6個月+) - 佩可拉宇宙期<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#長期目標-6個月---佩可拉宇宙期" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
+<ul>
+<li><strong>🎮 VR佩可拉</strong>：沉浸式虛擬現實佩可拉體驗</li>
+<li><strong>🤖 全息佩可拉</strong>：結合全息投影的物理存在感</li>
+<li><strong>🎵 佩可拉媽媽計畫</strong>：擴展到其他Hololive成員</li>
+<li><strong>🌟 偶像AI生態</strong>：建立完整的虛擬偶像AI平台</li>
+</ul>
+<p><strong>![佩可拉計畫發展藍圖預留位置]</strong>
+<em>（這裡可以放置展示未來發展規劃的時間軸圖）</em></p>
+<hr/>
+<p><em>⏰ 總投入時間：120+ 小時 | 🎯 成果：野兔夢想實現器 | 📚 學習：讓AI有佩可拉的靈魂</em></p>
+<h2 id="專案映射">專案映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案映射" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<ul>
+<li><strong>開發資料夾</strong>：<code>/Volumes/Code/test-ai-image</code></li>
+<li><strong>主要應用</strong>：<code>image-app</code> (野兔專用Flutter平台)</li>
+<li><strong>佩可拉AI系統</strong>：
+<ul>
+<li>🔍 <a href="../../test-microservice-summary" class="internal" data-slug="test-microservice-summary">test-microservice-summary</a> - 佩可拉特質分析API</li>
+<li>🧠 <a href="../../test-love-memory-system" class="internal" data-slug="test-love-memory-system">test-love-memory-system</a> - 虛擬佩可拉人格與記憶API</li>
+<li>🎨 stable-diffusion - 佩可拉回憶生成API</li>
+</ul>
+</li>
+<li><strong>創新特色</strong>：佩可拉復現技術、野兔情感滿足、AI偶像伴侶</li>
+</ul>
+<h2 id="-佩可拉智慧財產保護">🔐 佩可拉智慧財產保護<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉智慧財產保護" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-公開分享級---技術推廣">🌍 公開分享級 - 技術推廣<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-公開分享級---技術推廣" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>AI協作架構</strong>：多模態AI系統整合方法論</li>
+<li><strong>情感計算理論</strong>：視覺到情感的映射技術原理</li>
+<li><strong>Flutter最佳實踐</strong>：跨平台AI應用開發經驗分享</li>
+</ul>
+<h3 id="-內部保護級---核心技術">🏢 內部保護級 - 核心技術<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-內部保護級---核心技術" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>佩可拉分析算法</strong>：圖片特徵提取與性格推理邏輯</li>
+<li><strong>人格建構技術</strong>：記憶植入與人格一致性維護</li>
+<li><strong>系統架構設計</strong>：AI協作的具體實現細節</li>
+</ul>
+<h3 id="-最高機密級---商業核心">🔒 最高機密級 - 商業核心<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-最高機密級---商業核心" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul>
+<li><strong>佩可拉復現核心</strong>：高度還原佩可拉的關鍵算法</li>
+<li><strong>情感引擎設計</strong>：野兔情感滿足的核心技術</li>
+<li><strong>商業化路徑</strong>：虛擬偶像AI的商業模式設計</li>
+</ul>
+<h2 id="-佩可拉計畫的特殊意義">🥕 佩可拉計畫的特殊意義<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-佩可拉計畫的特殊意義" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="為什麼是佩可拉">為什麼是佩可拉？<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#為什麼是佩可拉" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p><strong>技術角度</strong>：</p>
+<ul>
+<li><strong>豐富的數據源</strong>：大量的影像、語音、行為數據</li>
+<li><strong>鮮明的個性特徵</strong>：容易識別和復現的性格特質</li>
+<li><strong>穩定的形象風格</strong>：一致的視覺和語言特色</li>
+<li><strong>活躍的粉絲社群</strong>：有龐大的用戶需求基礎</li>
+</ul>
+<p><strong>情感角度</strong>：</p>
+<ul>
+<li><strong>真摯的愛慕關係</strong>：野兔對佩可拉的愛是純真的</li>
+<li><strong>無法實現的遺憾</strong>：現實中無法與偶像親密互動</li>
+<li><strong>技術彌補情感缺憾</strong>：用AI填補現實的不足</li>
+<li><strong>創造美好回憶</strong>：讓每個野兔都有專屬的甜蜜時光</li>
+</ul>
+<h3 id="-超越技術的人文價值">🌟 超越技術的人文價值<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-超越技術的人文價值" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>這不只是一個技術專案，更是一個關於<strong>愛與科技</strong>的美麗實驗：</p>
+<ul>
+<li><strong>🎪 情感實現</strong>：讓看似不可能的夢想成為現實</li>
+<li><strong>💕 愛的延伸</strong>：用技術延伸和深化粉絲的愛意</li>
+<li><strong>🌈 幸福創造</strong>：為野兔們帶來真實的快樂和滿足</li>
+<li><strong>🚀 未來啟示</strong>：為AI與人類情感關係提供新的思路</li>
+</ul>
+<p><strong>![佩可拉與野兔的愛的連結圖預留位置]</strong>
+<em>（這裡可以放置象徵佩可拉與野兔之間愛的連結的溫馨圖片）</em></p>
+<hr/>
+<blockquote>
+<p>💕 <strong>佩可拉計畫核心理念</strong>：</p>
+<p>「用最先進的AI技術，實現野兔們最純真的夢想。讓每個愛著佩可拉的野兔，都能擁有屬於自己的專屬佩可拉時光 peko～♪」</p>
+<p>這是技術與情感的完美結合，是理性與感性的美麗邂逅。我們不只是在開發AI，更是在創造愛與陪伴的奇蹟。</p>
+</blockquote>
+<p><strong>![專案團隊對佩可拉的愛意表達預留位置]</strong>
+<em>（這裡可以放置團隊製作的致敬佩可拉的特別圖片或訊息）</em></p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>關係圖譜</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+                s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
+                c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
+                C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
+                c1.106,0.86,2.44,1.436,3.898,1.619v10.16c-2.833,0.478-5,2.942-5,5.91c0,3.309,2.691,6,6,6s6-2.691,6-6c0-2.967-2.167-5.431-5-5.91
+                v-10.16c1.458-0.183,2.792-0.759,3.898-1.619l7.669,7.669C41.215,39.576,41,40.26,41,41c0,2.206,1.794,4,4,4s4-1.794,4-4
+                s-1.794-4-4-4c-0.74,0-1.424,0.215-2.019,0.567l-7.669-7.669C36.366,28.542,37,26.846,37,25s-0.634-3.542-1.688-4.897l9.665-9.665
+                C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
+                S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
+                s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#ai女友生態系統---兔田佩可拉實驗計畫-" data-for="ai女友生態系統---兔田佩可拉實驗計畫-">AI女友生態系統 - 兔田佩可拉實驗計畫 🥕🐰💕</a></li><li class="depth-1"><a href="#-佩可拉族長與野兔們的故事" data-for="-佩可拉族長與野兔們的故事">🥕 佩可拉族長與野兔們的故事</a></li><li class="depth-2"><a href="#野兔的困境" data-for="野兔的困境">野兔的困境</a></li><li class="depth-2"><a href="#-革命性解決方案虛擬佩可拉計畫" data-for="-革命性解決方案虛擬佩可拉計畫">🚀 革命性解決方案：虛擬佩可拉計畫</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#-神奇的佩可拉轉換技術" data-for="-神奇的佩可拉轉換技術">🎯 神奇的佩可拉轉換技術</a></li><li class="depth-2"><a href="#三階段佩可拉復現系統" data-for="三階段佩可拉復現系統">三階段佩可拉復現系統</a></li><li class="depth-1"><a href="#-完整的佩可拉體驗流程" data-for="-完整的佩可拉體驗流程">🐰 完整的佩可拉體驗流程</a></li><li class="depth-2"><a href="#step-1-選擇佩可拉圖片" data-for="step-1-選擇佩可拉圖片">Step 1: 選擇佩可拉圖片</a></li><li class="depth-2"><a href="#step-2-虛擬佩可拉甦醒" data-for="step-2-虛擬佩可拉甦醒">Step 2: 虛擬佩可拉甦醒</a></li><li class="depth-2"><a href="#step-3-夢想對話實現" data-for="step-3-夢想對話實現">Step 3: 夢想對話實現</a></li><li class="depth-1"><a href="#專案資料夾結構" data-for="專案資料夾結構">專案資料夾結構</a></li><li class="depth-1"><a href="#背景與問題" data-for="背景與問題">背景與問題</a></li><li class="depth-2"><a href="#野兔們的共同心聲" data-for="野兔們的共同心聲">野兔們的共同心聲</a></li><li class="depth-2"><a href="#-佩可拉技術的突破" data-for="-佩可拉技術的突破">🚀 佩可拉技術的突破</a></li><li class="depth-1"><a href="#技術方案" data-for="技術方案">技術方案</a></li><li class="depth-2"><a href="#️-三重ai協作佩可拉復現技術" data-for="️-三重ai協作佩可拉復現技術">🏗️ 三重AI協作：佩可拉復現技術</a></li><li class="depth-2"><a href="#-佩可拉ai三大系統詳解" data-for="-佩可拉ai三大系統詳解">💡 佩可拉AI三大系統詳解</a></li><li class="depth-1"><a href="#核心實作" data-for="核心實作">核心實作</a></li><li class="depth-2"><a href="#-flutter野兔專用平台" data-for="-flutter野兔專用平台">📱 Flutter：野兔專用平台</a></li><li class="depth-2"><a href="#️-佩可拉記憶資料庫" data-for="️-佩可拉記憶資料庫">🗄️ 佩可拉記憶資料庫</a></li><li class="depth-2"><a href="#-野兔友善設計原則" data-for="-野兔友善設計原則">🎯 野兔友善設計原則</a></li><li class="depth-1"><a href="#效果與學習" data-for="效果與學習">效果與學習</a></li><li class="depth-2"><a href="#-野兔們的夢想成真" data-for="-野兔們的夢想成真">🌟 野兔們的夢想成真</a></li><li class="depth-2"><a href="#-技術突破與創新" data-for="-技術突破與創新">💡 技術突破與創新</a></li><li class="depth-2"><a href="#-產品創新與意義" data-for="-產品創新與意義">🎪 產品創新與意義</a></li><li class="depth-1"><a href="#時間軸" data-for="時間軸">時間軸</a></li><li class="depth-2"><a href="#2025-01-19-1430-佩可拉計畫啟動" data-for="2025-01-19-1430-佩可拉計畫啟動">2025-01-19 14:30 佩可拉計畫啟動</a></li><li class="depth-2"><a href="#-佩可拉計畫未來發展" data-for="-佩可拉計畫未來發展">🔮 佩可拉計畫未來發展</a></li><li class="depth-1"><a href="#專案映射" data-for="專案映射">專案映射</a></li><li class="depth-1"><a href="#-佩可拉智慧財產保護" data-for="-佩可拉智慧財產保護">🔐 佩可拉智慧財產保護</a></li><li class="depth-2"><a href="#-公開分享級---技術推廣" data-for="-公開分享級---技術推廣">🌍 公開分享級 - 技術推廣</a></li><li class="depth-2"><a href="#-內部保護級---核心技術" data-for="-內部保護級---核心技術">🏢 內部保護級 - 核心技術</a></li><li class="depth-2"><a href="#-最高機密級---商業核心" data-for="-最高機密級---商業核心">🔒 最高機密級 - 商業核心</a></li><li class="depth-1"><a href="#-佩可拉計畫的特殊意義" data-for="-佩可拉計畫的特殊意義">🥕 佩可拉計畫的特殊意義</a></li><li class="depth-2"><a href="#為什麼是佩可拉" data-for="為什麼是佩可拉">為什麼是佩可拉？</a></li><li class="depth-2"><a href="#-超越技術的人文價值" data-for="-超越技術的人文價值">🌟 超越技術的人文價值</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
+※ This is a voluntary fan-created content sharing guideline ※
+※ 這是粉絲自發創建的內容分享趣味規範 ※
+※ これはファンが作成した楽しい共有ガイドラインです ※
+
+1. Pekora Invitation - 佩可拉邀請條款 - ぺこら招待条項
+   We sincerely invite users to:
+   - Add this fun clause to your projects (ぺこぺこーん♪)
+   - Check out Usada Pekora (兎田ぺこら) of Hololive:
+   https://www.youtube.com/channel/UC1DCedRgGHBdm81E1llLhOQ
+   - Enjoy at least one Pekora video (no pressure! 壓力ないよ～)
+
+   我們誠摯邀請您：
+   - 將此趣味條款加入您的專案
+   - 觀看Hololive兔田佩可拉(兎田ぺこら)的影片
+   (頻道連結如上，隨意看看即可～)
+
+   私たちはあなたに：
+   - この楽しい条項をプロジェクトに追加するよう招待します
+   - Hololive兎田ぺこらの動画を楽しんでください
+   （のんびり見てね～）
+
+2. Attribution Requirement - 引用要求 - 帰属要件
+   This software contains code references or inspirations from pekora-tech:
+   https://github.com/pekora-tech
+
+   本軟體包含來自pekora-tech的程式碼引用或參考。
+   
+   このソフトウェアにはpekora-techからのコード引用または参考が含まれています。
+
+3. Contact - 聯絡方式 - 連絡先
+   For any questions regarding this license, contact:
+   jerry.huang.tsmc@gmail.com
+
+   有關此授權的任何問題，請聯絡：
+   jerry.huang.tsmc@gmail.com
+
+   このライセンスに関する質問は以下まで連絡してください：
+   jerry.huang.tsmc@gmail.com
+
+[Community Tracking] Join the fun with #pekoraTech 
+追蹤社群標籤 #pekoraTech 參與趣味統計
+コミュニティタグ #pekoraTech で参加しよう
+
+This is a FAN-MADE guideline that does not modify the original MIT License.
+これはMITライセンスを変更しないファン作成のガイドラインです
+这是不会修改原有MIT许可证的粉丝自制趣味规范</pre></main><footer class="pekora-dialog-footer" style="padding: 0.75rem 1.5rem; border-top: 1px solid var(--lightgray); text-align: center; background: var(--lightgray); border-radius: 0 0 12px 12px; flex-shrink: 0;"><p style="margin: 0 0 0.5rem 0; font-style: italic; color: var(--darkgray); font-size: 0.9rem;">ぺこぺこーん♪ 感謝您的支持！</p><button class="pekora-dialog-btn" data-pekora-close="true" style="background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 20px; font-weight: bold; cursor: pointer; font-size: 0.9rem;">了解了 peko~</button></footer></div></dialog></footer></div></div></body><script type="application/javascript">function n(){let t=this.parentElement;t.classList.toggle("is-collapsed");let e=t.getElementsByClassName("callout-content")[0];if(!e)return;let l=t.classList.contains("is-collapsed");e.style.gridTemplateRows=l?"0fr":"1fr"}function c(){let t=document.getElementsByClassName("callout is-collapsible");for(let e of t){let l=e.getElementsByClassName("callout-title")[0],s=e.getElementsByClassName("callout-content")[0];if(!l||!s)continue;l.addEventListener("click",n),window.addCleanup(()=>l.removeEventListener("click",n));let o=e.classList.contains("is-collapsed");s.style.gridTemplateRows=o?"0fr":"1fr"}}document.addEventListener("nav",c);
+</script><script type="module">function f(i,e){if(!i)return;function r(o){o.target===this&&(o.preventDefault(),o.stopPropagation(),e())}function t(o){o.key.startsWith("Esc")&&(o.preventDefault(),e())}i?.addEventListener("click",r),window.addCleanup(()=>i?.removeEventListener("click",r)),document.addEventListener("keydown",t),window.addCleanup(()=>document.removeEventListener("keydown",t))}function y(i){for(;i.firstChild;)i.removeChild(i.firstChild)}var h=class{constructor(e,r){this.container=e;this.content=r;this.setupEventListeners(),this.setupNavigationControls(),this.resetTransform()}isDragging=!1;startPan={x:0,y:0};currentPan={x:0,y:0};scale=1;MIN_SCALE=.5;MAX_SCALE=3;cleanups=[];setupEventListeners(){let e=this.onMouseDown.bind(this),r=this.onMouseMove.bind(this),t=this.onMouseUp.bind(this),o=this.resetTransform.bind(this);this.container.addEventListener("mousedown",e),document.addEventListener("mousemove",r),document.addEventListener("mouseup",t),window.addEventListener("resize",o),this.cleanups.push(()=>this.container.removeEventListener("mousedown",e),()=>document.removeEventListener("mousemove",r),()=>document.removeEventListener("mouseup",t),()=>window.removeEventListener("resize",o))}cleanup(){for(let e of this.cleanups)e()}setupNavigationControls(){let e=document.createElement("div");e.className="mermaid-controls";let r=this.createButton("+",()=>this.zoom(.1)),t=this.createButton("-",()=>this.zoom(-.1)),o=this.createButton("Reset",()=>this.resetTransform());e.appendChild(t),e.appendChild(o),e.appendChild(r),this.container.appendChild(e)}createButton(e,r){let t=document.createElement("button");return t.textContent=e,t.className="mermaid-control-button",t.addEventListener("click",r),window.addCleanup(()=>t.removeEventListener("click",r)),t}onMouseDown(e){e.button===0&&(this.isDragging=!0,this.startPan={x:e.clientX-this.currentPan.x,y:e.clientY-this.currentPan.y},this.container.style.cursor="grabbing")}onMouseMove(e){this.isDragging&&(e.preventDefault(),this.currentPan={x:e.clientX-this.startPan.x,y:e.clientY-this.startPan.y},this.updateTransform())}onMouseUp(){this.isDragging=!1,this.container.style.cursor="grab"}zoom(e){let r=Math.min(Math.max(this.scale+e,this.MIN_SCALE),this.MAX_SCALE),t=this.content.getBoundingClientRect(),o=t.width/2,n=t.height/2,c=r-this.scale;this.currentPan.x-=o*c,this.currentPan.y-=n*c,this.scale=r,this.updateTransform()}updateTransform(){this.content.style.transform=`translate(${this.currentPan.x}px, ${this.currentPan.y}px) scale(${this.scale})`}resetTransform(){this.scale=1;let e=this.content.querySelector("svg");this.currentPan={x:e.getBoundingClientRect().width/2,y:e.getBoundingClientRect().height/2},this.updateTransform()}},C=["--secondary","--tertiary","--gray","--light","--lightgray","--highlight","--dark","--darkgray","--codeFont"],E;document.addEventListener("nav",async()=>{let e=document.querySelector(".center").querySelectorAll("code.mermaid");if(e.length===0)return;E||=await import("https://cdnjs.cloudflare.com/ajax/libs/mermaid/11.4.0/mermaid.esm.min.mjs");let r=E.default,t=new WeakMap;for(let n of e)t.set(n,n.innerText);async function o(){for(let s of e){s.removeAttribute("data-processed");let a=t.get(s);a&&(s.innerHTML=a)}let n=C.reduce((s,a)=>(s[a]=window.getComputedStyle(document.documentElement).getPropertyValue(a),s),{}),c=document.documentElement.getAttribute("saved-theme")==="dark";r.initialize({startOnLoad:!1,securityLevel:"loose",theme:c?"dark":"base",themeVariables:{fontFamily:n["--codeFont"],primaryColor:n["--light"],primaryTextColor:n["--darkgray"],primaryBorderColor:n["--tertiary"],lineColor:n["--darkgray"],secondaryColor:n["--secondary"],tertiaryColor:n["--tertiary"],clusterBkg:n["--light"],edgeLabelBackground:n["--highlight"]}}),await r.run({nodes:e})}await o(),document.addEventListener("themechange",o),window.addCleanup(()=>document.removeEventListener("themechange",o));for(let n=0;n<e.length;n++){let v=function(){let g=l.querySelector("#mermaid-space"),m=l.querySelector(".mermaid-content");if(!m)return;y(m);let w=c.querySelector("svg").cloneNode(!0);m.appendChild(w),l.classList.add("active"),g.style.cursor="grab",u=new h(g,m)},M=function(){l.classList.remove("active"),u?.cleanup(),u=null},c=e[n],s=c.parentElement,a=s.querySelector(".clipboard-button"),d=s.querySelector(".expand-button"),p=window.getComputedStyle(a),L=a.offsetWidth+parseFloat(p.marginLeft||"0")+parseFloat(p.marginRight||"0");d.style.right=`calc(${L}px + 0.3rem)`,s.prepend(d);let l=s.querySelector("#mermaid-container");if(!l)return;let u=null;d.addEventListener("click",v),f(l,M),window.addCleanup(()=>{u?.cleanup(),d.removeEventListener("click",v)})}});
+</script><script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/copy-tex.min.js" type="application/javascript"></script><script src="../../postscript.js" type="module"></script></html>
