@@ -10,7 +10,13 @@
     <link>https://pekora-tech.github.io/</link>
     <guid>https://pekora-tech.github.io/</guid>
     <description>專精收斂而非擴散 - 從第一性原理思考的技術探索之旅</description>
-    <pubDate>Sun, 13 Jul 2025 15:20:32 GMT</pubDate>
+    <pubDate>Sun, 20 Jul 2025 09:21:02 GMT</pubDate>
+  </item><item>
+    <title>專案建置與分析</title>
+    <link>https://pekora-tech.github.io/projects/</link>
+    <guid>https://pekora-tech.github.io/projects/</guid>
+    <description>深度技術分析與專案經驗整合，從實踐中提煉架構智慧</description>
+    <pubDate>Sun, 20 Jul 2025 09:21:02 GMT</pubDate>
   </item><item>
     <title>SelfPageSource 技術文件化專案</title>
     <link>https://pekora-tech.github.io/index-formal</link>
@@ -58,12 +64,6 @@
     <link>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</link>
     <guid>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</guid>
     <description>基於 test-ai-memory 架構的客服系統實驗，嘗試將記憶系統轉化為技術支援平台</description>
-    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Test Node.js API Example - RESTful API 範例專案</title>
-    <link>https://pekora-tech.github.io/projects/development-tools/test-nodejs-api-example</link>
-    <guid>https://pekora-tech.github.io/projects/development-tools/test-nodejs-api-example</guid>
-    <description>標準化的 Node.js RESTful API 範例專案，提供完整的 API 設計模板</description>
     <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>
