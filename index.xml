@@ -6,6 +6,12 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>PekoraTech 🚀 技術知識庫</title>
+    <link>https://pekora-tech.github.io/</link>
+    <guid>https://pekora-tech.github.io/</guid>
+    <description>專精收斂而非擴散 - 從第一性原理思考的技術探索之旅</description>
+    <pubDate>Sat, 26 Jul 2025 15:30:08 GMT</pubDate>
+  </item><item>
     <title>Monorepo最佳實踐指南</title>
     <link>https://pekora-tech.github.io/doc/Monorepo%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90%E6%8C%87%E5%8D%97</link>
     <guid>https://pekora-tech.github.io/doc/Monorepo%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90%E6%8C%87%E5%8D%97</guid>
@@ -58,12 +64,6 @@
     <link>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</link>
     <guid>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</guid>
     <description>📸 圖片管理指南 內部技術文件 - 圖片資源標準化管理方案 最後更新：2025-07-06 v1.0 🗂️ 資料夾結構 content/ ├── assets/ # 靜態資源根目錄 │ └── images/ # 圖片資源 │ ├── ai-tools/ # AI工具領域圖片 │ │ ├── test-ai-memory/ # test-ai-memory專案圖片 │ │ └── [其他AI專案]/ │ ├── development-tools/ # 開發工具領域圖片 │ │ ├── calu-app/ # calu-app專案圖片 │ │ └── [其他開發工具]/ │ ├── bro...</description>
-    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
-  </item><item>
-    <title>PekoraTech 🚀 技術知識庫</title>
-    <link>https://pekora-tech.github.io/</link>
-    <guid>https://pekora-tech.github.io/</guid>
-    <description>專精收斂而非擴散 - 從第一性原理思考的技術探索之旅</description>
     <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item>
     </channel>
