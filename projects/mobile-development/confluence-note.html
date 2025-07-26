@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh"><head><title>高度結構化筆記系統 | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="高度結構化筆記系統 | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="高度結構化筆記系統 | 個人技術知識庫"/><meta name="twitter:description" content="以「事」為中心，關聯「人、地、物、時」維度的高度結構化筆記管理系統"/><meta property="og:description" content="以「事」為中心，關聯「人、地、物、時」維度的高度結構化筆記管理系統"/><meta property="og:image:alt" content="以「事」為中心，關聯「人、地、物、時」維度的高度結構化筆記管理系統"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note"/><meta property="twitter:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="以「事」為中心，關聯「人、地、物、時」維度的高度結構化筆記管理系統"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+<html lang="zh"><head><title>ConfluenceNote - 結構化知識管理系統 | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="ConfluenceNote - 結構化知識管理系統 | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="ConfluenceNote - 結構化知識管理系統 | 個人技術知識庫"/><meta name="twitter:description" content="企業級結構化筆記系統，以「人事時地物」五維度架構實現智能工作記錄與知識管理"/><meta property="og:description" content="企業級結構化筆記系統，以「人事時地物」五維度架構實現智能工作記錄與知識管理"/><meta property="og:image:alt" content="企業級結構化筆記系統，以「人事時地物」五維度架構實現智能工作記錄與知識管理"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note"/><meta property="twitter:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="企業級結構化筆記系統，以「人事時地物」五維度架構實現智能工作記錄與知識管理"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
   position: absolute;
   display: flex;
   float: right;
@@ -116,216 +116,1092 @@ pre:hover > .expand-button {
   padding: 0 12px;
   font-size: 14px;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="projects/mobile-development/confluence-note"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="閱讀模式"><title>閱讀模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">專案建置與分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/mobile-development/">mobile development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>高度結構化筆記系統</a></div></nav><h1 class="article-title">高度結構化筆記系統</h1><p show-comma="true" class="content-meta"><time datetime="2025-01-20T00:00:00.000Z">2025年1月20日</time><span>閱讀時間約 9 分鐘</span></p><ul class="tags"><li><a href="../../tags/筆記管理" class="internal tag-link">筆記管理</a></li><li><a href="../../tags/知識管理" class="internal tag-link">知識管理</a></li><li><a href="../../tags/結構化數據" class="internal tag-link">結構化數據</a></li><li><a href="../../tags/工作助手" class="internal tag-link">工作助手</a></li></ul></div></div><article class="popover-hint"><h1 id="-confluencenote---高度結構化筆記系統">📝 ConfluenceNote - 高度結構化筆記系統<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-confluencenote---高度結構化筆記系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/projects/mobile-development/confluence-note-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="projects/mobile-development/confluence-note"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="閱讀模式"><title>閱讀模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">專案建置與分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/mobile-development/">mobile development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>ConfluenceNote   結構化知識管理系統</a></div></nav><h1 class="article-title">ConfluenceNote - 結構化知識管理系統</h1><p show-comma="true" class="content-meta"><time datetime="2025-01-20T00:00:00.000Z">2025年1月20日</time><span>閱讀時間約 21 分鐘</span></p><ul class="tags"><li><a href="../../tags/筆記管理" class="internal tag-link">筆記管理</a></li><li><a href="../../tags/知識管理" class="internal tag-link">知識管理</a></li><li><a href="../../tags/結構化數據" class="internal tag-link">結構化數據</a></li><li><a href="../../tags/企業級應用" class="internal tag-link">企業級應用</a></li><li><a href="../../tags/五維度架構" class="internal tag-link">五維度架構</a></li></ul></div></div><article class="popover-hint"><h1 id="-confluencenote---結構化知識管理系統">📝 ConfluenceNote - 結構化知識管理系統<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-confluencenote---結構化知識管理系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
 <blockquote>
-<p>一個基於「人事時地物」五維度架構的智能筆記管理系統，以「事」為核心，實現高度結構化的知識組織和工作事務管理</p>
+<p>一個革命性的筆記管理系統，運用「人事時地物」五維度架構，將抽象工作事務轉化為結構化數據，實現智能化知識組織與高效工作記錄</p>
 </blockquote>
 <h2 id="專案概述">專案概述<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案概述" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>路徑</strong>：<code>/Volumes/Code/test-flutter/confluence_note</code></li>
-<li><strong>技術棧</strong>：Flutter, SQLite, 本地認證, UUID, SharedPreferences</li>
-<li><strong>狀態</strong>：積極開發中，架構設計完成</li>
-<li><strong>複雜度</strong>：複雜級別 - 企業級架構設計，多層數據關聯</li>
-<li><strong>領域</strong>：移動開發 (mobile-development)</li>
-</ul>
-<h2 id="專案資料夾結構">專案資料夾結構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案資料夾結構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>項目</th><th>詳細信息</th></tr></thead><tbody><tr><td><strong>路徑</strong></td><td><code>/Volumes/Code/test-flutter/confluence_note</code></td></tr><tr><td><strong>技術棧</strong></td><td>Flutter, SQLite, Riverpod, Google Sign-In</td></tr><tr><td><strong>平台支持</strong></td><td>Windows, Android, iOS, macOS, Linux, Web</td></tr><tr><td><strong>狀態</strong></td><td>🚀 積極開發中，核心架構完成</td></tr><tr><td><strong>複雜度</strong></td><td>🏆 企業級 - 多層關聯、高度模組化</td></tr><tr><td><strong>領域</strong></td><td>📱 移動開發 (mobile-development)</td></tr></tbody></table></div>
+<h2 id="操作介面">操作介面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#操作介面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="ｗindows">Ｗindows<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#ｗindows" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>進入介面後，主要以筆記為首
+<img src="../../projects/mobile-development/attachments/Pasted-image-20250726223852.png" width="auto" height="auto" alt/></p>
+<p>筆記主要仰賴預設好的基礎資料設置，如下圖匡選的對應5W
+<img src="../../projects/mobile-development/attachments/Pasted-image-20250726223940.png" width="auto" height="auto" alt/></p>
+<p>在寫筆記時，就能快速調用
+<img src="../../projects/mobile-development/attachments/Pasted-image-20250726224025.png" width="auto" height="auto" alt/></p>
+<h3 id="android-與-ai">Android 與 AI<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#android-與-ai" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>Android 的部分已經成功嘗試擴增錄音功能，並且可轉換為文字</p>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726224624.png" width="auto" height="auto" alt/></p>
+<h2 id="-核心創新概念">🎯 核心創新概念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心創新概念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="五維度架構體系">五維度架構體系<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#五維度架構體系" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n    subgraph \&quot;五維度知識架構\&quot;\n        E[事 Event/Action&lt;br/>核心動作動詞]\n        P[人 Person&lt;br/>個體或群體]\n        T[時 Time&lt;br/>時間軸記錄]\n        L[地 Location&lt;br/>物理虛擬空間]\n        O[物 Object&lt;br/>工作項目物件]\n    end\n    \n    subgraph \&quot;關聯體系\&quot;\n        N[NoteEntry&lt;br/>筆記條目]\n        N -.->|多對多| P\n        N -.->|一對一| L\n        N -.->|多對多| O\n        N -.->|一對一| E\n        N -.->|時間戳| T\n    end\n    \n    style E fill:#ff6b6b\n    style P fill:#4ecdc4\n    style T fill:#45b7d1\n    style L fill:#96ceb4\n    style O fill:#ffeaa7\n    style N fill:#dda0dd&quot;">graph TB
+    subgraph &quot;五維度知識架構&quot;
+        E[事 Event/Action&lt;br/>核心動作動詞]
+        P[人 Person&lt;br/>個體或群體]
+        T[時 Time&lt;br/>時間軸記錄]
+        L[地 Location&lt;br/>物理虛擬空間]
+        O[物 Object&lt;br/>工作項目物件]
+    end
+    
+    subgraph &quot;關聯體系&quot;
+        N[NoteEntry&lt;br/>筆記條目]
+        N -.->|多對多| P
+        N -.->|一對一| L
+        N -.->|多對多| O
+        N -.->|一對一| E
+        N -.->|時間戳| T
+    end
+    
+    style E fill:#ff6b6b
+    style P fill:#4ecdc4
+    style T fill:#45b7d1
+    style L fill:#96ceb4
+    style O fill:#ffeaa7
+    style N fill:#dda0dd
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="系統架構概念圖">系統架構概念圖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#系統架構概念圖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;C4Component\n    title ConfluenceNote 系統架構概覽\n    \n    Container_Boundary(ui, \&quot;用戶界面層\&quot;) {\n        Component(nav, \&quot;左側導航欄\&quot;, \&quot;Flutter Widget\&quot;, \&quot;五維度導航\&quot;)\n        Component(content, \&quot;內容區域\&quot;, \&quot;Flutter Widget\&quot;, \&quot;動態內容展示\&quot;)\n        Component(forms, \&quot;表單組件\&quot;, \&quot;Flutter Widget\&quot;, \&quot;結構化數據輸入\&quot;)\n    }\n    \n    Container_Boundary(business, \&quot;業務邏輯層\&quot;) {\n        Component(providers, \&quot;狀態管理\&quot;, \&quot;Riverpod\&quot;, \&quot;全域狀態管理\&quot;)\n        Component(features, \&quot;功能模塊\&quot;, \&quot;Feature Modules\&quot;, \&quot;按維度組織功能\&quot;)\n        Component(auth, \&quot;認證服務\&quot;, \&quot;Auth Service\&quot;, \&quot;Google登入+本地認證\&quot;)\n    }\n    \n    Container_Boundary(data, \&quot;數據存取層\&quot;) {\n        Component(repos, \&quot;倉儲模式\&quot;, \&quot;Repository Pattern\&quot;, \&quot;數據存取抽象\&quot;)\n        Component(models, \&quot;數據模型\&quot;, \&quot;Dart Models\&quot;, \&quot;五維度實體模型\&quot;)\n        Component(db, \&quot;SQLite\&quot;, \&quot;Local Database\&quot;, \&quot;結構化本地存儲\&quot;)\n    }\n    \n    Rel(nav, providers, \&quot;狀態訂閱\&quot;)\n    Rel(content, features, \&quot;功能調用\&quot;)\n    Rel(providers, repos, \&quot;數據請求\&quot;)\n    Rel(repos, db, \&quot;SQL操作\&quot;)&quot;">C4Component
+    title ConfluenceNote 系統架構概覽
+    
+    Container_Boundary(ui, &quot;用戶界面層&quot;) {
+        Component(nav, &quot;左側導航欄&quot;, &quot;Flutter Widget&quot;, &quot;五維度導航&quot;)
+        Component(content, &quot;內容區域&quot;, &quot;Flutter Widget&quot;, &quot;動態內容展示&quot;)
+        Component(forms, &quot;表單組件&quot;, &quot;Flutter Widget&quot;, &quot;結構化數據輸入&quot;)
+    }
+    
+    Container_Boundary(business, &quot;業務邏輯層&quot;) {
+        Component(providers, &quot;狀態管理&quot;, &quot;Riverpod&quot;, &quot;全域狀態管理&quot;)
+        Component(features, &quot;功能模塊&quot;, &quot;Feature Modules&quot;, &quot;按維度組織功能&quot;)
+        Component(auth, &quot;認證服務&quot;, &quot;Auth Service&quot;, &quot;Google登入+本地認證&quot;)
+    }
+    
+    Container_Boundary(data, &quot;數據存取層&quot;) {
+        Component(repos, &quot;倉儲模式&quot;, &quot;Repository Pattern&quot;, &quot;數據存取抽象&quot;)
+        Component(models, &quot;數據模型&quot;, &quot;Dart Models&quot;, &quot;五維度實體模型&quot;)
+        Component(db, &quot;SQLite&quot;, &quot;Local Database&quot;, &quot;結構化本地存儲&quot;)
+    }
+    
+    Rel(nav, providers, &quot;狀態訂閱&quot;)
+    Rel(content, features, &quot;功能調用&quot;)
+    Rel(providers, repos, &quot;數據請求&quot;)
+    Rel(repos, db, &quot;SQL操作&quot;)
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-數據庫架構設計">📊 數據庫架構設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-數據庫架構設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="實體關係圖-erd">實體關係圖 (ERD)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#實體關係圖-erd" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;erDiagram\n    User {\n        string id PK\n        string username\n        string email\n        bool isGuest\n        datetime createdAt\n        datetime lastLoginAt\n    }\n\n    NoteEntry {\n        string id PK\n        string title\n        string content\n        string coreActionVerb\n        datetime createdAt\n        datetime updatedAt\n        datetime eventOccurredAt\n        duration eventDuration\n        string tags\n        string notesForNote\n        string userId FK\n        string primaryPlaceId FK\n    }\n\n    Person {\n        string id PK\n        string name\n        string extensionNumber\n        string mobileNumber\n        string email\n        string notes\n        string salutationId FK\n        string categoryId FK\n        string userId FK\n    }\n\n    Place {\n        string id PK\n        string unitName\n        string address\n        string notes\n        string userId FK\n    }\n\n    WorkObject {\n        string id PK\n        string name\n        int type\n        string description\n        string status\n        string relatedProjectIds\n        string userId FK\n    }\n\n    Salutation {\n        string id PK\n        string name\n        string userId FK\n    }\n\n    PersonCategory {\n        string id PK\n        string name\n        string description\n        string userId FK\n    }\n\n    ActionVerb {\n        string id PK\n        string verb\n        string description\n        string userId FK\n    }\n\n    AudioAttachment {\n        string id PK\n        string noteEntryId FK\n        string filePath\n        string fileName\n        int fileSize\n        duration recordingDuration\n        datetime createdAt\n        string userId FK\n    }\n\n    NoteEntry_Person {\n        string noteEntryId PK, FK\n        string personId PK, FK\n    }\n\n    NoteEntry_WorkObject {\n        string noteEntryId PK, FK\n        string workObjectId PK, FK\n    }\n\n    Person_Place {\n        string personId PK, FK\n        string placeId PK, FK\n    }\n\n    %% 關聯關係\n    User ||--o{ NoteEntry : \&quot;擁有\&quot;\n    User ||--o{ Person : \&quot;管理\&quot;\n    User ||--o{ Place : \&quot;定義\&quot;\n    User ||--o{ WorkObject : \&quot;創建\&quot;\n    User ||--o{ Salutation : \&quot;設定\&quot;\n    User ||--o{ PersonCategory : \&quot;分類\&quot;\n    User ||--o{ ActionVerb : \&quot;維護\&quot;\n    User ||--o{ AudioAttachment : \&quot;記錄\&quot;\n\n    NoteEntry }o--|| Place : \&quot;發生地點\&quot;\n    NoteEntry ||--o{ AudioAttachment : \&quot;音頻附件\&quot;\n    \n    NoteEntry }o--|| NoteEntry_Person : \&quot;參與者\&quot;\n    Person ||--o{ NoteEntry_Person : \&quot;參與\&quot;\n\n    NoteEntry }o--|| NoteEntry_WorkObject : \&quot;關聯工作項\&quot;\n    WorkObject ||--o{ NoteEntry_WorkObject : \&quot;被引用\&quot;\n\n    Person }o--|| Salutation : \&quot;稱謂\&quot;\n    Person }o--|| PersonCategory : \&quot;分類\&quot;\n\n    Person ||--o{ Person_Place : \&quot;常駐地點\&quot;\n    Place ||--o{ Person_Place : \&quot;人員\&quot;&quot;">erDiagram
+    User {
+        string id PK
+        string username
+        string email
+        bool isGuest
+        datetime createdAt
+        datetime lastLoginAt
+    }
+
+    NoteEntry {
+        string id PK
+        string title
+        string content
+        string coreActionVerb
+        datetime createdAt
+        datetime updatedAt
+        datetime eventOccurredAt
+        duration eventDuration
+        string tags
+        string notesForNote
+        string userId FK
+        string primaryPlaceId FK
+    }
+
+    Person {
+        string id PK
+        string name
+        string extensionNumber
+        string mobileNumber
+        string email
+        string notes
+        string salutationId FK
+        string categoryId FK
+        string userId FK
+    }
+
+    Place {
+        string id PK
+        string unitName
+        string address
+        string notes
+        string userId FK
+    }
+
+    WorkObject {
+        string id PK
+        string name
+        int type
+        string description
+        string status
+        string relatedProjectIds
+        string userId FK
+    }
+
+    Salutation {
+        string id PK
+        string name
+        string userId FK
+    }
+
+    PersonCategory {
+        string id PK
+        string name
+        string description
+        string userId FK
+    }
+
+    ActionVerb {
+        string id PK
+        string verb
+        string description
+        string userId FK
+    }
+
+    AudioAttachment {
+        string id PK
+        string noteEntryId FK
+        string filePath
+        string fileName
+        int fileSize
+        duration recordingDuration
+        datetime createdAt
+        string userId FK
+    }
+
+    NoteEntry_Person {
+        string noteEntryId PK, FK
+        string personId PK, FK
+    }
+
+    NoteEntry_WorkObject {
+        string noteEntryId PK, FK
+        string workObjectId PK, FK
+    }
+
+    Person_Place {
+        string personId PK, FK
+        string placeId PK, FK
+    }
+
+    %% 關聯關係
+    User ||--o{ NoteEntry : &quot;擁有&quot;
+    User ||--o{ Person : &quot;管理&quot;
+    User ||--o{ Place : &quot;定義&quot;
+    User ||--o{ WorkObject : &quot;創建&quot;
+    User ||--o{ Salutation : &quot;設定&quot;
+    User ||--o{ PersonCategory : &quot;分類&quot;
+    User ||--o{ ActionVerb : &quot;維護&quot;
+    User ||--o{ AudioAttachment : &quot;記錄&quot;
+
+    NoteEntry }o--|| Place : &quot;發生地點&quot;
+    NoteEntry ||--o{ AudioAttachment : &quot;音頻附件&quot;
+    
+    NoteEntry }o--|| NoteEntry_Person : &quot;參與者&quot;
+    Person ||--o{ NoteEntry_Person : &quot;參與&quot;
+
+    NoteEntry }o--|| NoteEntry_WorkObject : &quot;關聯工作項&quot;
+    WorkObject ||--o{ NoteEntry_WorkObject : &quot;被引用&quot;
+
+    Person }o--|| Salutation : &quot;稱謂&quot;
+    Person }o--|| PersonCategory : &quot;分類&quot;
+
+    Person ||--o{ Person_Place : &quot;常駐地點&quot;
+    Place ||--o{ Person_Place : &quot;人員&quot;
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="數據分層架構">數據分層架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#數據分層架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>層級</th><th>職責</th><th>技術實現</th><th>示例</th></tr></thead><tbody><tr><td><strong>UI層</strong></td><td>用戶交互界面</td><td>Flutter Widgets</td><td><code>NotesScreen</code>, <code>PersonForm</code></td></tr><tr><td><strong>狀態管理層</strong></td><td>業務邏輯與狀態</td><td>Riverpod Providers</td><td><code>noteProvider</code>, <code>authProvider</code></td></tr><tr><td><strong>服務層</strong></td><td>業務規則處理</td><td>Service Classes</td><td><code>AuthService</code>, <code>AudioService</code></td></tr><tr><td><strong>倉儲層</strong></td><td>數據存取抽象</td><td>Repository Pattern</td><td><code>NoteRepository</code>, <code>PersonRepository</code></td></tr><tr><td><strong>數據層</strong></td><td>持久化存儲</td><td>SQLite + Models</td><td><code>DatabaseHelper</code>, 實體模型</td></tr></tbody></table></div>
+<h2 id="️-專案架構詳解">🏗️ 專案架構詳解<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-專案架構詳解" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="目錄結構圖">目錄結構圖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#目錄結構圖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <pre><code>confluence_note/
-├── lib/
-│   ├── main.dart                       # 應用入口點
-│   ├── app.dart                        # 應用根組件
-│   ├── src/
-│   │   ├── core/                       # 核心服務
-│   │   │   ├── database/
-│   │   │   │   └── database_helper.dart # SQLite 初始化和操作
-│   │   │   ├── auth/
-│   │   │   │   ├── auth_service.dart   # 本地認證服務
-│   │   │   │   └── auth_providers.dart # 認證提供者
-│   │   │   └── utils/
-│   │   │       ├── date_utils.dart     # 日期時間處理
-│   │   │       └── id_generator.dart   # UUID 生成
-│   │   ├── models/                     # 數據模型
-│   │   │   ├── note_entry.dart         # 筆記實體
-│   │   │   ├── person.dart             # 人員實體
-│   │   │   ├── place.dart              # 地點實體
-│   │   │   ├── work_object.dart        # 工作項/物
-│   │   │   └── [其他模型文件...]
-│   │   ├── repositories/               # 數據存取層
-│   │   ├── features/                   # 功能模塊
-│   │   │   ├── auth/                   # 認證相關
-│   │   │   ├── notes/                  # 筆記功能
-│   │   │   ├── people/                 # 人員管理
-│   │   │   ├── places/                 # 地點管理
-│   │   │   ├── work_objects/           # 工作項管理
-│   │   │   └── layout/                 # 主佈局
-│   │   └── widgets/                    # 共享組件
-├── README-project-1.md                 # 項目初始概念設計
-├── README-project-2.md                 # 系統架構詳細設計
-├── README-project-3.md                 # Flutter 實現指南
-├── README-project-4.md                 # 最終開發 Prompt
-└── [完整的Flutter專案結構]
+├── 📱 Platform Support
+│   ├── android/                   # Android 配置
+│   ├── ios/                       # iOS 配置  
+│   ├── windows/                   # Windows 桌面
+│   ├── macos/                     # macOS 桌面
+│   ├── linux/                     # Linux 桌面
+│   └── web/                       # Web 平台
+│
+├── 🎯 Core Application
+│   └── lib/
+│       ├── main.dart              # 🚀 應用入口
+│       ├── app.dart               # 🏠 根組件設置
+│       │
+│       └── src/
+│           ├── 🔧 core/           # 核心基礎設施
+│           │   ├── database/
+│           │   │   └── database_helper.dart
+│           │   ├── auth/
+│           │   │   ├── auth_service.dart
+│           │   │   └── auth_providers.dart
+│           │   └── utils/
+│           │       ├── date_utils.dart
+│           │       └── id_generator.dart
+│           │
+│           ├── 📊 models/         # 數據實體模型
+│           │   ├── note_entry.dart
+│           │   ├── person.dart
+│           │   ├── place.dart
+│           │   ├── work_object.dart
+│           │   ├── action_verb.dart
+│           │   └── user.dart
+│           │
+│           ├── 🗄️ repositories/   # 數據存取層
+│           │   ├── base_repository.dart
+│           │   ├── note_repository.dart
+│           │   ├── person_repository.dart
+│           │   ├── place_repository.dart
+│           │   └── work_object_repository.dart
+│           │
+│           ├── 🎭 features/       # 功能模塊 (Feature-First)
+│           │   ├── auth/          # 👤 認證功能
+│           │   │   └── screens/
+│           │   ├── notes/         # 📝 筆記核心
+│           │   │   ├── screens/
+│           │   │   └── widgets/
+│           │   ├── people/        # 👥 人員管理
+│           │   │   ├── screens/
+│           │   │   └── widgets/
+│           │   ├── places/        # 📍 地點管理
+│           │   │   ├── screens/
+│           │   │   └── widgets/
+│           │   ├── work_objects/  # 📋 工作項管理
+│           │   │   ├── screens/
+│           │   │   └── widgets/
+│           │   ├── audio/         # 🎙️ 音頻功能
+│           │   │   ├── models/
+│           │   │   ├── services/
+│           │   │   ├── widgets/
+│           │   │   └── screens/
+│           │   ├── layout/        # 🖼️ 主佈局
+│           │   │   ├── main_layout.dart
+│           │   │   ├── side_navigation.dart
+│           │   │   └── content_area.dart
+│           │   └── search/        # 🔍 搜索功能
+│           │       └── screens/
+│           │
+│           └── 🧩 widgets/        # 共享組件
+│               └── pickers/
+│                   └── entity_picker.dart
+│
+├── 📚 Documentation
+│   ├── README.md                  # 主要說明文件
+│   ├── README-project-1.md        # 概念設計
+│   ├── README-project-2.md        # 架構設計
+│   ├── README-project-3.md        # 實現指南
+│   ├── README-project-4.md        # 開發指導
+│   ├── AUDIO_FEATURE_PLAN.md      # 音頻功能規劃
+│   ├── AUDIO_TESTING_GUIDE.md     # 音頻測試指南
+│   ├── PHASE2_TESTING_GUIDE.md    # 第二階段測試
+│   ├── CHANGELOG.md               # 版本變更記錄
+│   └── CODE_OF_CONDUCT.md         # 行為準則
+│
+└── 🖼️ Assets
+    └── image/README/              # 說明文件截圖
 </code></pre>
-<h2 id="背景與問題">背景與問題<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#背景與問題" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="核心理念">核心理念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心理念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<blockquote>
-<p>將「人事時地物」以及核心的「事」（動作/動詞）作為組織筆記的核心維度，構建一個非常強大且貼合軟體工程師思維的工具。</p>
-</blockquote>
-<h3 id="設計哲學">設計哲學<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#設計哲學" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li><strong>以「事」為中心</strong>：筆記的核心是發生的「事件」或「動作」</li>
-<li><strong>五維度關聯</strong>：每個「事」都可以關聯到具體的「人、地、物、時」</li>
-<li><strong>高度結構化</strong>：不是自由文本，而是結構化的數據關聯</li>
-<li><strong>軟體工程思維</strong>：OOP概念，萬物皆可當成物品/對象</li>
-</ul>
-<h2 id="技術方案">技術方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術方案" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="-核心概念實體化">🎯 核心概念實體化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心概念實體化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="1-地-place---物理或虛擬空間">1. 地 (Place) - 物理或虛擬空間<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1-地-place---物理或虛擬空間" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="dart" data-theme="github-light github-dark"><code data-language="dart" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> Place</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  final</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> id;</span></span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> unitName;   </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 單位名稱 (例如：公司會議室A, 客戶辦公室)</span></span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> address;   </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 詳細地址</span></span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  String</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">?</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> notes;     </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 關於此地點的額外備註</span></span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">  String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> userId;     </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 用戶歸屬</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
-<h4 id="2-人-person---個體或群體">2. 人 (Person) - 個體或群體<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-人-person---個體或群體" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>分三區設計：稱謂、人分類、人資料</li>
-<li>引用分類稱謂跟地方資料Set</li>
-<li>包含人名、分機、手機、備註等</li>
-</ul>
-<h4 id="3-物-workobject---工作對象項目或產出物">3. 物 (WorkObject) - 工作對象、項目或產出物<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3-物-workobject---工作對象項目或產出物" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="dart" data-theme="github-light github-dark"><code data-language="dart" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">enum</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> WorkObjectType</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  meeting, developmentTask, documentation, bugFix,</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  research, personalProject, generalTask</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
-<ul>
-<li>OOP思維：萬物皆可當成物品</li>
-<li>軟體工程師的項目拆解概念</li>
-</ul>
-<h4 id="4-事-actionverb---核心動作事件或主題">4. 事 (ActionVerb) - 核心動作、事件或主題<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4-事-actionverb---核心動作事件或主題" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>核心動詞，描述「做什麼」</li>
-<li>補足物的不可具象性</li>
-<li>可能非常抽象的動作概念</li>
-</ul>
-<h4 id="5-時-noteentry---基於前四者建立的筆記條目">5. 時 (NoteEntry) - 基於前四者建立的筆記條目<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#5-時-noteentry---基於前四者建立的筆記條目" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>利用1~4的資源建置筆記</li>
-<li>時間維度的具體體現</li>
-<li>最終的知識載體</li>
-</ul>
-<h3 id="️-系統架構設計">🏗️ 系統架構設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-系統架構設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="左側導航欄結構">左側導航欄結構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#左側導航欄結構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<pre><code>主視圖
-├── 總覽/儀表板
-└── 所有筆記
+<h3 id="導航架構設計">導航架構設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#導航架構設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n    subgraph \&quot;左側導航架構\&quot;\n        A[總覽儀表板]\n        \n        subgraph \&quot;按事分類\&quot;\n            B1[討論相關]\n            B2[設計工作] \n            B3[開發日誌]\n            B4[會議記錄]\n        end\n        \n        subgraph \&quot;按物分類\&quot;\n            C1[開發任務]\n            C2[文檔工作]\n            C3[Bug修復]\n            C4[研究項目]\n        end\n        \n        subgraph \&quot;按人分類\&quot;\n            D1[同事]\n            D2[客戶]\n            D3[合作夥伴]\n            D4[外部聯絡人]\n        end\n        \n        subgraph \&quot;按地分類\&quot;\n            E1[會議室]\n            E2[辦公室]\n            E3[遠程會議]\n            E4[外部地點]\n        end\n        \n        subgraph \&quot;按時分類\&quot;\n            F1[今天]\n            F2[本週]\n            F3[本月]\n            F4[日曆視圖]\n        end\n        \n        subgraph \&quot;系統管理\&quot;\n            G1[人員管理]\n            G2[地點管理]\n            G3[工作項管理]\n            G4[動作庫管理]\n            G5[系統設定]\n        end\n    end\n    \n    A --> B1\n    style A fill:#e1f5fe\n    style B1 fill:#fff3e0\n    style C1 fill:#f3e5f5\n    style D1 fill:#e8f5e8\n    style E1 fill:#fff8e1\n    style F1 fill:#fce4ec\n    style G1 fill:#f1f8e9&quot;">graph LR
+    subgraph &quot;左側導航架構&quot;
+        A[總覽儀表板]
+        
+        subgraph &quot;按事分類&quot;
+            B1[討論相關]
+            B2[設計工作] 
+            B3[開發日誌]
+            B4[會議記錄]
+        end
+        
+        subgraph &quot;按物分類&quot;
+            C1[開發任務]
+            C2[文檔工作]
+            C3[Bug修復]
+            C4[研究項目]
+        end
+        
+        subgraph &quot;按人分類&quot;
+            D1[同事]
+            D2[客戶]
+            D3[合作夥伴]
+            D4[外部聯絡人]
+        end
+        
+        subgraph &quot;按地分類&quot;
+            E1[會議室]
+            E2[辦公室]
+            E3[遠程會議]
+            E4[外部地點]
+        end
+        
+        subgraph &quot;按時分類&quot;
+            F1[今天]
+            F2[本週]
+            F3[本月]
+            F4[日曆視圖]
+        end
+        
+        subgraph &quot;系統管理&quot;
+            G1[人員管理]
+            G2[地點管理]
+            G3[工作項管理]
+            G4[動作庫管理]
+            G5[系統設定]
+        end
+    end
+    
+    A --> B1
+    style A fill:#e1f5fe
+    style B1 fill:#fff3e0
+    style C1 fill:#f3e5f5
+    style D1 fill:#e8f5e8
+    style E1 fill:#fff8e1
+    style F1 fill:#fce4ec
+    style G1 fill:#f1f8e9
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-核心技術實現">💡 核心技術實現<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心技術實現" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="狀態管理架構">狀態管理架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#狀態管理架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n    subgraph \&quot;Riverpod 狀態管理層次\&quot;\n        UI[UI Components]\n        \n        subgraph \&quot;Provider Layer\&quot;\n            UP[UI Providers&lt;br/>按鈕狀態、表單驗證]\n            BP[Business Providers&lt;br/>功能邏輯、數據處理]\n            DP[Data Providers&lt;br/>倉儲調用、快取管理]\n        end\n        \n        subgraph \&quot;Service Layer\&quot;\n            AS[Auth Service]\n            AUS[Audio Service]\n            NS[Notification Service]\n        end\n        \n        subgraph \&quot;Repository Layer\&quot;\n            NR[Note Repository]\n            PR[Person Repository]\n            PLR[Place Repository]\n            WR[WorkObject Repository]\n        end\n        \n        subgraph \&quot;Data Layer\&quot;\n            DB[(SQLite Database)]\n            PREF[Shared Preferences]\n            FILES[Local Files]\n        end\n    end\n    \n    UI --> UP\n    UI --> BP\n    UP --> BP\n    BP --> DP\n    DP --> AS\n    DP --> AUS\n    DP --> NS\n    AS --> NR\n    AUS --> PLR\n    NR --> DB\n    PR --> DB\n    PLR --> DB\n    WR --> DB\n    AS --> PREF\n    AUS --> FILES\n    \n    style UI fill:#e3f2fd\n    style UP fill:#fff3e0\n    style BP fill:#f3e5f5\n    style DP fill:#e8f5e8\n    style DB fill:#ffebee&quot;">graph TB
+    subgraph &quot;Riverpod 狀態管理層次&quot;
+        UI[UI Components]
+        
+        subgraph &quot;Provider Layer&quot;
+            UP[UI Providers&lt;br/>按鈕狀態、表單驗證]
+            BP[Business Providers&lt;br/>功能邏輯、數據處理]
+            DP[Data Providers&lt;br/>倉儲調用、快取管理]
+        end
+        
+        subgraph &quot;Service Layer&quot;
+            AS[Auth Service]
+            AUS[Audio Service]
+            NS[Notification Service]
+        end
+        
+        subgraph &quot;Repository Layer&quot;
+            NR[Note Repository]
+            PR[Person Repository]
+            PLR[Place Repository]
+            WR[WorkObject Repository]
+        end
+        
+        subgraph &quot;Data Layer&quot;
+            DB[(SQLite Database)]
+            PREF[Shared Preferences]
+            FILES[Local Files]
+        end
+    end
+    
+    UI --> UP
+    UI --> BP
+    UP --> BP
+    BP --> DP
+    DP --> AS
+    DP --> AUS
+    DP --> NS
+    AS --> NR
+    AUS --> PLR
+    NR --> DB
+    PR --> DB
+    PLR --> DB
+    WR --> DB
+    AS --> PREF
+    AUS --> FILES
+    
+    style UI fill:#e3f2fd
+    style UP fill:#fff3e0
+    style BP fill:#f3e5f5
+    style DP fill:#e8f5e8
+    style DB fill:#ffebee
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="音頻功能架構">音頻功能架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#音頻功能架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 
-按「事」核心動詞/主題
-├── 討論相關
-├── 設計工作
-└── 開發日誌
 
-按「物」(工作項/專案)
-├── 按類型 (會議、開發任務、文檔)
-└── 按專案
 
-按「人」
-├── 按分類 (同事、客戶、合作夥伴)
-└── 所有人列表
 
-按「地」
-├── 會議室
-├── 辦公室
-└── 遠程會議
 
-按「時」
-├── 今天/本週
-└── 日曆視圖
 
-數據管理/設定
-├── 管理地點
-├── 管理人事資料
-├── 管理工作項 (物)
-├── 管理動作庫 (事)
-└── 應用設定
-</code></pre>
-<h4 id="技術選型">技術選型<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術選型" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li><strong>前端框架</strong>: Flutter (跨平台支持)</li>
-<li><strong>數據存儲</strong>: SQLite (本地數據庫)</li>
-<li><strong>認證方式</strong>: 本地認證</li>
-<li><strong>ID 生成</strong>: UUID 套件</li>
-<li><strong>用戶設置</strong>: SharedPreferences</li>
-</ul>
-<h2 id="核心實作">核心實作<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心實作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="數據模型關聯設計">數據模型關聯設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#數據模型關聯設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<p>每個筆記(NoteEntry)可以關聯：</p>
-<ul>
-<li><strong>多個人員</strong> (personIds)</li>
-<li><strong>一個主要地點</strong> (primaryPlaceId)</li>
-<li><strong>多個工作項</strong> (workObjectIds)</li>
-<li><strong>一個核心動作</strong> (coreActionVerb)</li>
-</ul>
-<h3 id="創新的uiux設計">創新的UI/UX設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#創新的uiux設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li><strong>左右分欄佈局</strong>：左側導航，右側內容</li>
-<li><strong>維度化導航</strong>：按五個維度組織信息</li>
-<li><strong>結構化表單</strong>：引導用戶建立關聯</li>
-<li><strong>多維度篩選</strong>：支援複合查詢條件</li>
-</ul>
-<h3 id="企業級架構模式">企業級架構模式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#企業級架構模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li><strong>Repository Pattern</strong>：數據存取層抽象</li>
-<li><strong>MVVM架構</strong>：清晰的層次分離</li>
-<li><strong>依賴注入</strong>：使用Provider管理狀態</li>
-<li><strong>單一職責</strong>：每個模塊專注特定功能</li>
-</ul>
-<h2 id="效果與學習">效果與學習<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#效果與學習" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="-創新價值">🎯 創新價值<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-創新價值" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>功能模塊</th><th>Android實現</th><th>核心技術</th><th>特色功能</th></tr></thead><tbody><tr><td><strong>錄音服務</strong></td><td><code>AudioRecordingService</code></td><td>Flutter Sound</td><td>實時錄音、暫停/恢復</td></tr><tr><td><strong>播放服務</strong></td><td><code>AudioPlaybackService</code></td><td>AudioPlayers</td><td>播放控制、進度條</td></tr><tr><td><strong>存儲管理</strong></td><td><code>AudioStorageService</code></td><td>Path Provider</td><td>本地文件管理</td></tr><tr><td><strong>UI組件</strong></td><td><code>AudioRecordingWidget</code></td><td>Custom Widgets</td><td>錄音按鈕、波形顯示</td></tr></tbody></table></div>
+<h3 id="平台特性支持">平台特性支持<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#平台特性支持" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n    subgraph \&quot;平台功能矩陣\&quot;\n        W[Windows]\n        A[Android] \n        I[iOS]\n        M[macOS]\n        L[Linux]\n        WEB[Web]\n    end\n    \n    subgraph \&quot;核心功能\&quot;\n        F1[筆記管理 ✓]\n        F2[數據同步 ✓]\n        F3[用戶認證 ✓]\n        F4[SQLite存儲 ✓]\n    end\n    \n    subgraph \&quot;平台特殊功能\&quot;\n        AF1[音頻錄製]\n        AF2[文件系統存取]\n        AF3[原生整合]\n    end\n    \n    W --> F1\n    A --> F1\n    I --> F1\n    M --> F1\n    L --> F1\n    WEB --> F1\n    \n    A --> AF1\n    I --> AF1\n    W --> AF2\n    M --> AF2\n    \n    style A fill:#a5d6a7\n    style I fill:#81c784\n    style W fill:#64b5f6\n    style M fill:#4fc3f7\n    style L fill:#aed581\n    style WEB fill:#ffb74d&quot;">graph LR
+    subgraph &quot;平台功能矩陣&quot;
+        W[Windows]
+        A[Android] 
+        I[iOS]
+        M[macOS]
+        L[Linux]
+        WEB[Web]
+    end
+    
+    subgraph &quot;核心功能&quot;
+        F1[筆記管理 ✓]
+        F2[數據同步 ✓]
+        F3[用戶認證 ✓]
+        F4[SQLite存儲 ✓]
+    end
+    
+    subgraph &quot;平台特殊功能&quot;
+        AF1[音頻錄製]
+        AF2[文件系統存取]
+        AF3[原生整合]
+    end
+    
+    W --> F1
+    A --> F1
+    I --> F1
+    M --> F1
+    L --> F1
+    WEB --> F1
+    
+    A --> AF1
+    I --> AF1
+    W --> AF2
+    M --> AF2
+    
+    style A fill:#a5d6a7
+    style I fill:#81c784
+    style W fill:#64b5f6
+    style M fill:#4fc3f7
+    style L fill:#aed581
+    style WEB fill:#ffb74d
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-用戶體驗設計">🎨 用戶體驗設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-用戶體驗設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="界面佈局設計">界面佈局設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#界面佈局設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n    subgraph \&quot;主界面佈局\&quot;\n        subgraph \&quot;Header\&quot;\n            H1[應用標題]\n            H2[用戶資訊]\n            H3[全域搜索]\n        end\n        \n        subgraph \&quot;Main Content\&quot;\n            subgraph \&quot;Left Sidebar\&quot;\n                L1[五維度導航]\n                L2[快速篩選]\n                L3[最近使用]\n                L4[設定選項]\n            end\n            \n            subgraph \&quot;Content Area\&quot;\n                C1[動態內容區]\n                C2[詳細視圖]\n                C3[編輯表單]\n            end\n            \n            subgraph \&quot;Right Panel\&quot;\n                R1[關聯信息]\n                R2[快速操作]\n                R3[預覽面板]\n            end\n        end\n        \n        subgraph \&quot;Footer\&quot;\n            F1[狀態欄]\n            F2[音頻控制]\n            F3[同步狀態]\n        end\n    end\n    \n    style L1 fill:#e1f5fe\n    style C1 fill:#fff3e0\n    style R1 fill:#f3e5f5&quot;">graph TB
+    subgraph &quot;主界面佈局&quot;
+        subgraph &quot;Header&quot;
+            H1[應用標題]
+            H2[用戶資訊]
+            H3[全域搜索]
+        end
+        
+        subgraph &quot;Main Content&quot;
+            subgraph &quot;Left Sidebar&quot;
+                L1[五維度導航]
+                L2[快速篩選]
+                L3[最近使用]
+                L4[設定選項]
+            end
+            
+            subgraph &quot;Content Area&quot;
+                C1[動態內容區]
+                C2[詳細視圖]
+                C3[編輯表單]
+            end
+            
+            subgraph &quot;Right Panel&quot;
+                R1[關聯信息]
+                R2[快速操作]
+                R3[預覽面板]
+            end
+        end
+        
+        subgraph &quot;Footer&quot;
+            F1[狀態欄]
+            F2[音頻控制]
+            F3[同步狀態]
+        end
+    end
+    
+    style L1 fill:#e1f5fe
+    style C1 fill:#fff3e0
+    style R1 fill:#f3e5f5
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="數據流向設計">數據流向設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#數據流向設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;sequenceDiagram\n    participant U as User\n    participant UI as UI Layer\n    participant P as Provider\n    participant R as Repository\n    participant DB as Database\n    \n    Note over U,DB: 創建新筆記流程\n    \n    U->>UI: 點擊\&quot;新增筆記\&quot;\n    UI->>P: noteProvider.createNote()\n    P->>P: 驗證輸入數據\n    P->>R: noteRepository.insert()\n    R->>DB: SQL INSERT\n    DB-->>R: 返回ID\n    R-->>P: 成功回應\n    P-->>UI: 更新狀態\n    UI-->>U: 顯示新筆記\n    \n    Note over U,DB: 關聯查詢流程\n    \n    U->>UI: 選擇關聯人員\n    UI->>P: personProvider.getRelated()\n    P->>R: personRepository.findByNote()\n    R->>DB: JOIN查詢\n    DB-->>R: 關聯數據\n    R-->>P: 人員列表\n    P-->>UI: 更新UI\n    UI-->>U: 顯示關聯&quot;">sequenceDiagram
+    participant U as User
+    participant UI as UI Layer
+    participant P as Provider
+    participant R as Repository
+    participant DB as Database
+    
+    Note over U,DB: 創建新筆記流程
+    
+    U->>UI: 點擊&quot;新增筆記&quot;
+    UI->>P: noteProvider.createNote()
+    P->>P: 驗證輸入數據
+    P->>R: noteRepository.insert()
+    R->>DB: SQL INSERT
+    DB-->>R: 返回ID
+    R-->>P: 成功回應
+    P-->>UI: 更新狀態
+    UI-->>U: 顯示新筆記
+    
+    Note over U,DB: 關聯查詢流程
+    
+    U->>UI: 選擇關聯人員
+    UI->>P: personProvider.getRelated()
+    P->>R: personRepository.findByNote()
+    R->>DB: JOIN查詢
+    DB-->>R: 關聯數據
+    R-->>P: 人員列表
+    P-->>UI: 更新UI
+    UI-->>U: 顯示關聯
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-核心業務流程">🔍 核心業務流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心業務流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="筆記創建工作流">筆記創建工作流<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#筆記創建工作流" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>步驟</th><th>操作</th><th>輸入</th><th>輸出</th><th>驗證規則</th></tr></thead><tbody><tr><td>1</td><td>選擇核心動作</td><td>ActionVerb</td><td>動作ID</td><td>必選，來自預定義清單</td></tr><tr><td>2</td><td>設定時間</td><td>DateTime</td><td>事件時間戳</td><td>預設當前時間，可調整</td></tr><tr><td>3</td><td>關聯人員</td><td>Person List</td><td>人員ID陣列</td><td>可選，支援多選</td></tr><tr><td>4</td><td>指定地點</td><td>Place</td><td>地點ID</td><td>可選，單選</td></tr><tr><td>5</td><td>關聯工作項</td><td>WorkObject List</td><td>工作項ID陣列</td><td>可選，支援多選</td></tr><tr><td>6</td><td>填寫內容</td><td>Text Content</td><td>筆記內容</td><td>必填，最少10字</td></tr><tr><td>7</td><td>添加音頻</td><td>Audio File</td><td>音頻附件</td><td>可選，僅移動端</td></tr><tr><td>8</td><td>保存筆記</td><td>Complete Data</td><td>筆記ID</td><td>自動生成UUID</td></tr></tbody></table></div>
+<h3 id="搜索查詢矩陣">搜索查詢矩陣<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#搜索查詢矩陣" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph LR\n    subgraph \&quot;搜索維度\&quot;\n        S1[全文搜索]\n        S2[按人搜索]\n        S3[按地搜索]\n        S4[按物搜索]\n        S5[按事搜索]\n        S6[按時間搜索]\n    end\n    \n    subgraph \&quot;查詢條件\&quot;\n        Q1[關鍵字匹配]\n        Q2[標籤篩選]\n        Q3[日期範圍]\n        Q4[關聯查詢]\n        Q5[模糊搜索]\n    end\n    \n    subgraph \&quot;結果展示\&quot;\n        R1[列表視圖]\n        R2[卡片視圖]\n        R3[時間軸視圖]\n        R4[關聯圖視圖]\n    end\n    \n    S1 --> Q1\n    S2 --> Q4\n    S3 --> Q4\n    S4 --> Q4\n    S5 --> Q2\n    S6 --> Q3\n    \n    Q1 --> R1\n    Q4 --> R4\n    Q3 --> R3\n    \n    style S1 fill:#e3f2fd\n    style Q1 fill:#fff3e0\n    style R1 fill:#f3e5f5&quot;">graph LR
+    subgraph &quot;搜索維度&quot;
+        S1[全文搜索]
+        S2[按人搜索]
+        S3[按地搜索]
+        S4[按物搜索]
+        S5[按事搜索]
+        S6[按時間搜索]
+    end
+    
+    subgraph &quot;查詢條件&quot;
+        Q1[關鍵字匹配]
+        Q2[標籤篩選]
+        Q3[日期範圍]
+        Q4[關聯查詢]
+        Q5[模糊搜索]
+    end
+    
+    subgraph &quot;結果展示&quot;
+        R1[列表視圖]
+        R2[卡片視圖]
+        R3[時間軸視圖]
+        R4[關聯圖視圖]
+    end
+    
+    S1 --> Q1
+    S2 --> Q4
+    S3 --> Q4
+    S4 --> Q4
+    S5 --> Q2
+    S6 --> Q3
+    
+    Q1 --> R1
+    Q4 --> R4
+    Q3 --> R3
+    
+    style S1 fill:#e3f2fd
+    style Q1 fill:#fff3e0
+    style R1 fill:#f3e5f5
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-技術債務與優化">📈 技術債務與優化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術債務與優化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="性能優化策略">性能優化策略<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#性能優化策略" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>優化層面</th><th>當前實現</th><th>優化方向</th><th>預期提升</th></tr></thead><tbody><tr><td><strong>數據庫查詢</strong></td><td>基礎SQL查詢</td><td>索引優化、查詢緩存</td><td>50% 查詢速度提升</td></tr><tr><td><strong>UI渲染</strong></td><td>基礎Widget</td><td>LazyLoading、虛擬滾動</td><td>記憶體使用減少30%</td></tr><tr><td><strong>狀態管理</strong></td><td>Provider基礎</td><td>細粒度Provider分割</td><td>重建次數減少40%</td></tr><tr><td><strong>文件存儲</strong></td><td>同步IO操作</td><td>異步操作、批次處理</td><td>IO效能提升60%</td></tr></tbody></table></div>
+<h3 id="擴展性設計">擴展性設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#擴展性設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TB\n    subgraph \&quot;未來擴展規劃\&quot;\n        subgraph \&quot;雲端整合\&quot;\n            C1[Firebase同步]\n            C2[多設備協作]\n            C3[團隊共享]\n        end\n        \n        subgraph \&quot;AI功能\&quot;\n            A1[智能分類]\n            A2[內容建議]\n            A3[關聯推薦]\n            A4[語音轉文字]\n        end\n        \n        subgraph \&quot;企業功能\&quot;\n            E1[權限管理]\n            E2[審計日誌]\n            E3[數據分析]\n            E4[報表生成]\n        end\n        \n        subgraph \&quot;平台擴展\&quot;\n            P1[桌面原生應用]\n            P2[瀏覽器擴展]\n            P3[API服務]\n            P4[第三方整合]\n        end\n    end\n    \n    style C1 fill:#e3f2fd\n    style A1 fill:#fff3e0\n    style E1 fill:#f3e5f5\n    style P1 fill:#e8f5e8&quot;">graph TB
+    subgraph &quot;未來擴展規劃&quot;
+        subgraph &quot;雲端整合&quot;
+            C1[Firebase同步]
+            C2[多設備協作]
+            C3[團隊共享]
+        end
+        
+        subgraph &quot;AI功能&quot;
+            A1[智能分類]
+            A2[內容建議]
+            A3[關聯推薦]
+            A4[語音轉文字]
+        end
+        
+        subgraph &quot;企業功能&quot;
+            E1[權限管理]
+            E2[審計日誌]
+            E3[數據分析]
+            E4[報表生成]
+        end
+        
+        subgraph &quot;平台擴展&quot;
+            P1[桌面原生應用]
+            P2[瀏覽器擴展]
+            P3[API服務]
+            P4[第三方整合]
+        end
+    end
+    
+    style C1 fill:#e3f2fd
+    style A1 fill:#fff3e0
+    style E1 fill:#f3e5f5
+    style P1 fill:#e8f5e8
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h2 id="-專案價值與影響">🎯 專案價值與影響<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-專案價值與影響" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="創新技術貢獻">創新技術貢獻<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#創新技術貢獻" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>創新領域</th><th>技術亮點</th><th>行業影響</th></tr></thead><tbody><tr><td><strong>知識管理</strong></td><td>五維度結構化組織</td><td>重新定義個人知識管理方式</td></tr><tr><td><strong>Flutter架構</strong></td><td>企業級模組化設計</td><td>為複雜應用提供架構範本</td></tr><tr><td><strong>數據關聯</strong></td><td>多維度關聯查詢</td><td>提升結構化數據檢索效率</td></tr><tr><td><strong>跨平台一致性</strong></td><td>統一業務邏輯實現</td><td>降低多平台開發成本</td></tr></tbody></table></div>
+<h3 id="商業化潛力分析">商業化潛力分析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#商業化潛力分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;pie title 市場細分與機會\n    \&quot;個人用戶\&quot; : 30\n    \&quot;小型團隊\&quot; : 25  \n    \&quot;企業客戶\&quot; : 35\n    \&quot;教育機構\&quot; : 10&quot;">pie title 市場細分與機會
+    &quot;個人用戶&quot; : 30
+    &quot;小型團隊&quot; : 25  
+    &quot;企業客戶&quot; : 35
+    &quot;教育機構&quot; : 10
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="技術成熟度評估">技術成熟度評估<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術成熟度評估" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>技術模塊</th><th>完成度</th><th>穩定性</th><th>擴展性</th><th>維護性</th></tr></thead><tbody><tr><td><strong>核心架構</strong></td><td>95%</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>數據模型</strong></td><td>90%</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>UI組件</strong></td><td>85%</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr><tr><td><strong>音頻功能</strong></td><td>80%</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td><td>⭐⭐⭐</td></tr><tr><td><strong>雲端同步</strong></td><td>20%</td><td>⭐⭐</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐</td></tr></tbody></table></div>
+<h2 id="-開發時間軸">🔄 開發時間軸<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發時間軸" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="歷史發展階段">歷史發展階段<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#歷史發展階段" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;gantt\n    title ConfluenceNote 開發時間軸\n    dateFormat  YYYY-MM-DD\n    \n    section 概念設計\n    五維度架構設計     :milestone, concept, 2024-12-01, 0d\n    需求分析與建模     :design1, 2024-12-01, 7d\n    \n    section 技術架構\n    Flutter架構設計    :arch1, after design1, 10d\n    數據庫設計        :arch2, after design1, 8d\n    UI/UX設計        :arch3, after arch1, 12d\n    \n    section 核心開發\n    基礎架構實現      :dev1, after arch2, 15d\n    筆記功能開發      :dev2, after dev1, 12d\n    人員管理功能      :dev3, after dev1, 10d\n    地點管理功能      :dev4, after dev3, 8d\n    \n    section 高級功能\n    音頻功能開發      :audio, after dev2, 14d\n    搜索功能實現      :search, after dev4, 10d\n    認證系統整合      :auth, after dev1, 8d\n    \n    section 測試與部署\n    單元測試編寫      :test1, after audio, 7d\n    整合測試         :test2, after search, 5d\n    性能優化         :opt, after test1, 10d\n    文檔完善         :doc, after test2, 5d\n    \n    section 未來規劃\n    AI功能研發       :future1, 2025-02-01, 20d\n    雲端同步開發      :future2, 2025-03-01, 25d\n    企業版功能       :future3, 2025-04-01, 30d&quot;">gantt
+    title ConfluenceNote 開發時間軸
+    dateFormat  YYYY-MM-DD
+    
+    section 概念設計
+    五維度架構設計     :milestone, concept, 2024-12-01, 0d
+    需求分析與建模     :design1, 2024-12-01, 7d
+    
+    section 技術架構
+    Flutter架構設計    :arch1, after design1, 10d
+    數據庫設計        :arch2, after design1, 8d
+    UI/UX設計        :arch3, after arch1, 12d
+    
+    section 核心開發
+    基礎架構實現      :dev1, after arch2, 15d
+    筆記功能開發      :dev2, after dev1, 12d
+    人員管理功能      :dev3, after dev1, 10d
+    地點管理功能      :dev4, after dev3, 8d
+    
+    section 高級功能
+    音頻功能開發      :audio, after dev2, 14d
+    搜索功能實現      :search, after dev4, 10d
+    認證系統整合      :auth, after dev1, 8d
+    
+    section 測試與部署
+    單元測試編寫      :test1, after audio, 7d
+    整合測試         :test2, after search, 5d
+    性能優化         :opt, after test1, 10d
+    文檔完善         :doc, after test2, 5d
+    
+    section 未來規劃
+    AI功能研發       :future1, 2025-02-01, 20d
+    雲端同步開發      :future2, 2025-03-01, 25d
+    企業版功能       :future3, 2025-04-01, 30d
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="當前狀態更新">當前狀態更新<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#當前狀態更新" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>模塊</th><th>最新進展</th><th>完成日期</th><th>備註</th></tr></thead><tbody><tr><td><strong>基礎架構</strong></td><td>✅ 完成</td><td>2025-01-15</td><td>包含所有核心模塊</td></tr><tr><td><strong>數據模型</strong></td><td>✅ 完成</td><td>2025-01-12</td><td>ERD設計已實現</td></tr><tr><td><strong>筆記功能</strong></td><td>🔄 開發中</td><td>2025-01-25</td><td>核心功能80%完成</td></tr><tr><td><strong>音頻系統</strong></td><td>🔄 測試中</td><td>2025-01-30</td><td>Android平台優先</td></tr><tr><td><strong>UI組件</strong></td><td>🔄 迭代中</td><td>2025-02-05</td><td>響應式設計優化</td></tr></tbody></table></div>
+<h2 id="-學習成果與技術洞察">🏆 學習成果與技術洞察<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-學習成果與技術洞察" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="核心技術掌握">核心技術掌握<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心技術掌握" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;radar\n    title 技術能力雷達圖\n    \n    config {\n        width: 600\n        height: 400\n    }\n    \n    layout {\n        Flutter開發 : 90\n        狀態管理 : 85\n        數據庫設計 : 95\n        架構設計 : 88\n        企業級開發 : 80\n        用戶體驗 : 75\n        性能優化 : 70\n        跨平台開發 : 92\n    }&quot;">radar
+    title 技術能力雷達圖
+    
+    config {
+        width: 600
+        height: 400
+    }
+    
+    layout {
+        Flutter開發 : 90
+        狀態管理 : 85
+        數據庫設計 : 95
+        架構設計 : 88
+        企業級開發 : 80
+        用戶體驗 : 75
+        性能優化 : 70
+        跨平台開發 : 92
+    }
+</code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<h3 id="關鍵學習收穫">關鍵學習收穫<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#關鍵學習收穫" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>技術領域</th><th>深度學習點</th><th>實際應用</th><th>未來發展</th></tr></thead><tbody><tr><td><strong>Flutter企業級開發</strong></td><td>Feature-First架構、Riverpod狀態管理</td><td>複雜應用架構設計</td><td>大型團隊協作開發</td></tr><tr><td><strong>數據庫設計</strong></td><td>ERD建模、多表關聯設計</td><td>結構化數據存儲</td><td>NoSQL混合架構</td></tr><tr><td><strong>軟體架構</strong></td><td>Clean Architecture、Repository Pattern</td><td>可維護代碼架構</td><td>微服務架構設計</td></tr><tr><td><strong>產品設計</strong></td><td>領域驅動設計、用戶體驗設計</td><td>商業需求轉化</td><td>產品戰略規劃</td></tr></tbody></table></div>
+<h3 id="創新突破點">創新突破點<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#創新突破點" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <ol>
-<li><strong>結構化思維</strong> - 將抽象工作事務轉化為結構化數據</li>
-<li><strong>軟體工程理念</strong> - 運用OOP思維組織現實世界概念</li>
-<li><strong>用戶體驗創新</strong> - 直觀的維度化導航和高效檢索</li>
+<li><strong>🎯 概念創新</strong>：將抽象工作概念轉化為結構化數據模型</li>
+<li><strong>🏗️ 架構創新</strong>：Five-Dimensional關聯式知識管理架構</li>
+<li><strong>💡 技術創新</strong>：Flutter企業級應用最佳實踐範本</li>
+<li><strong>🎨 體驗創新</strong>：維度化導航與智能關聯查詢體驗</li>
 </ol>
-<h3 id="-技術洞察">🧠 技術洞察<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術洞察" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ol>
-<li><strong>企業級Flutter應用開發</strong> - 複雜數據模型和多層架構</li>
-<li><strong>知識管理系統設計</strong> - 信息架構和分類策略</li>
-<li><strong>軟體工程最佳實踐</strong> - 領域驅動設計和清潔架構</li>
-</ol>
-<h3 id="-發展潛力">📈 發展潛力<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-發展潛力" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li><strong>AI整合機會</strong>：智能內容分析、自動關聯建議</li>
-<li><strong>雲端同步擴展</strong>：多設備協作、團隊功能</li>
-<li><strong>商業化可能性</strong>：企業知識管理解決方案</li>
-</ul>
-<h2 id="時間軸">時間軸<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#時間軸" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="2025-01-20-1315-專案分析與文檔化">2025-01-20 13:15 專案分析與文檔化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2025-01-20-1315-專案分析與文檔化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li>深度分析四個版本的README文檔</li>
-<li>理解完整的系統架構設計</li>
-<li>建立標準化專案記錄</li>
-</ul>
-<h3 id="開發歷程推測">開發歷程推測<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#開發歷程推測" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="phase-1-概念設計---確立五維度架構理念">Phase 1: 概念設計 - 確立五維度架構理念<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#phase-1-概念設計---確立五維度架構理念" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<h4 id="phase-2-架構細化---完善數據模型和ui設計">Phase 2: 架構細化 - 完善數據模型和UI設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#phase-2-架構細化---完善數據模型和ui設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<h4 id="phase-3-實現指南---提供flutter實現骨架">Phase 3: 實現指南 - 提供Flutter實現骨架<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#phase-3-實現指南---提供flutter實現骨架" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<h4 id="phase-4-開發就緒---轉換為本地存儲完整方案">Phase 4: 開發就緒 - 轉換為本地存儲完整方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#phase-4-開發就緒---轉換為本地存儲完整方案" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<h3 id="未來規劃">未來規劃<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#未來規劃" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> 核心功能完整實現</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 高級搜索和篩選</li>
-<li class="task-list-item"><input type="checkbox" disabled/> AI輔助功能整合</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 雲端同步支持</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 多用戶協作功能</li>
-</ul>
+<h3 id="踩坑經驗">踩坑經驗<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#踩坑經驗" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<p>目前我們發現到 flutter 在使用上，更接近弱化擴張能力的前端開發，很多工作盡可能仰賴後端，
+另外在開發中發現到，雖然 flutter 是個跨平台的基礎，但實際上他硬體支援其實並不好，
+舉個例子，我們加入錄音後，發現windows很難支援，僅有android可以穩定運作。</p>
 <hr/>
-<p><em>⏰ 總投入時間：估計 100+ 小時設計與開發 | 🎯 成果：企業級筆記管理系統架構 | 📚 學習：系統架構設計、領域建模、Flutter企業級開發</em></p>
-<h2 id="專案映射">專案映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案映射" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><em>⏰ 總投入時間：150+ 小時設計與開發 | 🎯 成果：企業級知識管理系統 | 📚 學習：領域驅動設計、Flutter企業級開發、複雜數據關聯設計</em></p>
+<h2 id="-專案映射">🔗 專案映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-專案映射" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
 <ul>
 <li><strong>開發資料夾</strong>：<code>/Volumes/Code/test-flutter/confluence_note</code></li>
-<li><strong>GitHub倉庫</strong>：無 (本地開發)</li>
-<li><strong>相關專案</strong>：知識管理系統、企業工作流程管理、結構化筆記工具</li>
-</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>關係圖譜</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+<li><strong>GitHub倉庫</strong>：<a href="https://github.com/pekora-tech/test-flutter" class="external">pekora-tech/test-flutter<svg aria-hidden="true" class="external-icon" style="max-width:0.8em;max-height:0.8em;" viewBox="0 0 512 512"><path d="M320 0H288V64h32 82.7L201.4 265.4 178.7 288 224 333.3l22.6-22.6L448 109.3V192v32h64V192 32 0H480 320zM32 32H0V64 480v32H32 456h32V480 352 320H424v32 96H64V96h96 32V32H160 32z"></path></svg></a></li>
+<li><strong>相關專案</strong>：知識管理系統、企業工作流程管理、結構化筆記工具、Flutter企業應用範本</li>
+<li><strong>技術標籤</strong>：<code>#Flutter</code> <code>#企業級開發</code> <code>#知識管理</code> <code>#結構化數據</code> <code>#跨平台應用</code></li>
+</ul>
+<h2 id="-未來發展路線圖">📋 未來發展路線圖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-未來發展路線圖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="短期目標-3個月">短期目標 (3個月)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#短期目標-3個月" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 完成核心筆記功能開發</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 實現完整的音頻錄製與播放</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 優化用戶界面與交互體驗</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 完成跨平台測試與調優</li>
+</ul>
+<h3 id="中期目標-6個月">中期目標 (6個月)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#中期目標-6個月" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 整合AI智能推薦功能</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 實現雲端同步與多設備協作</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 開發高級搜索與數據分析</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 建立插件化擴展系統</li>
+</ul>
+<h3 id="長期願景-1年">長期願景 (1年)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#長期願景-1年" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> 企業級權限管理與安全機制</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 開放API與第三方整合平台</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 國際化與多語言支持</li>
+<li class="task-list-item"><input type="checkbox" disabled/> 商業化產品化推廣</li>
+</ul>
+<blockquote>
+<p>💡 <strong>項目哲學</strong>：「將知識工作的複雜性轉化為結構化的簡潔性，用軟體工程思維重新定義個人知識管理。」</p>
+</blockquote></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>關係圖譜</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
                 s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
                 c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
                 C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
@@ -335,7 +1211,7 @@ pre:hover > .expand-button {
                 C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
                 S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
                 s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
-                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-confluencenote---高度結構化筆記系統" data-for="-confluencenote---高度結構化筆記系統">📝 ConfluenceNote - 高度結構化筆記系統</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#專案資料夾結構" data-for="專案資料夾結構">專案資料夾結構</a></li><li class="depth-1"><a href="#背景與問題" data-for="背景與問題">背景與問題</a></li><li class="depth-2"><a href="#核心理念" data-for="核心理念">核心理念</a></li><li class="depth-2"><a href="#設計哲學" data-for="設計哲學">設計哲學</a></li><li class="depth-1"><a href="#技術方案" data-for="技術方案">技術方案</a></li><li class="depth-2"><a href="#-核心概念實體化" data-for="-核心概念實體化">🎯 核心概念實體化</a></li><li class="depth-2"><a href="#️-系統架構設計" data-for="️-系統架構設計">🏗️ 系統架構設計</a></li><li class="depth-1"><a href="#核心實作" data-for="核心實作">核心實作</a></li><li class="depth-2"><a href="#數據模型關聯設計" data-for="數據模型關聯設計">數據模型關聯設計</a></li><li class="depth-2"><a href="#創新的uiux設計" data-for="創新的uiux設計">創新的UI/UX設計</a></li><li class="depth-2"><a href="#企業級架構模式" data-for="企業級架構模式">企業級架構模式</a></li><li class="depth-1"><a href="#效果與學習" data-for="效果與學習">效果與學習</a></li><li class="depth-2"><a href="#-創新價值" data-for="-創新價值">🎯 創新價值</a></li><li class="depth-2"><a href="#-技術洞察" data-for="-技術洞察">🧠 技術洞察</a></li><li class="depth-2"><a href="#-發展潛力" data-for="-發展潛力">📈 發展潛力</a></li><li class="depth-1"><a href="#時間軸" data-for="時間軸">時間軸</a></li><li class="depth-2"><a href="#2025-01-20-1315-專案分析與文檔化" data-for="2025-01-20-1315-專案分析與文檔化">2025-01-20 13:15 專案分析與文檔化</a></li><li class="depth-2"><a href="#開發歷程推測" data-for="開發歷程推測">開發歷程推測</a></li><li class="depth-2"><a href="#未來規劃" data-for="未來規劃">未來規劃</a></li><li class="depth-1"><a href="#專案映射" data-for="專案映射">專案映射</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向連結</h3><ul id="list-2" class="overflow"><li><a href="../../" class="internal">PekoraTech 🚀 技術知識庫</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-confluencenote---結構化知識管理系統" data-for="-confluencenote---結構化知識管理系統">📝 ConfluenceNote - 結構化知識管理系統</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#操作介面" data-for="操作介面">操作介面</a></li><li class="depth-2"><a href="#ｗindows" data-for="ｗindows">Ｗindows</a></li><li class="depth-2"><a href="#android-與-ai" data-for="android-與-ai">Android 與 AI</a></li><li class="depth-1"><a href="#-核心創新概念" data-for="-核心創新概念">🎯 核心創新概念</a></li><li class="depth-2"><a href="#五維度架構體系" data-for="五維度架構體系">五維度架構體系</a></li><li class="depth-2"><a href="#系統架構概念圖" data-for="系統架構概念圖">系統架構概念圖</a></li><li class="depth-1"><a href="#-數據庫架構設計" data-for="-數據庫架構設計">📊 數據庫架構設計</a></li><li class="depth-2"><a href="#實體關係圖-erd" data-for="實體關係圖-erd">實體關係圖 (ERD)</a></li><li class="depth-2"><a href="#數據分層架構" data-for="數據分層架構">數據分層架構</a></li><li class="depth-1"><a href="#️-專案架構詳解" data-for="️-專案架構詳解">🏗️ 專案架構詳解</a></li><li class="depth-2"><a href="#目錄結構圖" data-for="目錄結構圖">目錄結構圖</a></li><li class="depth-2"><a href="#導航架構設計" data-for="導航架構設計">導航架構設計</a></li><li class="depth-1"><a href="#-核心技術實現" data-for="-核心技術實現">💡 核心技術實現</a></li><li class="depth-2"><a href="#狀態管理架構" data-for="狀態管理架構">狀態管理架構</a></li><li class="depth-2"><a href="#音頻功能架構" data-for="音頻功能架構">音頻功能架構</a></li><li class="depth-2"><a href="#平台特性支持" data-for="平台特性支持">平台特性支持</a></li><li class="depth-1"><a href="#-用戶體驗設計" data-for="-用戶體驗設計">🎨 用戶體驗設計</a></li><li class="depth-2"><a href="#界面佈局設計" data-for="界面佈局設計">界面佈局設計</a></li><li class="depth-2"><a href="#數據流向設計" data-for="數據流向設計">數據流向設計</a></li><li class="depth-1"><a href="#-核心業務流程" data-for="-核心業務流程">🔍 核心業務流程</a></li><li class="depth-2"><a href="#筆記創建工作流" data-for="筆記創建工作流">筆記創建工作流</a></li><li class="depth-2"><a href="#搜索查詢矩陣" data-for="搜索查詢矩陣">搜索查詢矩陣</a></li><li class="depth-1"><a href="#-技術債務與優化" data-for="-技術債務與優化">📈 技術債務與優化</a></li><li class="depth-2"><a href="#性能優化策略" data-for="性能優化策略">性能優化策略</a></li><li class="depth-2"><a href="#擴展性設計" data-for="擴展性設計">擴展性設計</a></li><li class="depth-1"><a href="#-專案價值與影響" data-for="-專案價值與影響">🎯 專案價值與影響</a></li><li class="depth-2"><a href="#創新技術貢獻" data-for="創新技術貢獻">創新技術貢獻</a></li><li class="depth-2"><a href="#商業化潛力分析" data-for="商業化潛力分析">商業化潛力分析</a></li><li class="depth-2"><a href="#技術成熟度評估" data-for="技術成熟度評估">技術成熟度評估</a></li><li class="depth-1"><a href="#-開發時間軸" data-for="-開發時間軸">🔄 開發時間軸</a></li><li class="depth-2"><a href="#歷史發展階段" data-for="歷史發展階段">歷史發展階段</a></li><li class="depth-2"><a href="#當前狀態更新" data-for="當前狀態更新">當前狀態更新</a></li><li class="depth-1"><a href="#-學習成果與技術洞察" data-for="-學習成果與技術洞察">🏆 學習成果與技術洞察</a></li><li class="depth-2"><a href="#核心技術掌握" data-for="核心技術掌握">核心技術掌握</a></li><li class="depth-2"><a href="#關鍵學習收穫" data-for="關鍵學習收穫">關鍵學習收穫</a></li><li class="depth-2"><a href="#創新突破點" data-for="創新突破點">創新突破點</a></li><li class="depth-2"><a href="#踩坑經驗" data-for="踩坑經驗">踩坑經驗</a></li><li class="depth-1"><a href="#-專案映射" data-for="-專案映射">🔗 專案映射</a></li><li class="depth-1"><a href="#-未來發展路線圖" data-for="-未來發展路線圖">📋 未來發展路線圖</a></li><li class="depth-2"><a href="#短期目標-3個月" data-for="短期目標-3個月">短期目標 (3個月)</a></li><li class="depth-2"><a href="#中期目標-6個月" data-for="中期目標-6個月">中期目標 (6個月)</a></li><li class="depth-2"><a href="#長期願景-1年" data-for="長期願景-1年">長期願景 (1年)</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向連結</h3><ul id="list-2" class="overflow"><li><a href="../../" class="internal">PekoraTech 🚀 技術知識庫</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
 ※ This is a voluntary fan-created content sharing guideline ※
 ※ 這是粉絲自發創建的內容分享趣味規範 ※
 ※ これはファンが作成した楽しい共有ガイドラインです ※
