@@ -10,7 +10,7 @@
     <link>https://pekora-tech.github.io/doc/Monorepo%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90%E6%8C%87%E5%8D%97</link>
     <guid>https://pekora-tech.github.io/doc/Monorepo%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90%E6%8C%87%E5%8D%97</guid>
     <description>📦 Monorepo 最佳實踐指南 v1.0 基於實戰經驗的 Monorepo 完整實施指南 從概念到落地，讓多專案管理變得簡單高效 🎯 指南適用範圍 本指南基於 md-presentation-toolkit 實際轉換經驗，適用於： 🔄 相似專案整合：有重複代碼和依賴的多個專案 🚀 新平台建設：需要支援多個應用或引擎的平台 🛠️ 工具生態系統：共享底層邏輯的工具集合 📦 組件庫管理：需要版本統一的組件與工具庫 🚦 何時選擇 Monorepo ✅ 適合 Monorepo 的場景 flowchart TD A[專案評估] --&gt; B{代碼重複率} B --&gt;|&gt; ...</description>
-    <pubDate>Sat, 26 Jul 2025 08:14:39 GMT</pubDate>
+    <pubDate>Sat, 26 Jul 2025 08:15:15 GMT</pubDate>
   </item><item>
     <title>技術文件中心</title>
     <link>https://pekora-tech.github.io/doc/</link>
