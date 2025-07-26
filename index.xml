@@ -6,6 +6,12 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>PekoraTech 專案總覽</title>
+    <link>https://pekora-tech.github.io/projects/project-index</link>
+    <guid>https://pekora-tech.github.io/projects/project-index</guid>
+    <description>PekoraTech 完整專案生態系統總覽 - 涵蓋 AI 工具、開發工具、移動應用與瀏覽器擴展</description>
+    <pubDate>Sun, 27 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
     <title>PekoraTech 🚀 技術知識庫</title>
     <link>https://pekora-tech.github.io/</link>
     <guid>https://pekora-tech.github.io/</guid>
@@ -58,12 +64,6 @@
     <link>https://pekora-tech.github.io/doc/project-documentation-guide</link>
     <guid>https://pekora-tech.github.io/doc/project-documentation-guide</guid>
     <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
-    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
-  </item><item>
-    <title>圖片管理指南</title>
-    <link>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</link>
-    <guid>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</guid>
-    <description>📸 圖片管理指南 內部技術文件 - 圖片資源標準化管理方案 最後更新：2025-07-06 v1.0 🗂️ 資料夾結構 content/ ├── assets/ # 靜態資源根目錄 │ └── images/ # 圖片資源 │ ├── ai-tools/ # AI工具領域圖片 │ │ ├── test-ai-memory/ # test-ai-memory專案圖片 │ │ └── [其他AI專案]/ │ ├── development-tools/ # 開發工具領域圖片 │ │ ├── calu-app/ # calu-app專案圖片 │ │ └── [其他開發工具]/ │ ├── bro...</description>
     <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item>
     </channel>
