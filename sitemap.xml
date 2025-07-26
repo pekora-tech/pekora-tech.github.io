@@ -11,6 +11,9 @@
     <loc>https://pekora-tech.github.io/daily-code/</loc>
     <lastmod>2025-07-26T03:41:48.000Z</lastmod>
   </url><url>
+    <loc>https://pekora-tech.github.io/doc/Monorepo%E6%9C%80%E4%BD%B3%E5%AF%A6%E8%B8%90%E6%8C%87%E5%8D%97</loc>
+    <lastmod>2025-07-26T08:14:39.000Z</lastmod>
+  </url><url>
     <loc>https://pekora-tech.github.io/doc/SA-project-mapping</loc>
     <lastmod>2025-07-26T02:57:26.000Z</lastmod>
   </url><url>
@@ -36,7 +39,7 @@
     <lastmod>2025-06-29T13:06:44.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/</loc>
-    <lastmod>2025-07-26T02:57:26.000Z</lastmod>
+    <lastmod>2025-07-26T08:14:39.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/doc/os-control/</loc>
     <lastmod>2025-07-05T07:03:46.000Z</lastmod>
@@ -79,6 +82,9 @@
   </url><url>
     <loc>https://pekora-tech.github.io/projects/development-tools/calu-app-gradio-toolkit</loc>
     <lastmod>2025-07-05T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/projects/development-tools/md-presentation-toolkit</loc>
+    <lastmod>2025-07-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/projects/development-tools/test-nodejs-api-example</loc>
     <lastmod>2025-07-07T00:00:00.000Z</lastmod>
