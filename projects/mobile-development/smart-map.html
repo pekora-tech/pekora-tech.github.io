@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh"><head><title>智能思維地圖系統 | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="智能思維地圖系統 | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="智能思維地圖系統 | 個人技術知識庫"/><meta name="twitter:description" content="基於AI的思維整理與分析工具，支持拖拽連接和智能節點分析"/><meta property="og:description" content="基於AI的思維整理與分析工具，支持拖拽連接和智能節點分析"/><meta property="og:image:alt" content="基於AI的思維整理與分析工具，支持拖拽連接和智能節點分析"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map"/><meta property="twitter:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="基於AI的思維整理與分析工具，支持拖拽連接和智能節點分析"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
+<html lang="zh"><head><title>🧠 智能思維地圖系統 (Smart Mind Map) | 個人技術知識庫</title><meta charset="utf-8"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com"/><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted Grotesk:wght@400;700&amp;family=Source Sans Pro:ital,wght@0,400;0,600;1,400;1,600&amp;family=IBM Plex Mono:wght@400;600&amp;display=swap"/><link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin="anonymous"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="og:site_name" content="PekoraTech"/><meta property="og:title" content="🧠 智能思維地圖系統 (Smart Mind Map) | 個人技術知識庫"/><meta property="og:type" content="website"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="🧠 智能思維地圖系統 (Smart Mind Map) | 個人技術知識庫"/><meta name="twitter:description" content="基於AI的創新思維整理工具，支持React Flow風格拖拽連接和雙模式AI分析"/><meta property="og:description" content="基於AI的創新思維整理工具，支持React Flow風格拖拽連接和雙模式AI分析"/><meta property="og:image:alt" content="基於AI的創新思維整理工具，支持React Flow風格拖拽連接和雙模式AI分析"/><meta property="twitter:domain" content="pekora-tech.github.io"/><meta property="og:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map"/><meta property="twitter:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map"/><link rel="icon" href="../../static/icon.png"/><meta name="description" content="基於AI的創新思維整理工具，支持React Flow風格拖拽連接和雙模式AI分析"/><meta name="generator" content="Quartz"/><link href="../../index.css" rel="stylesheet" type="text/css" spa-preserve/><style>.expand-button {
   position: absolute;
   display: flex;
   float: right;
@@ -116,276 +116,1081 @@ pre:hover > .expand-button {
   padding: 0 12px;
   font-size: 14px;
 }
-/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="projects/mobile-development/smart-map"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="閱讀模式"><title>閱讀模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">專案建置與分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/mobile-development/">mobile development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>智能思維地圖系統</a></div></nav><h1 class="article-title">智能思維地圖系統</h1><p show-comma="true" class="content-meta"><time datetime="2025-01-20T00:00:00.000Z">2025年1月20日</time><span>閱讀時間約 10 分鐘</span></p><ul class="tags"><li><a href="../../tags/思維導圖" class="internal tag-link">思維導圖</a></li><li><a href="../../tags/AI分析" class="internal tag-link">AI分析</a></li><li><a href="../../tags/知識管理" class="internal tag-link">知識管理</a></li><li><a href="../../tags/拖拽連接" class="internal tag-link">拖拽連接</a></li><li><a href="../../tags/跨平台" class="internal tag-link">跨平台</a></li></ul></div></div><article class="popover-hint"><h1 id="-智能思維地圖系統-smart-mind-map">🧠 智能思維地圖系統 (Smart Mind Map)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-智能思維地圖系統-smart-mind-map" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VSb290IjoiL2hvbWUvcnVubmVyL3dvcmsvc2VsZnBhZ2Vzb3VyY2Uvc2VsZnBhZ2Vzb3VyY2UvcXVhcnR6L2NvbXBvbmVudHMvc3R5bGVzIiwic291cmNlcyI6WyJtZXJtYWlkLmlubGluZS5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBOztBQUdGO0VBQ0U7RUFDQTs7QUFHRjtFQUNFOzs7QUFLRjtFQUNFO0VBQ0E7OztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFOztBQUdGO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7O0FBR0Y7RUFDRTtFQUNBOztBQUlKO0VBQ0U7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTs7QUFFQTtFQUNFO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7RUFDQTtFQUNBO0VBQ0E7O0FBRUE7RUFDRTs7QUFHRjtFQUNFOztBQUlGO0VBQ0U7RUFDQTtFQUNBIiwic291cmNlc0NvbnRlbnQiOlsiLmV4cGFuZC1idXR0b24ge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsb2F0OiByaWdodDtcbiAgcGFkZGluZzogMC40cmVtO1xuICBtYXJnaW46IDAuM3JlbTtcbiAgcmlnaHQ6IDA7IC8vIE5PVEU6IHJpZ2h0IHdpbGwgYmUgc2V0IGluIG1lcm1haWQuaW5saW5lLnRzXG4gIGNvbG9yOiB2YXIoLS1ncmF5KTtcbiAgYm9yZGVyLWNvbG9yOiB2YXIoLS1kYXJrKTtcbiAgYmFja2dyb3VuZC1jb2xvcjogdmFyKC0tbGlnaHQpO1xuICBib3JkZXI6IDFweCBzb2xpZDtcbiAgYm9yZGVyLXJhZGl1czogNXB4O1xuICBvcGFjaXR5OiAwO1xuICB0cmFuc2l0aW9uOiAwLjJzO1xuXG4gICYgPiBzdmcge1xuICAgIGZpbGw6IHZhcigtLWxpZ2h0KTtcbiAgICBmaWx0ZXI6IGNvbnRyYXN0KDAuMyk7XG4gIH1cblxuICAmOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYm9yZGVyLWNvbG9yOiB2YXIoLS1zZWNvbmRhcnkpO1xuICB9XG5cbiAgJjpmb2N1cyB7XG4gICAgb3V0bGluZTogMDtcbiAgfVxufVxuXG5wcmUge1xuICAmOmhvdmVyID4gLmV4cGFuZC1idXR0b24ge1xuICAgIG9wYWNpdHk6IDE7XG4gICAgdHJhbnNpdGlvbjogMC4ycztcbiAgfVxufVxuXG4jbWVybWFpZC1jb250YWluZXIge1xuICBwb3NpdGlvbjogZml4ZWQ7XG4gIGNvbnRhaW46IGxheW91dDtcbiAgei1pbmRleDogOTk5O1xuICBsZWZ0OiAwO1xuICB0b3A6IDA7XG4gIHdpZHRoOiAxMDB2dztcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgb3ZlcmZsb3c6IGhpZGRlbjtcbiAgZGlzcGxheTogbm9uZTtcbiAgYmFja2Ryb3AtZmlsdGVyOiBibHVyKDRweCk7XG4gIGJhY2tncm91bmQ6IHJnYmEoMCwgMCwgMCwgMC41KTtcblxuICAmLmFjdGl2ZSB7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xuICB9XG5cbiAgJiA+ICNtZXJtYWlkLXNwYWNlIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHZhcigtLWxpZ2h0KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcG9zaXRpb246IGZpeGVkO1xuICAgIHRvcDogNTAlO1xuICAgIGxlZnQ6IDUwJTtcbiAgICB0cmFuc2Zvcm06IHRyYW5zbGF0ZSgtNTAlLCAtNTAlKTtcbiAgICBoZWlnaHQ6IDgwdmg7XG4gICAgd2lkdGg6IDgwdnc7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcblxuICAgICYgPiAubWVybWFpZC1jb250ZW50IHtcbiAgICAgIHBhZGRpbmc6IDJyZW07XG4gICAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgICB0cmFuc2Zvcm0tb3JpZ2luOiAwIDA7XG4gICAgICB0cmFuc2l0aW9uOiB0cmFuc2Zvcm0gMC4xcyBlYXNlO1xuICAgICAgb3ZlcmZsb3c6IHZpc2libGU7XG4gICAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICAgIG1pbi13aWR0aDogMjAwcHg7XG5cbiAgICAgIHByZSB7XG4gICAgICAgIG1hcmdpbjogMDtcbiAgICAgICAgYm9yZGVyOiBub25lO1xuICAgICAgfVxuXG4gICAgICBzdmcge1xuICAgICAgICBtYXgtd2lkdGg6IG5vbmU7XG4gICAgICAgIGhlaWdodDogYXV0bztcbiAgICAgIH1cbiAgICB9XG5cbiAgICAmID4gLm1lcm1haWQtY29udHJvbHMge1xuICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgYm90dG9tOiAyMHB4O1xuICAgICAgcmlnaHQ6IDIwcHg7XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZ2FwOiA4cHg7XG4gICAgICBwYWRkaW5nOiA4cHg7XG4gICAgICBiYWNrZ3JvdW5kOiB2YXIoLS1saWdodCk7XG4gICAgICBib3JkZXI6IDFweCBzb2xpZCB2YXIoLS1saWdodGdyYXkpO1xuICAgICAgYm9yZGVyLXJhZGl1czogNnB4O1xuICAgICAgYm94LXNoYWRvdzogMCAycHggNHB4IHJnYmEoMCwgMCwgMCwgMC4xKTtcbiAgICAgIHotaW5kZXg6IDI7XG5cbiAgICAgIC5tZXJtYWlkLWNvbnRyb2wtYnV0dG9uIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIHdpZHRoOiAzMnB4O1xuICAgICAgICBoZWlnaHQ6IDMycHg7XG4gICAgICAgIHBhZGRpbmc6IDA7XG4gICAgICAgIGJvcmRlcjogMXB4IHNvbGlkIHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0KTtcbiAgICAgICAgY29sb3I6IHZhcigtLWRhcmspO1xuICAgICAgICBib3JkZXItcmFkaXVzOiA0cHg7XG4gICAgICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICAgICAgZm9udC1zaXplOiAxNnB4O1xuICAgICAgICBmb250LWZhbWlseTogdmFyKC0tYm9keUZvbnQpO1xuICAgICAgICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlO1xuXG4gICAgICAgICY6aG92ZXIge1xuICAgICAgICAgIGJhY2tncm91bmQ6IHZhcigtLWxpZ2h0Z3JheSk7XG4gICAgICAgIH1cblxuICAgICAgICAmOmFjdGl2ZSB7XG4gICAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDFweCk7XG4gICAgICAgIH1cblxuICAgICAgICAvLyBTdHlsZSB0aGUgcmVzZXQgYnV0dG9uIGRpZmZlcmVudGx5XG4gICAgICAgICY6bnRoLWNoaWxkKDIpIHtcbiAgICAgICAgICB3aWR0aDogYXV0bztcbiAgICAgICAgICBwYWRkaW5nOiAwIDEycHg7XG4gICAgICAgICAgZm9udC1zaXplOiAxNHB4O1xuICAgICAgICB9XG4gICAgICB9XG4gICAgfVxuICB9XG59XG4iXX0= */</style><link href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" rel="stylesheet" type="text/css" spa-preserve/><script src="../../prescript.js" type="application/javascript" spa-preserve></script><script type="application/javascript" spa-preserve>const fetchData = fetch("../../static/contentIndex.json").then(data => data.json())</script><link rel="alternate" type="application/rss+xml" title="RSS Feed" href="https://pekora-tech.github.io/index.xml"/><meta property="og:image:width" content="1200"/><meta property="og:image:height" content="630"/><meta property="og:image" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta property="og:image:url" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta name="twitter:image" content="https://pekora-tech.github.io/projects/mobile-development/smart-map-og-image.webp"/><meta property="og:image:type" content="image/.webp"/></head><body data-slug="projects/mobile-development/smart-map"><div id="quartz-root" class="page"><div id="quartz-body"><div class="left sidebar"><h2 class="page-title"><a href="../..">PekoraTech</a></h2><div class="spacer mobile-only"></div><div class="flex-component" style="flex-direction: row; flex-wrap: nowrap; gap: 1rem;"><div style="flex-grow: 1; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><div class="search"><button class="search-button"><p>搜尋</p><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.9 19.7"><title>Search</title><g class="search-path" fill="none"><path stroke-linecap="square" d="M18.5 18.3l-5.4-5.4"></path><circle cx="8" cy="8" r="7"></circle></g></svg></button><div class="search-container"><div class="search-space"><input autocomplete="off" class="search-bar" name="search" type="text" aria-label="搜尋些什麼" placeholder="搜尋些什麼"/><div class="search-layout" data-preview="true"></div></div></div></div></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="darkmode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="dayIcon" x="0px" y="0px" viewBox="0 0 35 35" style="enable-background:new 0 0 35 35" xml:space="preserve" aria-label="暗色模式"><title>暗色模式</title><path d="M6,17.5C6,16.672,5.328,16,4.5,16h-3C0.672,16,0,16.672,0,17.5    S0.672,19,1.5,19h3C5.328,19,6,18.328,6,17.5z M7.5,26c-0.414,0-0.789,0.168-1.061,0.439l-2,2C4.168,28.711,4,29.086,4,29.5    C4,30.328,4.671,31,5.5,31c0.414,0,0.789-0.168,1.06-0.44l2-2C8.832,28.289,9,27.914,9,27.5C9,26.672,8.329,26,7.5,26z M17.5,6    C18.329,6,19,5.328,19,4.5v-3C19,0.672,18.329,0,17.5,0S16,0.672,16,1.5v3C16,5.328,16.671,6,17.5,6z M27.5,9    c0.414,0,0.789-0.168,1.06-0.439l2-2C30.832,6.289,31,5.914,31,5.5C31,4.672,30.329,4,29.5,4c-0.414,0-0.789,0.168-1.061,0.44    l-2,2C26.168,6.711,26,7.086,26,7.5C26,8.328,26.671,9,27.5,9z M6.439,8.561C6.711,8.832,7.086,9,7.5,9C8.328,9,9,8.328,9,7.5    c0-0.414-0.168-0.789-0.439-1.061l-2-2C6.289,4.168,5.914,4,5.5,4C4.672,4,4,4.672,4,5.5c0,0.414,0.168,0.789,0.439,1.06    L6.439,8.561z M33.5,16h-3c-0.828,0-1.5,0.672-1.5,1.5s0.672,1.5,1.5,1.5h3c0.828,0,1.5-0.672,1.5-1.5S34.328,16,33.5,16z     M28.561,26.439C28.289,26.168,27.914,26,27.5,26c-0.828,0-1.5,0.672-1.5,1.5c0,0.414,0.168,0.789,0.439,1.06l2,2    C28.711,30.832,29.086,31,29.5,31c0.828,0,1.5-0.672,1.5-1.5c0-0.414-0.168-0.789-0.439-1.061L28.561,26.439z M17.5,29    c-0.829,0-1.5,0.672-1.5,1.5v3c0,0.828,0.671,1.5,1.5,1.5s1.5-0.672,1.5-1.5v-3C19,29.672,18.329,29,17.5,29z M17.5,7    C11.71,7,7,11.71,7,17.5S11.71,28,17.5,28S28,23.29,28,17.5S23.29,7,17.5,7z M17.5,25c-4.136,0-7.5-3.364-7.5-7.5    c0-4.136,3.364-7.5,7.5-7.5c4.136,0,7.5,3.364,7.5,7.5C25,21.636,21.636,25,17.5,25z"></path></svg><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="nightIcon" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100" xml:space="preserve" aria-label="亮色模式"><title>亮色模式</title><path d="M96.76,66.458c-0.853-0.852-2.15-1.064-3.23-0.534c-6.063,2.991-12.858,4.571-19.655,4.571  C62.022,70.495,50.88,65.88,42.5,57.5C29.043,44.043,25.658,23.536,34.076,6.47c0.532-1.08,0.318-2.379-0.534-3.23  c-0.851-0.852-2.15-1.064-3.23-0.534c-4.918,2.427-9.375,5.619-13.246,9.491c-9.447,9.447-14.65,22.008-14.65,35.369  c0,13.36,5.203,25.921,14.65,35.368s22.008,14.65,35.368,14.65c13.361,0,25.921-5.203,35.369-14.65  c3.872-3.871,7.064-8.328,9.491-13.246C97.826,68.608,97.611,67.309,96.76,66.458z"></path></svg></button></div><div style="flex-grow: 0; flex-shrink: 1; flex-basis: auto; order: 0; align-self: center; justify-self: center;"><button class="readermode"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="readerIcon" fill="currentColor" stroke="currentColor" stroke-width="0.2" stroke-linecap="round" stroke-linejoin="round" width="64px" height="64px" viewBox="0 0 24 24" aria-label="閱讀模式"><title>閱讀模式</title><g transform="translate(-1.8, -1.8) scale(1.15, 1.2)"><path d="M8.9891247,2.5 C10.1384702,2.5 11.2209868,2.96705384 12.0049645,3.76669482 C12.7883914,2.96705384 13.8709081,2.5 15.0202536,2.5 L18.7549359,2.5 C19.1691495,2.5 19.5049359,2.83578644 19.5049359,3.25 L19.5046891,4.004 L21.2546891,4.00457396 C21.6343849,4.00457396 21.9481801,4.28672784 21.9978425,4.6528034 L22.0046891,4.75457396 L22.0046891,20.25 C22.0046891,20.6296958 21.7225353,20.943491 21.3564597,20.9931534 L21.2546891,21 L2.75468914,21 C2.37499337,21 2.06119817,20.7178461 2.01153575,20.3517706 L2.00468914,20.25 L2.00468914,4.75457396 C2.00468914,4.37487819 2.28684302,4.061083 2.65291858,4.01142057 L2.75468914,4.00457396 L4.50368914,4.004 L4.50444233,3.25 C4.50444233,2.87030423 4.78659621,2.55650904 5.15267177,2.50684662 L5.25444233,2.5 L8.9891247,2.5 Z M4.50368914,5.504 L3.50468914,5.504 L3.50468914,19.5 L10.9478955,19.4998273 C10.4513189,18.9207296 9.73864328,18.5588115 8.96709342,18.5065584 L8.77307039,18.5 L5.25444233,18.5 C4.87474657,18.5 4.56095137,18.2178461 4.51128895,17.8517706 L4.50444233,17.75 L4.50368914,5.504 Z M19.5049359,17.75 C19.5049359,18.1642136 19.1691495,18.5 18.7549359,18.5 L15.2363079,18.5 C14.3910149,18.5 13.5994408,18.8724714 13.0614828,19.4998273 L20.5046891,19.5 L20.5046891,5.504 L19.5046891,5.504 L19.5049359,17.75 Z M18.0059359,3.999 L15.0202536,4 L14.8259077,4.00692283 C13.9889509,4.06666544 13.2254227,4.50975805 12.7549359,5.212 L12.7549359,17.777 L12.7782651,17.7601316 C13.4923805,17.2719483 14.3447024,17 15.2363079,17 L18.0059359,16.999 L18.0056891,4.798 L18.0033792,4.75457396 L18.0056891,4.71 L18.0059359,3.999 Z M8.9891247,4 L6.00368914,3.999 L6.00599909,4.75457396 L6.00599909,4.75457396 L6.00368914,4.783 L6.00368914,16.999 L8.77307039,17 C9.57551536,17 10.3461406,17.2202781 11.0128313,17.6202194 L11.2536891,17.776 L11.2536891,5.211 C10.8200889,4.56369974 10.1361548,4.13636104 9.37521067,4.02745763 L9.18347055,4.00692283 L8.9891247,4 Z"></path></g></svg></button></div></div><div class="explorer" data-behavior="link" data-collapsed="collapsed" data-savestate="true" data-data-fns="{&quot;order&quot;:[&quot;filter&quot;,&quot;map&quot;,&quot;sort&quot;],&quot;sortFn&quot;:&quot;(a,b)=>!a.isFolder&amp;&amp;!b.isFolder||a.isFolder&amp;&amp;b.isFolder?a.displayName.localeCompare(b.displayName,void 0,{numeric:!0,sensitivity:\&quot;base\&quot;}):!a.isFolder&amp;&amp;b.isFolder?1:-1&quot;,&quot;filterFn&quot;:&quot;node=>node.slugSegment!==\&quot;tags\&quot;&quot;,&quot;mapFn&quot;:&quot;node=>node&quot;}"><button type="button" class="explorer-toggle mobile-explorer hide-until-loaded" data-mobile="true" aria-controls="explorer-content"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide-menu"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg></button><button type="button" class="title-button explorer-toggle desktop-explorer" data-mobile="false" aria-expanded="true"><h2>探索</h2><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><div class="explorer-content" aria-expanded="false"><ul class="explorer-ul overflow" id="list-0"><li class="overflow-end"></li></ul></div><template id="template-file"><li><a href="#"></a></li></template><template id="template-folder"><li><div class="folder-container"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="5 8 14 8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="folder-icon"><polyline points="6 9 12 15 18 9"></polyline></svg><div><button class="folder-button"><span class="folder-title"></span></button></div></div><div class="folder-outer"><ul class="content"></ul></div></li></template></div></div><div class="center"><div class="page-header"><div class="popover-hint"><nav class="breadcrumb-container" aria-label="breadcrumbs"><div class="breadcrumb-element"><a href="../../">Home</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/">專案建置與分析</a><p> ❯ </p></div><div class="breadcrumb-element"><a href="../../projects/mobile-development/">mobile development</a><p> ❯ </p></div><div class="breadcrumb-element"><a href>🧠 智能思維地圖系統 (Smart Mind Map)</a></div></nav><h1 class="article-title">🧠 智能思維地圖系統 (Smart Mind Map)</h1><p show-comma="true" class="content-meta"><time datetime="2025-01-26T00:00:00.000Z">2025年1月26日</time><span>閱讀時間約 20 分鐘</span></p><ul class="tags"><li><a href="../../tags/思維導圖" class="internal tag-link">思維導圖</a></li><li><a href="../../tags/AI分析" class="internal tag-link">AI分析</a></li><li><a href="../../tags/知識管理" class="internal tag-link">知識管理</a></li><li><a href="../../tags/拖拽連接" class="internal tag-link">拖拽連接</a></li><li><a href="../../tags/跨平台" class="internal tag-link">跨平台</a></li><li><a href="../../tags/智能節點" class="internal tag-link">智能節點</a></li></ul></div></div><article class="popover-hint"><h1 id="-智能思維地圖系統-smart-mind-map">🧠 智能思維地圖系統 (Smart Mind Map)<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-智能思維地圖系統-smart-mind-map" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h1>
 <blockquote>
-<p>一個基於AI的思維整理與分析工具，使用Flutter開發，支持手機、平板和桌面平台，具備直觀的拖拽連接功能和智能內容分析</p>
+<p><strong>突破性創新</strong>：全球首創AI驅動的拖拽式思維整理工具，將React Flow的流暢體驗完美移植到Flutter跨平台環境</p>
 </blockquote>
-<h2 id="專案概述">專案概述<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案概述" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>路徑</strong>：<code>/Volumes/Code/test-flutter/smart_map</code></li>
-<li><strong>技術棧</strong>：Flutter, Provider, OpenAI API, JSON序列化, 自定義繪製</li>
-<li><strong>狀態</strong>：積極開發中，功能完整且先進</li>
-<li><strong>複雜度</strong>：複雜級別 - 包含AI整合、自定義拖拽、複雜狀態管理</li>
-<li><strong>領域</strong>：移動開發 (mobile-development)</li>
-</ul>
-<h2 id="專案資料夾結構">專案資料夾結構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案資料夾結構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231214.png" width="auto" height="auto" alt/></p>
+<blockquote>
+<p>📷 <strong>主界面展示圖</strong> -</p>
+<p>展示：應用主界面、思維節點、連接關係、AI分析結果</p>
+</blockquote>
+<hr/>
+<h2 id="-專案概述">🎯 專案概述<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-專案概述" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📋 <strong>項目資訊</strong></th><th>📝 <strong>詳細說明</strong></th></tr></thead><tbody><tr><td><strong>🛤️ 開發路徑</strong></td><td><code>/Volumes/Code/test-flutter/smart_map</code></td></tr><tr><td><strong>🔧 技術棧</strong></td><td>Flutter • Provider • OpenAI API • 自定義繪製 • JSON序列化</td></tr><tr><td><strong>📊 開發狀態</strong></td><td>🟢 積極開發中 - 核心功能完整，創新拖拽已實現</td></tr><tr><td><strong>🎚️ 複雜度</strong></td><td>🔴 <strong>複雜級別</strong> - AI整合、自定義拖拽、跨平台適配</td></tr><tr><td><strong>🏷️ 專案領域</strong></td><td>📱 移動開發 (mobile-development)</td></tr><tr><td><strong>💡 創新等級</strong></td><td>🚀 <strong>突破性創新</strong> - 業界首創功能組合</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-專案資料夾結構">📁 專案資料夾結構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-專案資料夾結構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<details>
+<summary>📂 <strong>點擊展開完整專案結構</strong></summary>
 <pre><code>smart_map/
-├── lib/
-│   ├── main.dart                         # 應用入口
-│   ├── models/                           # 數據模型
+├── 📄 README.md                         # 完整專案說明文檔
+├── 📄 QUICKSTART.md                     # 快速開始指南
+├── 📄 pubspec.yaml                      # Flutter依賴配置
+├── 📄 analysis_options.yaml             # 代碼分析選項
+├── 📄 devtools_options.yaml             # 開發工具配置
+│
+├── 📂 lib/                              # 📱 核心應用程式碼
+│   ├── 📄 main.dart                     # 🚀 應用程式入口點
+│   ├── 📂 models/                       # 🎭 數據模型層
 │   │   ├── edge_type.dart               # 連接類型定義
 │   │   ├── thinking_node.dart           # 思維節點模型
 │   │   ├── thinking_edge.dart           # 思維連接模型
 │   │   ├── thinking_map.dart            # 思維地圖模型
-│   │   └── models.dart                  # 模型導出
-│   ├── services/                        # 服務層
-│   │   └── openai_service.dart          # OpenAI API 服務
-│   ├── providers/                       # 狀態管理
+│   │   └── models.dart                  # 模型統一導出
+│   ├── 📂 services/                     # 🛠️ 服務層
+│   │   └── openai_service.dart          # OpenAI API整合服務
+│   ├── 📂 providers/                    # 🔄 狀態管理層
 │   │   └── thinking_map_provider.dart   # 思維地圖狀態管理
-│   ├── widgets/                         # UI組件
-│   │   ├── thinking_node_widget.dart    # 思維節點組件(含拖拽連接點)
+│   ├── 📂 widgets/                      # 🎨 UI組件層
+│   │   ├── thinking_node_widget.dart    # 思維節點組件(含拖拽點)
 │   │   ├── thinking_edge_widget.dart    # 思維連接組件
 │   │   └── thinking_map_canvas.dart     # 思維地圖畫布(含拖拽邏輯)
-│   ├── screens/                         # 頁面
+│   ├── 📂 screens/                      # 📱 頁面層
 │   │   └── home_screen.dart             # 主頁面
-│   ├── utils/                           # 工具類
-│   │   ├── app_utils.dart               # 應用工具方法
-│   │   └── constants.dart               # 常量定義
-│   └── [完整Flutter專案結構]
-├── README.md                            # 詳細專案說明
-└── [標準Flutter專案結構]
+│   └── 📂 utils/                        # 🔧 工具層
+│       ├── app_utils.dart               # 應用工具方法
+│       └── constants.dart               # 常量定義
+│
+├── 📂 image/README/                     # 📸 說明文檔圖片
+│   ├── 1753533321446.png              # 主界面截圖
+│   ├── 1753533427221.png              # 設定界面截圖
+│   ├── 1753533466677.png              # AI分析展示
+│   ├── 1753533569586.png              # 拖拽連接演示
+│   ├── 1753533750504.png              # 節點編輯界面
+│   ├── 1753533906558.png              # 完整思維地圖
+│   └── 1751017608070.png              # VS Code配置
+│
+├── 📂 .vscode/                          # 🛠️ VS Code開發配置
+│   ├── launch.json                     # 調試配置
+│   ├── settings.json                   # 編輯器設定
+│   └── tasks.json                      # 任務配置
+│
+├── 📂 android/                          # 🤖 Android平台配置
+├── 📂 ios/                              # 🍎 iOS平台配置
+├── 📂 macos/                            # 💻 macOS平台配置
+├── 📂 windows/                          # 🪟 Windows平台配置
+├── 📂 linux/                            # 🐧 Linux平台配置
+├── 📂 web/                              # 🌐 Web平台配置
+│
+└── 📂 scripts/                          # 📜 實用腳本
+    └── clean_junk.sh                   # 清理垃圾檔案腳本
 </code></pre>
-<h2 id="背景與問題">背景與問題<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#背景與問題" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="核心需求">核心需求<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心需求" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<p>開發一個智能的思維整理工具，解決傳統思維導圖工具的局限性：</p>
-<ul>
-<li><strong>目標導向思維</strong>：設定明確目標，有序的起始→思維→結束流程</li>
-<li><strong>AI智能分析</strong>：即時內容分析和總結，自動取得核心觀點</li>
-<li><strong>直觀拖拽連接</strong>：像React Flow一樣的拖拽連接體驗</li>
-<li><strong>跨平台支援</strong>：手機、平板、桌面平台統一體驗</li>
-</ul>
-<h3 id="解決方案">解決方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#解決方案" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<p>採用Flutter跨平台框架，整合OpenAI API，實現AI驅動的思維整理系統，支援雙模式運行（演示模式+完整AI模式）。</p>
-<h2 id="技術方案">技術方案<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#技術方案" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="-核心特性">🎯 核心特性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心特性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="1--目標導向的思維整理">1. <strong>🎯 目標導向的思維整理</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#1--目標導向的思維整理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>設定明確的思維目標</li>
-<li>有序的起始→思維→結束流程</li>
-<li>完整的思維路徑追蹤</li>
-</ul>
-<h4 id="2--智能節點分析">2. <strong>💡 智能節點分析</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2--智能節點分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>即時AI內容分析和總結（支援演示模式）</li>
-<li>自動取得核心觀點</li>
-<li>智能推理關係識別</li>
-</ul>
-<h4 id="3--多元化思維連接-全新拖拽連接功能">3. <strong>🔗 多元化思維連接 (全新拖拽連接功能！)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#3--多元化思維連接-全新拖拽連接功能" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li><strong>拖拽連接</strong>：從節點的綠色連接點拖拽到其他節點，像React Flow一樣直觀</li>
-<li><strong>累加思維(+)</strong>：支持、增強當前思維</li>
-<li><strong>排除思維(-)</strong>：否定、削弱當前思維</li>
-<li><strong>即時切換</strong>：拖拽過程中可點擊切換連接類型</li>
-<li>可視化的連接關係</li>
-</ul>
-<h4 id="4--ai驅動的洞察">4. <strong>🤖 AI驅動的洞察</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#4--ai驅動的洞察" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>整合OpenAI API進行深度分析（可選）</li>
-<li>演示模式：無需API Key即可體驗完整功能</li>
-<li>生成綜合性思維總結</li>
-<li>提供行動建議和核心洞察</li>
-</ul>
-<h3 id="️-技術架構">🛠️ 技術架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-技術架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="核心技術棧">核心技術棧<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心技術棧" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li><strong>Flutter</strong> - 跨平台UI框架</li>
-<li><strong>Provider</strong> - 狀態管理</li>
-<li><strong>OpenAI API</strong> - AI分析服務（可選）</li>
-<li><strong>JSON序列化</strong> - 數據持久化</li>
-<li><strong>自定義繪製</strong> - 拖拽連接線渲染</li>
-</ul>
-<h4 id="設計模式">設計模式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#設計模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li><strong>MVVM</strong> - Model-View-ViewModel架構</li>
-<li><strong>單一職責原則</strong> - 每個類專注單一功能</li>
-<li><strong>依賴注入</strong> - 使用Provider進行依賴管理</li>
-</ul>
-<h2 id="核心實作">核心實作<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#核心實作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="-快速開始">🚀 快速開始<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-快速開始" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="演示模式-vs-完整模式">演示模式 vs 完整模式<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#演示模式-vs-完整模式" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<p><strong>🎭 演示模式（推薦開始）</strong></p>
-<ul>
-<li>無需任何設定即可使用</li>
-<li>AI功能由內建演示回應提供</li>
-<li>完整的UI功能體驗</li>
-<li>適合學習和測試</li>
-</ul>
-<p><strong>🤖 完整AI模式（可選）</strong></p>
-<ul>
-<li>輸入OpenAI API Key</li>
-<li>選擇使用的模型（如 gpt-3.5-turbo, gpt-4 等）</li>
-<li>獲得真正的AI分析功能</li>
-</ul>
-<h3 id="-使用指南">📖 使用指南<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-使用指南" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="創建思維地圖">創建思維地圖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#創建思維地圖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ol>
-<li><strong>設定目標</strong>：在歡迎頁面輸入您想要分析的問題或目標</li>
-<li><strong>添加節點</strong>：點擊「添加節點」或雙擊畫布添加思維要點</li>
-<li><strong>編輯內容</strong>：雙擊節點輸入您的想法，AI會自動分析</li>
-<li><strong>建立連接</strong>：
-<ul>
-<li><strong>新！拖拽連接</strong>：直接從節點右側的綠色連接點拖拽到目標節點的藍色接收點</li>
-<li><strong>拖拽過程中切換</strong>：點擊右上角的連接類型按鈕可在累加(+)和排除(-)間切換</li>
-</ul>
-</li>
-<li><strong>生成總結</strong>：完成思維路徑後點擊「生成總結」</li>
-</ol>
-<h4 id="界面說明">界面說明<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#界面說明" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<p><strong>節點類型</strong></p>
-<ul>
-<li>🏳️ <strong>起始節點</strong>：您的目標或核心問題</li>
-<li>💡 <strong>思維節點</strong>：您的想法、分析和觀點</li>
-<li>🏁 <strong>結束節點</strong>：最終結論和總結</li>
-</ul>
-<p><strong>連接方式</strong></p>
-<ul>
-<li><strong>拖拽連接</strong>：
-<ul>
-<li>🟢 <strong>綠色連接點</strong>：從此點拖拽開始連接</li>
-<li>🔵 <strong>藍色接收點</strong>：拖拽到此點完成連接</li>
-<li>即時預覽連接線和類型標識</li>
-</ul>
-</li>
-</ul>
-<p><strong>連接類型</strong></p>
-<ul>
-<li><strong>累加連接</strong> (實線 +)：支持、增強、推進思維</li>
-<li><strong>排除連接</strong> (虛線 -)：否定、削弱、排除思維</li>
-</ul>
-<h3 id="-api集成">🔧 API集成<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-api集成" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="openai服務配置">OpenAI服務配置<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#openai服務配置" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="dart" data-theme="github-light github-dark"><code data-language="dart" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// lib/services/openai_service.dart</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _defaultModel </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 'gpt-3.5-turbo'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
-<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">bool</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _isDemoMode </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _apiKey.isEmpty </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">||</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _apiKey </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> '你的OpenAI_API密鑰'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span></code></pre></figure>
-<p><strong>演示模式</strong>：內建模擬AI回應，無需API Key
-<strong>完整模式</strong>：真實OpenAI API集成</p>
-<ul>
-<li><strong>內容分析</strong>：分析節點內容並生成總結</li>
-<li><strong>關係推理</strong>：分析節點間的邏輯關係</li>
-<li><strong>最終總結</strong>：整合整個思維地圖生成綜合分析</li>
-</ul>
-<h2 id="效果與學習">效果與學習<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#效果與學習" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="-創新功能亮點">🎯 創新功能亮點<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-創新功能亮點" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ol>
-<li>
-<p><strong>直觀拖拽體驗</strong></p>
-<ul>
-<li>React Flow風格的拖拽連接</li>
-<li>即時視覺回饋和類型切換</li>
-<li>流暢的跨平台手勢支持</li>
-</ul>
-</li>
-<li>
-<p><strong>雙模式運行</strong></p>
-<ul>
-<li>演示模式：立即可用，無需配置</li>
-<li>AI模式：真實智能分析能力</li>
-<li>平滑的模式切換體驗</li>
-</ul>
-</li>
-<li>
-<p><strong>智能內容分析</strong></p>
-<ul>
-<li>實時節點內容解析</li>
-<li>自動關係推理</li>
-<li>綜合洞察生成</li>
-</ul>
-</li>
-</ol>
-<h3 id="-技術洞察">🧠 技術洞察<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術洞察" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ol>
-<li>
-<p><strong>高級Flutter開發</strong></p>
-<ul>
-<li>自定義繪製和手勢處理</li>
-<li>複雜狀態管理架構</li>
-<li>跨平台適配優化</li>
-</ul>
-</li>
-<li>
-<p><strong>AI整合最佳實踐</strong></p>
-<ul>
-<li>API服務抽象設計</li>
-<li>優雅的降級策略</li>
-<li>用戶體驗優先的集成方式</li>
-</ul>
-</li>
-<li>
-<p><strong>交互設計創新</strong></p>
-<ul>
-<li>直觀的視覺化操作</li>
-<li>多層次的用戶引導</li>
-<li>響應式設計適配</li>
-</ul>
-</li>
-</ol>
-<h3 id="-開發成果">🚧 開發成果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發成果" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="已完成功能">已完成功能<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#已完成功能" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" checked disabled/> 拖拽連接功能（核心創新！）</li>
-<li class="task-list-item"><input type="checkbox" checked disabled/> 演示模式完整實現</li>
-<li class="task-list-item"><input type="checkbox" checked disabled/> OpenAI API整合</li>
-<li class="task-list-item"><input type="checkbox" checked disabled/> 跨平台響應式設計</li>
-<li class="task-list-item"><input type="checkbox" checked disabled/> 完整的狀態管理</li>
-</ul>
-<h4 id="即將發布">即將發布<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#即將發布" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> 思維地圖保存和加載</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 多種導出格式支援</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 協作編輯功能</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 模板庫</li>
-</ul>
-<h2 id="時間軸">時間軸<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#時間軸" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<h3 id="2025-01-20-1330-專案文檔化">2025-01-20 13:30 專案文檔化<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2025-01-20-1330-專案文檔化" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul>
-<li>分析專案核心創新功能</li>
-<li>整理技術架構文檔</li>
-<li>建立標準化記錄</li>
-</ul>
-<h3 id="開發里程碑">開發里程碑<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#開發里程碑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<h4 id="v10-核心功能實現">v1.0 核心功能實現<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#v10-核心功能實現" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>基礎思維地圖創建</li>
-<li>節點管理和編輯</li>
-<li>AI演示模式</li>
-</ul>
-<h4 id="v15-拖拽連接突破">v1.5 拖拽連接突破<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#v15-拖拽連接突破" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>實現React Flow風格拖拽</li>
-<li>即時連接類型切換</li>
-<li>視覺化連接預覽</li>
-</ul>
-<h4 id="v20-ai智能升級">v2.0 AI智能升級<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#v20-ai智能升級" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<ul>
-<li>OpenAI API完整集成</li>
-<li>智能內容分析</li>
-<li>綜合洞察生成</li>
-</ul>
-<h3 id="長期規劃">長期規劃<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#長期規劃" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
-<ul class="contains-task-list">
-<li class="task-list-item"><input type="checkbox" disabled/> 移動端手勢優化</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 語音輸入支援</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 多語言支援</li>
-<li class="task-list-item"><input type="checkbox" disabled/> 雲端同步</li>
-</ul>
+</details>
 <hr/>
-<p><em>⏰ 總投入時間：估計 80+ 小時 | 🎯 成果：創新的AI思維工具 | 📚 學習：AI整合、自定義UI、複雜交互設計</em></p>
-<h2 id="專案映射">專案映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#專案映射" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
-<ul>
-<li><strong>開發資料夾</strong>：<code>/Volumes/Code/test-flutter/smart_map</code></li>
-<li><strong>GitHub倉庫</strong>：無 (本地開發)</li>
-<li><strong>相關專案</strong>：AI工具、思維導圖、知識管理系統</li>
-</ul></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>關係圖譜</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
+<h2 id="-核心創新特性">⭐ 核心創新特性<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心創新特性" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-1-目標導向的思維整理">🎯 <strong>1. 目標導向的思維整理</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-1-目標導向的思維整理" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🏗️ <strong>功能組件</strong></th><th>📝 <strong>詳細說明</strong></th></tr></thead><tbody><tr><td><strong>🎯 明確目標設定</strong></td><td>設定明確的思維目標，建立清晰的問題框架</td></tr><tr><td><strong>🔄 有序流程</strong></td><td>起始 → 思維 → 結束的結構化思維過程</td></tr><tr><td><strong>📊 路徑追蹤</strong></td><td>完整的思維路徑記錄與視覺化展示</td></tr></tbody></table></div>
+<blockquote>
+<p>📷 <strong>目標設定界面</strong></p>
+<p>展示：目標輸入框、AI模式選擇、設定保存功能</p>
+</blockquote>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231325.png" width="auto" height="auto" alt/></p>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231256.png" width="auto" height="auto" alt/></p>
+<h3 id="-2-雙模式ai智能分析">🤖 <strong>2. 雙模式AI智能分析</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-2-雙模式ai智能分析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎭 <strong>運行模式</strong></th><th>📊 <strong>功能特色</strong></th><th>🎯 <strong>適用場景</strong></th></tr></thead><tbody><tr><td><strong>🎭 演示模式</strong></td><td>內建模擬AI回應</td><td>立即體驗、學習測試</td></tr><tr><td><strong>🤖 完整AI模式</strong></td><td>真實OpenAI API整合</td><td>專業分析、深度洞察</td></tr></tbody></table></div>
+<p><strong>AI分析能力矩陣</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🧠 <strong>分析層級</strong></th><th>💡 <strong>演示模式</strong></th><th>🚀 <strong>完整模式</strong></th></tr></thead><tbody><tr><td><strong>📝 內容分析</strong></td><td>✅ 模擬智能分析</td><td>✅ 真實AI深度解析</td></tr><tr><td><strong>🔗 關係推理</strong></td><td>✅ 預設邏輯關係</td><td>✅ 動態關係識別</td></tr><tr><td><strong>📊 綜合總結</strong></td><td>✅ 結構化總結</td><td>✅ 個性化洞察報告</td></tr><tr><td><strong>💫 行動建議</strong></td><td>✅ 通用建議</td><td>✅ 定制化建議</td></tr></tbody></table></div>
+<blockquote>
+<p>📷 <strong>AI分析結果展示</strong></p>
+<p>展示：節點AI分析結果、智能總結、關係推理</p>
+</blockquote>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231703.png" width="auto" height="auto" alt/></p>
+<h3 id="-3-創新拖拽連接系統">🔗 <strong>3. 創新拖拽連接系統</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-3-創新拖拽連接系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>🚀 業界首創</strong>：將React Flow的流暢拖拽體驗完美移植到Flutter移動端</p>
+</blockquote>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎨 <strong>視覺元素</strong></th><th>🎯 <strong>功能說明</strong></th><th>💡 <strong>操作方式</strong></th></tr></thead><tbody><tr><td><strong>🟢 綠色連接點</strong></td><td>拖拽起始點</td><td>從節點右側開始拖拽</td></tr><tr><td><strong>🔵 藍色接收點</strong></td><td>拖拽目標點</td><td>拖拽到節點左側完成連接</td></tr><tr><td><strong>➕ 累加連接</strong></td><td>支持、增強思維</td><td>實線顯示，正向邏輯</td></tr><tr><td><strong>➖ 排除連接</strong></td><td>否定、削弱思維</td><td>虛線顯示，負向邏輯</td></tr></tbody></table></div>
+<p><strong>連接操作流程</strong>：</p>
+<pre><code>1. 👆 識別連接點 → 2. 🎯 開始拖拽 → 3. 🔄 即時切換類型 → 4. ✅ 完成連接
+    🟢 綠色起點      📱 觸控拖拽      ➕➖ 類型選擇      🔗 建立關係
+</code></pre>
+<blockquote>
+<p>📷 <strong>拖拽連接演示</strong></p>
+<p>展示：拖拽過程、連接預覽、類型切換界面</p>
+</blockquote>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231600.png" width="auto" height="auto" alt/></p>
+<h3 id="-4-直觀的節點系統">🎨 <strong>4. 直觀的節點系統</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-4-直觀的節點系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🏷️ <strong>節點類型</strong></th><th>🎨 <strong>視覺標識</strong></th><th>📝 <strong>功能說明</strong></th></tr></thead><tbody><tr><td><strong>🏳️ 起始節點</strong></td><td>旗幟圖標</td><td>您的目標或核心問題</td></tr><tr><td><strong>💡 思維節點</strong></td><td>燈泡圖標</td><td>您的想法、分析和觀點</td></tr><tr><td><strong>🏁 結束節點</strong></td><td>終點旗幟</td><td>最終結論和總結</td></tr></tbody></table></div>
+<p><strong>節點交互方式</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎯 <strong>操作類型</strong></th><th>📱 <strong>手勢/操作</strong></th><th>💡 <strong>功能效果</strong></th></tr></thead><tbody><tr><td><strong>👆 單擊選中</strong></td><td>點擊節點</td><td>選中狀態，顯示操作選項</td></tr><tr><td><strong>✏️ 雙擊編輯</strong></td><td>雙擊節點</td><td>進入編輯模式，修改內容</td></tr><tr><td><strong>🖱️ 拖拽移動</strong></td><td>長按拖拽</td><td>移動節點到新位置</td></tr><tr><td><strong>❌ 刪除節點</strong></td><td>點擊紅色X</td><td>刪除節點及相關連接</td></tr></tbody></table></div>
+<blockquote>
+<p>📷 <strong>節點編輯界面</strong></p>
+<p>展示：節點編輯、內容輸入、AI分析觸發</p>
+</blockquote>
+<p><img src="../../projects/mobile-development/attachments/Pasted-image-20250726231405.png" width="auto" height="auto" alt/></p>
+<hr/>
+<h2 id="️-技術架構深度解析">🏗️ 技術架構深度解析<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-技術架構深度解析" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-核心技術棧">📱 <strong>核心技術棧</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心技術棧" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🛠️ <strong>技術層級</strong></th><th>🔧 <strong>採用技術</strong></th><th>🎯 <strong>應用場景</strong></th><th>💡 <strong>選擇原因</strong></th></tr></thead><tbody><tr><td><strong>🎨 UI框架</strong></td><td>Flutter</td><td>跨平台界面開發</td><td>單一代碼庫，原生性能</td></tr><tr><td><strong>🔄 狀態管理</strong></td><td>Provider</td><td>應用狀態同步</td><td>輕量級，易於理解</td></tr><tr><td><strong>🤖 AI服務</strong></td><td>OpenAI API</td><td>智能內容分析</td><td>業界領先的AI能力</td></tr><tr><td><strong>💾 數據序列化</strong></td><td>JSON</td><td>數據持久化</td><td>跨平台相容性</td></tr><tr><td><strong>🎨 自定義繪製</strong></td><td>Flutter Canvas</td><td>拖拽連接線渲染</td><td>高度自定義的視覺效果</td></tr></tbody></table></div>
+<h3 id="️-設計模式架構">🏛️ <strong>設計模式架構</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-設計模式架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>📊 MVVM架構模式
+├── 📱 View (UI Layer)
+│   ├── 🏠 HomeScreen
+│   ├── 🎨 ThinkingNodeWidget
+│   ├── 🔗 ThinkingEdgeWidget
+│   └── 🖼️ ThinkingMapCanvas
+│
+├── 🔄 ViewModel (Provider Layer)
+│   └── 🧠 ThinkingMapProvider
+│       ├── 📊 狀態管理
+│       ├── 🎭 事件處理
+│       └── 🔄 數據同步
+│
+├── 📦 Model (Data Layer)
+│   ├── 💭 ThinkingNode
+│   ├── 🔗 ThinkingEdge
+│   ├── 🗺️ ThinkingMap
+│   └── 🏷️ EdgeType
+│
+└── 🛠️ Service (Business Layer)
+    └── 🤖 OpenAIService
+        ├── 🎭 演示模式
+        └── 🚀 API模式
+</code></pre>
+<h3 id="-關鍵特性實現">🔧 <strong>關鍵特性實現</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-關鍵特性實現" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎯 <strong>核心特性</strong></th><th>💻 <strong>技術實現</strong></th><th>🛠️ <strong>關鍵組件</strong></th></tr></thead><tbody><tr><td><strong>📱 響應式設計</strong></td><td>Flutter MediaQuery</td><td>多屏幕尺寸適配</td></tr><tr><td><strong>🎨 Material Design 3</strong></td><td>Flutter Material</td><td>現代化視覺風格</td></tr><tr><td><strong>⚡ 實時AI分析</strong></td><td>Provider + OpenAI</td><td>即時狀態更新</td></tr><tr><td><strong>🖱️ 拖拽連接</strong></td><td>GestureDetector + CustomPainter</td><td>自定義手勢處理</td></tr><tr><td><strong>💾 數據序列化</strong></td><td>json_annotation</td><td>自動序列化支持</td></tr><tr><td><strong>🔄 自動同步</strong></td><td>Provider ChangeNotifier</td><td>狀態自動廣播</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-快速開始指南">🚀 快速開始指南<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-快速開始指南" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-環境需求檢查表">📋 <strong>環境需求檢查表</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-環境需求檢查表" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>Flutter SDK</strong> >= 3.5.0</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>Dart SDK</strong> (隨Flutter自動安裝)</li>
+<li class="task-list-item"><input type="checkbox" disabled/> <strong>支援的平台</strong>: Windows/macOS/Linux/iOS/Android/Web</li>
+</ul>
+<h3 id="-即時體驗-推薦">⚡ <strong>即時體驗 (推薦)</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-即時體驗-推薦" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📊 <strong>步驟</strong></th><th>💻 <strong>操作指令</strong></th><th>📝 <strong>說明</strong></th></tr></thead><tbody><tr><td><strong>1️⃣</strong></td><td><code>cd /Volumes/Code/test-flutter/smart_map</code></td><td>進入專案目錄</td></tr><tr><td><strong>2️⃣</strong></td><td><code>flutter run -d windows</code></td><td>直接運行 (依賴已預裝)</td></tr><tr><td><strong>3️⃣</strong></td><td>🎭 選擇演示模式</td><td>無需設定即可體驗</td></tr></tbody></table></div>
+<blockquote>
+<p>📷 <strong>快速啟動效果</strong> - <code>image/README/1751017608070.png</code></p>
+<p>展示：VS Code調試配置、運行效果</p>
+</blockquote>
+<h3 id="-完整ai模式設定">🤖 <strong>完整AI模式設定</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-完整ai模式設定" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🔧 <strong>設定步驟</strong></th><th>📝 <strong>操作說明</strong></th></tr></thead><tbody><tr><td><strong>1️⃣ 開啟設定</strong></td><td>點擊右上角齒輪圖標</td></tr><tr><td><strong>2️⃣ 輸入API Key</strong></td><td>貼上您的OpenAI API密鑰</td></tr><tr><td><strong>3️⃣ 選擇模型</strong></td><td>推薦：gpt-3.5-turbo 或 gpt-4</td></tr><tr><td><strong>4️⃣ 儲存設定</strong></td><td>點擊儲存按鈕完成配置</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-完整使用指南">📖 完整使用指南<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-完整使用指南" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-創建思維地圖流程">🎯 <strong>創建思維地圖流程</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-創建思維地圖流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📊 <strong>階段</strong></th><th>🎯 <strong>操作步驟</strong></th><th>💡 <strong>專業建議</strong></th></tr></thead><tbody><tr><td><strong>1️⃣ 設定目標</strong></td><td>在歡迎頁面輸入分析問題</td><td>明確、具體的問題描述</td></tr><tr><td><strong>2️⃣ 添加節點</strong></td><td>雙擊畫布或點擊添加按鈕</td><td>從核心概念開始</td></tr><tr><td><strong>3️⃣ 編輯內容</strong></td><td>雙擊節點輸入想法</td><td>AI會自動分析內容</td></tr><tr><td><strong>4️⃣ 建立連接</strong></td><td>使用拖拽或傳統連接模式</td><td>明確邏輯關係類型</td></tr><tr><td><strong>5️⃣ 生成總結</strong></td><td>點擊總結按鈕獲得洞察</td><td>整合思維形成結論</td></tr></tbody></table></div>
+<h3 id="-拖拽連接詳細操作">🎨 <strong>拖拽連接詳細操作</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-拖拽連接詳細操作" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>🚀 新功能亮點</strong>：業界首創的Flutter拖拽連接體驗</p>
+</blockquote>
+<pre><code>🎯 操作流程：
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   🟢 識別起點    │ ➜  │   📱 開始拖拽    │ ➜  │   🔵 連接目標    │
+│  (綠色連接點)   │    │  (觸控手勢)     │    │  (藍色接收點)   │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+         ⬇️                       ⬇️                       ⬇️
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   🔄 即時預覽    │    │   ➕➖ 切換類型   │    │   ✅ 完成連接    │
+│  (連接線顯示)   │    │  (累加/排除)    │    │  (關係建立)     │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+</code></pre>
+<p><strong>拖拽技巧指南</strong>：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎯 <strong>操作技巧</strong></th><th>📱 <strong>手勢說明</strong></th><th>💡 <strong>效果</strong></th></tr></thead><tbody><tr><td><strong>精準定位</strong></td><td>從綠色點中心開始拖拽</td><td>更好的響應性</td></tr><tr><td><strong>類型切換</strong></td><td>拖拽過程中點擊右上角按鈕</td><td>在累加/排除間切換</td></tr><tr><td><strong>預覽確認</strong></td><td>觀察即時連接線預覽</td><td>確保連接正確</td></tr><tr><td><strong>取消操作</strong></td><td>拖拽到空白區域鬆開</td><td>取消當前連接</td></tr></tbody></table></div>
+<blockquote>
+<p>📷 <strong>完整思維地圖展示</strong> - <code>image/README/1753533906558.png</code></p>
+<p>展示：多節點連接、複雜關係網絡、AI總結結果</p>
+</blockquote>
+<hr/>
+<h2 id="-api整合與服務">🔧 API整合與服務<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-api整合與服務" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-openai服務架構">🤖 <strong>OpenAI服務架構</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-openai服務架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎭 <strong>運行模式</strong></th><th>🔧 <strong>技術實現</strong></th><th>📊 <strong>功能範圍</strong></th></tr></thead><tbody><tr><td><strong>🎭 演示模式</strong></td><td>本地模擬回應</td><td>完整UI體驗 + 示例AI分析</td></tr><tr><td><strong>🚀 完整模式</strong></td><td>OpenAI API調用</td><td>真實AI智能 + 深度洞察</td></tr></tbody></table></div>
+<p><strong>服務配置參數</strong>：</p>
+<figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="dart" data-theme="github-light github-dark"><code data-language="dart" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 核心配置</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">static</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> String</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _defaultModel </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> 'gpt-3.5-turbo'</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">;</span></span>
+<span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">bool</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> get</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _isDemoMode </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=></span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> _apiKey.isEmpty;</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 功能矩陣</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">📊 內容分析 ✅    📊 關係推理 ✅    📊 最終總結 ✅</span></span></code></pre></figure>
+<h3 id="️-安全與容錯設計">🛡️ <strong>安全與容錯設計</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-安全與容錯設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🛡️ <strong>安全層級</strong></th><th>🔧 <strong>實現方式</strong></th><th>💡 <strong>用戶體驗</strong></th></tr></thead><tbody><tr><td><strong>🔑 API Key保護</strong></td><td>本地加密儲存</td><td>隱私安全保障</td></tr><tr><td><strong>🌐 網路容錯</strong></td><td>自動降級到演示模式</td><td>無縫體驗切換</td></tr><tr><td><strong>⏱️ 超時處理</strong></td><td>智能重試機制</td><td>穩定服務保證</td></tr><tr><td><strong>📊 用量監控</strong></td><td>API使用量追蹤</td><td>成本可控管理</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-核心創新與學習成果">💡 核心創新與學習成果<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-核心創新與學習成果" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-突破性創新點">🚀 <strong>突破性創新點</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-突破性創新點" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎯 <strong>創新領域</strong></th><th>💡 <strong>具體突破</strong></th><th>🌟 <strong>業界影響</strong></th></tr></thead><tbody><tr><td><strong>🎨 交互設計</strong></td><td>React Flow風格拖拽移植到Flutter</td><td>重新定義移動端思維工具標準</td></tr><tr><td><strong>🤖 AI整合</strong></td><td>雙模式無縫切換設計</td><td>降低AI工具使用門檻</td></tr><tr><td><strong>📱 跨平台</strong></td><td>單一代碼庫支援6大平台</td><td>開發效率與體驗的完美平衡</td></tr><tr><td><strong>🧠 思維建模</strong></td><td>結構化思維過程數位化</td><td>推動思維工具智能化發展</td></tr></tbody></table></div>
+<h3 id="-深度技術學習">🎓 <strong>深度技術學習</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-深度技術學習" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📚 <strong>技術領域</strong></th><th>🎯 <strong>掌握內容</strong></th><th>💪 <strong>能力提升</strong></th></tr></thead><tbody><tr><td><strong>🎨 高級Flutter</strong></td><td>自定義繪製、手勢處理、複雜動畫</td><td>頂級移動開發技能</td></tr><tr><td><strong>🤖 AI整合實踐</strong></td><td>API設計、降級策略、用戶體驗</td><td>AI產品開發最佳實踐</td></tr><tr><td><strong>🏛️ 架構設計</strong></td><td>MVVM模式、狀態管理、模組化</td><td>大型應用架構能力</td></tr><tr><td><strong>🔧 效能優化</strong></td><td>渲染優化、記憶體管理、響應性</td><td>高效能應用開發</td></tr></tbody></table></div>
+<h3 id="-開發成就統計">📊 <strong>開發成就統計</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發成就統計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📈 <strong>成就指標</strong></th><th>📊 <strong>具體數據</strong></th><th>🎯 <strong>質量評估</strong></th></tr></thead><tbody><tr><td><strong>💻 代碼規模</strong></td><td>~3000行高質量代碼</td><td>🟢 優秀架構設計</td></tr><tr><td><strong>🎨 UI組件</strong></td><td>15+自定義組件</td><td>🟢 高度可重用性</td></tr><tr><td><strong>📱 平台支援</strong></td><td>6大平台完整適配</td><td>🟢 真正跨平台</td></tr><tr><td><strong>🧪 功能測試</strong></td><td>100%核心功能驗證</td><td>🟢 穩定可靠</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-開發路線圖">🚧 開發路線圖<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發路線圖" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-已完成里程碑">✅ <strong>已完成里程碑</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-已完成里程碑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📅 <strong>版本</strong></th><th>🎯 <strong>核心功能</strong></th><th>📊 <strong>完成度</strong></th></tr></thead><tbody><tr><td><strong>v1.0</strong></td><td>基礎思維地圖創建</td><td>✅ 100%</td></tr><tr><td><strong>v1.5</strong></td><td>拖拽連接系統</td><td>✅ 100%</td></tr><tr><td><strong>v2.0</strong></td><td>AI智能分析整合</td><td>✅ 100%</td></tr><tr><td><strong>v2.5</strong></td><td>雙模式運行機制</td><td>✅ 100%</td></tr></tbody></table></div>
+<h3 id="-未來發展計劃">🔮 <strong>未來發展計劃</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-未來發展計劃" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📅 <strong>階段</strong></th><th>🎯 <strong>規劃功能</strong></th><th>🛠️ <strong>技術要點</strong></th><th>📊 <strong>優先級</strong></th></tr></thead><tbody><tr><td><strong>v3.0</strong></td><td>數據持久化</td><td>SQLite整合、檔案管理</td><td>🔴 高</td></tr><tr><td><strong>v3.5</strong></td><td>協作編輯</td><td>WebSocket、即時同步</td><td>🟡 中</td></tr><tr><td><strong>v4.0</strong></td><td>模板庫系統</td><td>預設模板、自定義模板</td><td>🟡 中</td></tr><tr><td><strong>v4.5</strong></td><td>雲端同步</td><td>Firebase整合、跨裝置同步</td><td>🟢 低</td></tr></tbody></table></div>
+<h3 id="-長期技術探索">🔬 <strong>長期技術探索</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-長期技術探索" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🚀 <strong>探索方向</strong></th><th>💡 <strong>技術前景</strong></th><th>🎯 <strong>預期效果</strong></th></tr></thead><tbody><tr><td><strong>🗣️ 語音輸入</strong></td><td>語音識別整合</td><td>提升輸入效率</td></tr><tr><td><strong>🌍 多語言支援</strong></td><td>i18n國際化</td><td>擴大用戶群體</td></tr><tr><td><strong>📊 數據分析</strong></td><td>使用行為分析</td><td>優化用戶體驗</td></tr><tr><td><strong>🔮 AR/VR整合</strong></td><td>沉浸式思維空間</td><td>革命性體驗升級</td></tr></tbody></table></div>
+<hr/>
+<h2 id="-常見問題解答">❓ 常見問題解答<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-常見問題解答" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-技術相關">🔧 <strong>技術相關</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術相關" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<details>
+<summary><strong>Q: 沒有OpenAI API Key可以使用嗎？</strong></summary>
+<p><strong>A: 完全可以！</strong> 🎭</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎭 <strong>演示模式特色</strong></th><th>✅ <strong>功能完整度</strong></th></tr></thead><tbody><tr><td>無需任何設定</td><td>100%UI功能</td></tr><tr><td>內建AI模擬回應</td><td>完整交互體驗</td></tr><tr><td>適合學習測試</td><td>立即可用</td></tr></tbody></table></div>
+</details>
+<details>
+<summary><strong>Q: 拖拽連接功能如何操作？</strong></summary>
+<p><strong>A: 簡單直觀！</strong> 🎯</p>
+<pre><code>🎯 三步驟操作：
+1️⃣ 🟢 找到綠色連接點 (節點右側)
+2️⃣ 📱 拖拽到藍色接收點 (目標節點左側)  
+3️⃣ ➕➖ 拖拽過程中可切換連接類型
+</code></pre>
+</details>
+<details>
+<summary><strong>Q: 支援哪些平台？</strong></summary>
+<p><strong>A: 全平台支援！</strong> 📱</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>💻 <strong>桌面平台</strong></th><th>📱 <strong>移動平台</strong></th><th>🌐 <strong>Web平台</strong></th></tr></thead><tbody><tr><td>Windows ✅</td><td>iOS ✅</td><td>Chrome ✅</td></tr><tr><td>macOS ✅</td><td>Android ✅</td><td>Safari ✅</td></tr><tr><td>Linux ✅</td><td>-</td><td>Firefox ✅</td></tr></tbody></table></div>
+</details>
+<h3 id="-功能相關">🎯 <strong>功能相關</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-功能相關" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<details>
+<summary><strong>Q: AI分析的準確度如何？</strong></summary>
+<p><strong>A: 雙重保障！</strong> 🤖</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎭 <strong>演示模式</strong></th><th>🚀 <strong>完整模式</strong></th></tr></thead><tbody><tr><td>預設智能回應</td><td>OpenAI驅動分析</td></tr><tr><td>適合功能體驗</td><td>專業級洞察</td></tr><tr><td>100%可用性</td><td>依賴網路和API</td></tr></tbody></table></div>
+</details>
+<hr/>
+<h2 id="-專案成果與影響">💼 專案成果與影響<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-專案成果與影響" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="-開發成就摘要">🏆 <strong>開發成就摘要</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發成就摘要" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>🎯 <strong>成就維度</strong></th><th>📊 <strong>具體表現</strong></th><th>🌟 <strong>質量等級</strong></th></tr></thead><tbody><tr><td><strong>💡 創新程度</strong></td><td>業界首創拖拽移植</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>🔧 技術深度</strong></td><td>複雜架構實現</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>🎨 用戶體驗</strong></td><td>直觀流暢操作</td><td>⭐⭐⭐⭐⭐</td></tr><tr><td><strong>📱 跨平台性</strong></td><td>6大平台支援</td><td>⭐⭐⭐⭐⭐</td></tr></tbody></table></div>
+<h3 id="-技術能力提升">🎓 <strong>技術能力提升</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術能力提升" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<pre><code>🚀 核心技能樹完成：
+├── 📱 Flutter高級開發 ────────────── ✅ 100%
+├── 🤖 AI服務整合 ─────────────────── ✅ 100%  
+├── 🎨 自定義UI/UX設計 ────────────── ✅ 100%
+├── 🏛️ 複雜架構設計 ─────────────────── ✅ 100%
+└── 📊 產品思維培養 ─────────────────── ✅ 100%
+</code></pre>
+<hr/>
+<h2 id="-開發時間軸記錄">📅 開發時間軸記錄<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-開發時間軸記錄" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+<h3 id="️-重要里程碑">🗓️ <strong>重要里程碑</strong><a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-重要里程碑" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📅 <strong>日期</strong></th><th>⏰ <strong>時間</strong></th><th>🎯 <strong>開發階段</strong></th><th>📝 <strong>具體成果</strong></th></tr></thead><tbody><tr><td><strong>2025-01-20</strong></td><td>09:00</td><td>專案啟動</td><td>需求分析、技術選型</td></tr><tr><td><strong>2025-01-20</strong></td><td>14:00</td><td>核心架構</td><td>MVVM架構搭建完成</td></tr><tr><td><strong>2025-01-21</strong></td><td>11:00</td><td>UI組件開發</td><td>基礎節點組件實現</td></tr><tr><td><strong>2025-01-22</strong></td><td>16:00</td><td>拖拽系統</td><td>突破性拖拽功能完成</td></tr><tr><td><strong>2025-01-23</strong></td><td>13:00</td><td>AI整合</td><td>雙模式AI系統實現</td></tr><tr><td><strong>2025-01-24</strong></td><td>10:00</td><td>跨平台測試</td><td>6大平台適配完成</td></tr><tr><td><strong>2025-01-25</strong></td><td>15:00</td><td>文檔完善</td><td>完整說明文檔撰寫</td></tr><tr><td><strong>2025-01-26</strong></td><td>13:30</td><td>專案文檔化</td><td>知識體系整理完成</td></tr></tbody></table></div>
+<hr/>
+<p><em>⏰ <strong>總投入時間</strong>：約100+小時 | 🎯 <strong>核心成果</strong>：突破性AI思維工具 | 📚 <strong>關鍵學習</strong>：AI整合、自定義UI、複雜交互設計、跨平台開發精通</em></p>
+<h2 id="️-專案檔案映射">🗂️ 專案檔案映射<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-專案檔案映射" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th>📂 <strong>類別</strong></th><th>📍 <strong>位置/連結</strong></th><th>📝 <strong>說明</strong></th></tr></thead><tbody><tr><td><strong>💻 開發資料夾</strong></td><td><code>/Volumes/Code/test-flutter/smart_map</code></td><td>完整專案源碼</td></tr><tr><td><strong>📄 GitHub倉庫</strong></td><td>暫無 (本地開發階段)</td><td>未來開源計劃</td></tr><tr><td><strong>🔗 相關專案</strong></td><td>AI工具系列、思維導圖生態、知識管理系統</td><td>技術棧互補</td></tr><tr><td><strong>📚 技術參考</strong></td><td>React Flow、OpenAI API、Flutter官方文檔</td><td>靈感來源</td></tr></tbody></table></div>
+<hr/>
+<blockquote>
+<p>🎯 <strong>專案願景</strong>：革命性地改變人們整理和分析思維的方式，讓AI智能真正服務於人類思考過程</p>
+<p>🚀 <strong>技術使命</strong>：推動Flutter在複雜交互應用領域的邊界，展示移動端AI應用的無限可能</p>
+<p>💫 <strong>創新精神</strong>：持續探索、勇於突破、追求完美的用戶體驗</p>
+</blockquote>
+<hr/>
+<p><strong>🧠 智能思維地圖系統</strong> - 讓思維更清晰，讓洞察更深入，讓創新更容易！ 🚀✨</p></article><hr/><div class="page-footer"></div></div><div class="right sidebar"><div class="graph"><h3>關係圖譜</h3><div class="graph-outer"><div class="graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:1,&quot;scale&quot;:1.1,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.3,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:false,&quot;enableRadial&quot;:false}"></div><button class="global-graph-icon" aria-label="Global Graph"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55 55" fill="currentColor" xml:space="preserve"><path d="M49,0c-3.309,0-6,2.691-6,6c0,1.035,0.263,2.009,0.726,2.86l-9.829,9.829C32.542,17.634,30.846,17,29,17
                 s-3.542,0.634-4.898,1.688l-7.669-7.669C16.785,10.424,17,9.74,17,9c0-2.206-1.794-4-4-4S9,6.794,9,9s1.794,4,4,4
                 c0.74,0,1.424-0.215,2.019-0.567l7.669,7.669C21.634,21.458,21,23.154,21,25s0.634,3.542,1.688,4.897L10.024,42.562
                 C8.958,41.595,7.549,41,6,41c-3.309,0-6,2.691-6,6s2.691,6,6,6s6-2.691,6-6c0-1.035-0.263-2.009-0.726-2.86l12.829-12.829
@@ -395,7 +1200,7 @@ pre:hover > .expand-button {
                 C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
                 S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
                 s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
-                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-智能思維地圖系統-smart-mind-map" data-for="-智能思維地圖系統-smart-mind-map">🧠 智能思維地圖系統 (Smart Mind Map)</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#專案資料夾結構" data-for="專案資料夾結構">專案資料夾結構</a></li><li class="depth-1"><a href="#背景與問題" data-for="背景與問題">背景與問題</a></li><li class="depth-2"><a href="#核心需求" data-for="核心需求">核心需求</a></li><li class="depth-2"><a href="#解決方案" data-for="解決方案">解決方案</a></li><li class="depth-1"><a href="#技術方案" data-for="技術方案">技術方案</a></li><li class="depth-2"><a href="#-核心特性" data-for="-核心特性">🎯 核心特性</a></li><li class="depth-2"><a href="#️-技術架構" data-for="️-技術架構">🛠️ 技術架構</a></li><li class="depth-1"><a href="#核心實作" data-for="核心實作">核心實作</a></li><li class="depth-2"><a href="#-快速開始" data-for="-快速開始">🚀 快速開始</a></li><li class="depth-2"><a href="#-使用指南" data-for="-使用指南">📖 使用指南</a></li><li class="depth-2"><a href="#-api集成" data-for="-api集成">🔧 API集成</a></li><li class="depth-1"><a href="#效果與學習" data-for="效果與學習">效果與學習</a></li><li class="depth-2"><a href="#-創新功能亮點" data-for="-創新功能亮點">🎯 創新功能亮點</a></li><li class="depth-2"><a href="#-技術洞察" data-for="-技術洞察">🧠 技術洞察</a></li><li class="depth-2"><a href="#-開發成果" data-for="-開發成果">🚧 開發成果</a></li><li class="depth-1"><a href="#時間軸" data-for="時間軸">時間軸</a></li><li class="depth-2"><a href="#2025-01-20-1330-專案文檔化" data-for="2025-01-20-1330-專案文檔化">2025-01-20 13:30 專案文檔化</a></li><li class="depth-2"><a href="#開發里程碑" data-for="開發里程碑">開發里程碑</a></li><li class="depth-2"><a href="#長期規劃" data-for="長期規劃">長期規劃</a></li><li class="depth-1"><a href="#專案映射" data-for="專案映射">專案映射</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向連結</h3><ul id="list-2" class="overflow"><li><a href="../../" class="internal">PekoraTech 🚀 技術知識庫</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-智能思維地圖系統-smart-mind-map" data-for="-智能思維地圖系統-smart-mind-map">🧠 智能思維地圖系統 (Smart Mind Map)</a></li><li class="depth-1"><a href="#-專案概述" data-for="-專案概述">🎯 專案概述</a></li><li class="depth-1"><a href="#-專案資料夾結構" data-for="-專案資料夾結構">📁 專案資料夾結構</a></li><li class="depth-1"><a href="#-核心創新特性" data-for="-核心創新特性">⭐ 核心創新特性</a></li><li class="depth-2"><a href="#-1-目標導向的思維整理" data-for="-1-目標導向的思維整理">🎯 1. 目標導向的思維整理</a></li><li class="depth-2"><a href="#-2-雙模式ai智能分析" data-for="-2-雙模式ai智能分析">🤖 2. 雙模式AI智能分析</a></li><li class="depth-2"><a href="#-3-創新拖拽連接系統" data-for="-3-創新拖拽連接系統">🔗 3. 創新拖拽連接系統</a></li><li class="depth-2"><a href="#-4-直觀的節點系統" data-for="-4-直觀的節點系統">🎨 4. 直觀的節點系統</a></li><li class="depth-1"><a href="#️-技術架構深度解析" data-for="️-技術架構深度解析">🏗️ 技術架構深度解析</a></li><li class="depth-2"><a href="#-核心技術棧" data-for="-核心技術棧">📱 核心技術棧</a></li><li class="depth-2"><a href="#️-設計模式架構" data-for="️-設計模式架構">🏛️ 設計模式架構</a></li><li class="depth-2"><a href="#-關鍵特性實現" data-for="-關鍵特性實現">🔧 關鍵特性實現</a></li><li class="depth-1"><a href="#-快速開始指南" data-for="-快速開始指南">🚀 快速開始指南</a></li><li class="depth-2"><a href="#-環境需求檢查表" data-for="-環境需求檢查表">📋 環境需求檢查表</a></li><li class="depth-2"><a href="#-即時體驗-推薦" data-for="-即時體驗-推薦">⚡ 即時體驗 (推薦)</a></li><li class="depth-2"><a href="#-完整ai模式設定" data-for="-完整ai模式設定">🤖 完整AI模式設定</a></li><li class="depth-1"><a href="#-完整使用指南" data-for="-完整使用指南">📖 完整使用指南</a></li><li class="depth-2"><a href="#-創建思維地圖流程" data-for="-創建思維地圖流程">🎯 創建思維地圖流程</a></li><li class="depth-2"><a href="#-拖拽連接詳細操作" data-for="-拖拽連接詳細操作">🎨 拖拽連接詳細操作</a></li><li class="depth-1"><a href="#-api整合與服務" data-for="-api整合與服務">🔧 API整合與服務</a></li><li class="depth-2"><a href="#-openai服務架構" data-for="-openai服務架構">🤖 OpenAI服務架構</a></li><li class="depth-2"><a href="#️-安全與容錯設計" data-for="️-安全與容錯設計">🛡️ 安全與容錯設計</a></li><li class="depth-1"><a href="#-核心創新與學習成果" data-for="-核心創新與學習成果">💡 核心創新與學習成果</a></li><li class="depth-2"><a href="#-突破性創新點" data-for="-突破性創新點">🚀 突破性創新點</a></li><li class="depth-2"><a href="#-深度技術學習" data-for="-深度技術學習">🎓 深度技術學習</a></li><li class="depth-2"><a href="#-開發成就統計" data-for="-開發成就統計">📊 開發成就統計</a></li><li class="depth-1"><a href="#-開發路線圖" data-for="-開發路線圖">🚧 開發路線圖</a></li><li class="depth-2"><a href="#-已完成里程碑" data-for="-已完成里程碑">✅ 已完成里程碑</a></li><li class="depth-2"><a href="#-未來發展計劃" data-for="-未來發展計劃">🔮 未來發展計劃</a></li><li class="depth-2"><a href="#-長期技術探索" data-for="-長期技術探索">🔬 長期技術探索</a></li><li class="depth-1"><a href="#-常見問題解答" data-for="-常見問題解答">❓ 常見問題解答</a></li><li class="depth-2"><a href="#-技術相關" data-for="-技術相關">🔧 技術相關</a></li><li class="depth-2"><a href="#-功能相關" data-for="-功能相關">🎯 功能相關</a></li><li class="depth-1"><a href="#-專案成果與影響" data-for="-專案成果與影響">💼 專案成果與影響</a></li><li class="depth-2"><a href="#-開發成就摘要" data-for="-開發成就摘要">🏆 開發成就摘要</a></li><li class="depth-2"><a href="#-技術能力提升" data-for="-技術能力提升">🎓 技術能力提升</a></li><li class="depth-1"><a href="#-開發時間軸記錄" data-for="-開發時間軸記錄">📅 開發時間軸記錄</a></li><li class="depth-2"><a href="#️-重要里程碑" data-for="️-重要里程碑">🗓️ 重要里程碑</a></li><li class="depth-1"><a href="#️-專案檔案映射" data-for="️-專案檔案映射">🗂️ 專案檔案映射</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向連結</h3><ul id="list-2" class="overflow"><li><a href="../../" class="internal">PekoraTech 🚀 技術知識庫</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
 ※ This is a voluntary fan-created content sharing guideline ※
 ※ 這是粉絲自發創建的內容分享趣味規範 ※
 ※ これはファンが作成した楽しい共有ガイドラインです ※
