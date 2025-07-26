@@ -189,8 +189,8 @@ pre:hover > .expand-button {
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// MCP工具自動調用架構</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> mcp_tools</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">  &quot;sequential-thinking&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;邏輯思考和推理功能&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
-<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">  &quot;filesystem&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;真實數據讀取功能&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span></span>
-<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">  &quot;memory&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;經驗學習與累積功能&quot;</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  filesystem: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;真實數據讀取功能&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  memory: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;經驗學習與累積功能&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
 <p><strong>突破點</strong>：</p>
 <ul>
@@ -202,18 +202,18 @@ pre:hover > .expand-button {
 <h4 id="2-強化思維鏈持續性系統">2. 強化思維鏈持續性系統<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#2-強化思維鏈持續性系統" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
 <p><strong>核心創新</strong>：解決了傳統AI思考中斷的根本問題</p>
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 動態輪數控制 - 根據任務複雜度自適應</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> roundLimits</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { </span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  simple: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 簡單任務快速完成</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  medium: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 中等任務充分思考  </span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  complex: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">15</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">   // 複雜任務深度分析</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">};</span></span></code></pre></figure>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> roundLimits</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  simple: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">3</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 簡單任務快速完成</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  medium: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">8</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 中等任務充分思考</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  complex: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">15</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 複雜任務深度分析</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
 <p><strong>實測效果</strong>：</p>
 <ul>
 <li>📈 <strong>複雜任務完成率提升 300%</strong></li>
 <li>🧠 <strong>思維上下文完整保持</strong></li>
 <li>⚡ <strong>智能完成判斷機制</strong></li>
 </ul>
-<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TD\n    A[🧠 接收用戶需求] --> B[🔍 複雜度檢測]\n    B --> C{📊 任務類型}\n    C -->|簡單| D[⚡ 3輪快速處理]\n    C -->|中等| E[🧠 8輪充分思考]\n    C -->|複雜| F[🔬 15輪深度分析]\n    D --> G[✨ 生成結果]\n    E --> G\n    F --> G\n    G --> H[📝 用戶評分]\n    H --> I[💾 記憶學習]\n    I --> A\n    \n    style A fill:#e1f5fe\n    style G fill:#e8f5e8\n    style I fill:#fff3e0&quot;">graph TD
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;graph TD\n    A[🧠 接收用戶需求] --> B[🔍 複雜度檢測]\n    B --> C{📊 任務類型}\n    C -->|簡單| D[⚡ 3輪快速處理]\n    C -->|中等| E[🧠 8輪充分思考]\n    C -->|複雜| F[🔬 15輪深度分析]\n    D --> G[✨ 生成結果]\n    E --> G\n    F --> G\n    G --> H[📝 用戶評分]\n    H --> I[💾 記憶學習]\n    I --> A&quot;">graph TD
     A[🧠 接收用戶需求] --> B[🔍 複雜度檢測]
     B --> C{📊 任務類型}
     C -->|簡單| D[⚡ 3輪快速處理]
@@ -225,10 +225,6 @@ pre:hover > .expand-button {
     G --> H[📝 用戶評分]
     H --> I[💾 記憶學習]
     I --> A
-    
-    style A fill:#e1f5fe
-    style G fill:#e8f5e8
-    style I fill:#fff3e0
 </code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
 <blockquote>
 <p>🎯 <strong>思維鏈持續性系統</strong>：根據任務複雜度動態調整分析輪數，確保深度思考不被中斷</p>
@@ -293,59 +289,78 @@ pre:hover > .expand-button {
 </blockquote>
 <h3 id="️-創新架構設計">🏗️ 創新架構設計<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#️-創新架構設計" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
 <h4 id="三層智能服務架構">三層智能服務架構<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#三層智能服務架構" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
-<pre><code>┌─────────────────┐    ┌──────────────────┐    ┌─────────────────┐
-│   前端界面       │    │   API 服務器      │    │   Slidev 預覽    │
-│   :3000         │◄──►│   :3001          │◄──►│   :3002         │
-│ Vue.js + CSS    │    │ Express + OpenAI │    │ Slidev 引擎     │
-└─────────────────┘    └──────────────────┘    └─────────────────┘
-                              │
-                              ▼
-                    ┌─────────────────────┐
-                    │   🧠 MCP 整合層     │
-                    │ • Sequential        │
-                    │   Thinking          │
-                    │ • Filesystem        │
-                    │   Access            │
-                    │ • Memory &amp;          │
-                    │   Learning          │
-                    └─────────────────────┘
-</code></pre>
-<p><strong>架構優勢</strong>：</p>
-<ul>
-<li>🔧 <strong>模組化設計</strong>：各層獨立運作，便於維護</li>
-<li>🚀 <strong>並行處理</strong>：多服務同時運行，提升效率</li>
-<li>🔒 <strong>安全隔離</strong>：API層統一管理，保護核心邏輯</li>
-<li>📈 <strong>易於擴展</strong>：新功能可輕鬆整合</li>
-</ul>
-<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;architecture-beta\n    group frontend(cloud)[前端層 🎨]\n    group api(server)[API層 ⚙️]\n    group mcp(database)[MCP整合層 🧠]\n    group data(disk)[數據層 📊]\n\n    service browser(internet)[瀏覽器界面] in frontend\n    service vue(internet)[Vue.js] in frontend\n    \n    service express(server)[Express API] in api\n    service openai(server)[OpenAI整合] in api\n    \n    service thinking(database)[思維鏈工具] in mcp\n    service filesystem(database)[檔案系統工具] in mcp\n    service memory(database)[記憶學習工具] in mcp\n    \n    service files(disk)[真實數據檔案] in data\n    service presentations(disk)[生成簡報] in data\n    \n    browser:R --> L:express\n    vue:R --> L:openai\n    express:B --> T:thinking\n    openai:B --> T:filesystem\n    thinking:B --> T:files\n    filesystem:R --> L:memory\n    memory:B --> T:presentations&quot;">architecture-beta
-    group frontend(cloud)[前端層 🎨]
-    group api(server)[API層 ⚙️]
-    group mcp(database)[MCP整合層 🧠]
-    group data(disk)[數據層 📊]
+<p><strong>🏗️ 架構設計概覽</strong></p>
 
-    service browser(internet)[瀏覽器界面] in frontend
-    service vue(internet)[Vue.js] in frontend
-    
-    service express(server)[Express API] in api
-    service openai(server)[OpenAI整合] in api
-    
-    service thinking(database)[思維鏈工具] in mcp
-    service filesystem(database)[檔案系統工具] in mcp
-    service memory(database)[記憶學習工具] in mcp
-    
-    service files(disk)[真實數據檔案] in data
-    service presentations(disk)[生成簡報] in data
-    
-    browser:R --> L:express
-    vue:R --> L:openai
-    express:B --> T:thinking
-    openai:B --> T:filesystem
-    thinking:B --> T:files
-    filesystem:R --> L:memory
-    memory:B --> T:presentations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:center;">層級</th><th style="text-align:left;">服務名稱</th><th style="text-align:center;">端口</th><th style="text-align:left;">核心功能</th><th style="text-align:left;">技術棧</th></tr></thead><tbody><tr><td style="text-align:center;">🎨 <strong>前端層</strong></td><td style="text-align:left;">用戶界面服務</td><td style="text-align:center;"><code>:3000</code></td><td style="text-align:left;">交互界面、需求輸入</td><td style="text-align:left;">Vue.js + CSS</td></tr><tr><td style="text-align:center;">⚙️ <strong>API層</strong></td><td style="text-align:left;">智能處理服務</td><td style="text-align:center;"><code>:3001</code></td><td style="text-align:left;">AI整合、業務邏輯</td><td style="text-align:left;">Express + OpenAI</td></tr><tr><td style="text-align:center;">🧠 <strong>MCP層</strong></td><td style="text-align:left;">工具協作服務</td><td style="text-align:center;">-</td><td style="text-align:left;">思維鏈、數據處理</td><td style="text-align:left;">MCP Protocol</td></tr><tr><td style="text-align:center;">🎪 <strong>預覽層</strong></td><td style="text-align:left;">簡報渲染服務</td><td style="text-align:center;"><code>:3002</code></td><td style="text-align:left;">實時預覽、編輯</td><td style="text-align:left;">Slidev Engine</td></tr></tbody></table></div>
+<p><strong>🔄 數據流向圖</strong></p>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart TD\n    User[👤 用戶] --> Frontend[🎨 前端界面&lt;br/>Vue.js + CSS&lt;br/>:3000]\n    Frontend --> API[⚙️ API服務器&lt;br/>Express + OpenAI&lt;br/>:3001]\n    API --> MCP[🧠 MCP整合層&lt;br/>工具協作中心]\n\n    subgraph mcptools [\&quot;🛠️ MCP工具生態\&quot;]\n        Thinking[🧠 思維鏈工具&lt;br/>Sequential Thinking]\n        FileSystem[📂 檔案系統工具&lt;br/>Data Access]\n        Memory[💾 記憶學習工具&lt;br/>Experience Storage]\n    end\n\n    MCP --> mcptools\n    mcptools --> DataLayer[📊 數據層&lt;br/>真實檔案 + 生成簡報]\n\n    API --> Preview[🎪 預覽服務&lt;br/>Slidev Engine&lt;br/>:3002]\n    Preview --> User\n\n    DataLayer -.-> Frontend&quot;">flowchart TD
+    User[👤 用戶] --> Frontend[🎨 前端界面&lt;br/>Vue.js + CSS&lt;br/>:3000]
+    Frontend --> API[⚙️ API服務器&lt;br/>Express + OpenAI&lt;br/>:3001]
+    API --> MCP[🧠 MCP整合層&lt;br/>工具協作中心]
+
+    subgraph mcptools [&quot;🛠️ MCP工具生態&quot;]
+        Thinking[🧠 思維鏈工具&lt;br/>Sequential Thinking]
+        FileSystem[📂 檔案系統工具&lt;br/>Data Access]
+        Memory[💾 記憶學習工具&lt;br/>Experience Storage]
+    end
+
+    MCP --> mcptools
+    mcptools --> DataLayer[📊 數據層&lt;br/>真實檔案 + 生成簡報]
+
+    API --> Preview[🎪 預覽服務&lt;br/>Slidev Engine&lt;br/>:3002]
+    Preview --> User
+
+    DataLayer -.-> Frontend
 </code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
+<p><strong>⭐ 關鍵創新點</strong></p>
+<ul>
+<li>🔧 <strong>模組化設計</strong>：各層獨立運作，便於維護和擴展</li>
+<li>🚀 <strong>並行處理</strong>：多服務同時運行，提升整體效率</li>
+<li>🔒 <strong>安全隔離</strong>：API層統一管理，保護核心邏輯</li>
+<li>🧠 <strong>智能協作</strong>：MCP工具自動配合，實現真正的AI思考</li>
+<li>📈 <strong>易於擴展</strong>：新功能可輕鬆整合到現有架構</li>
+</ul>
 <blockquote>
-<p>🏗️ <strong>創新架構</strong>：三層分離設計 + MCP協議整合，實現真正的AI工具協作</p>
+<p>🏗️ <strong>創新精要</strong>：跨越傳統PPT工具的質的飛躍，這不只是技術整合，而是真正讓AI具備「思考」能力的開端</p>
 </blockquote>
 <h4 id="智能數據流程">智能數據流程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#智能數據流程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h4>
 <pre><code>用戶需求 → 需求分析 → MCP工具調用 → 數據讀取 → 思維鏈分析 → 簡報生成
@@ -358,15 +373,15 @@ pre:hover > .expand-button {
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 需求分析核心邏輯</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> understandUserNeeds</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">input</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 1. 深度語意分析</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> analysis</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mcp_thinking.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">analyze</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> analysis</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> mcp_thinking.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">analyze</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(input)</span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 2. 複雜度檢測</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> complexity</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> detectComplexity</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(analysis);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> complexity</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> detectComplexity</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(analysis)</span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 3. 工具策略決定</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> strategy</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> determineToolStrategy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(complexity);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { analysis, complexity, strategy };</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> strategy</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> determineToolStrategy</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(complexity)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> { analysis, complexity, strategy }</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
 <p><strong>實際效果</strong>：</p>
 <ul>
@@ -374,23 +389,24 @@ pre:hover > .expand-button {
 <li>✅ 自動判斷是否需要調用數據檔案</li>
 <li>✅ 根據複雜度選擇最佳處理策略</li>
 </ul>
-<pre><code>┌─────────────────────────────────────────────────────────────┐
-│  🎯 AI簡報生成系統 - 智能需求理解                               │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  💬 請描述您的簡報需求：                                       │
-│  ┌─────────────────────────────────────────────────────────┐ │
-│  │ 我需要一份關於疫情數據分析的簡報，包含統計圖表和趨勢分析    │ │
-│  └─────────────────────────────────────────────────────────┘ │
-│                                                             │
-│  🧠 AI分析中...                                              │
-│  ✅ 檢測到：數據分析類型 (複雜度：高)                          │
-│  ✅ 發現相關數據：疫情數據.md                                 │
-│  ✅ 啟動思維鏈深度分析模式                                     │
-│                                                             │
-│          [🚀 開始生成]     [📂 選擇數據]                      │
-└─────────────────────────────────────────────────────────────┘
-</code></pre>
+<h3 id="-智能需求理解界面">🎯 智能需求理解界面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-智能需求理解界面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>🧠 AI簡報生成系統 - 智能需求理解</strong></p>
+</blockquote>
+<p><strong>💬 請描述您的簡報需求：</strong></p>
+<blockquote>
+<p>我需要一份關於疫情數據分析的簡報，包含統計圖表和趨勢分析</p>
+</blockquote>
+<p><strong>🧠 AI分析中…</strong></p>
+<ul>
+<li>✅ 檢測到：數據分析類型 (複雜度：高)</li>
+<li>✅ 發現相關數據：疫情數據.md</li>
+<li>✅ 啟動思維鏈深度分析模式</li>
+</ul>
+<p><strong>🚀 操作選項：</strong></p>
+<ul>
+<li>[<code>🚀 開始生成</code>] [<code>📂 選擇數據</code>]</li>
+</ul>
 <blockquote>
 <p>🎨 <strong>智能體驗</strong>：系統能理解隱含需求，自動匹配數據源並選擇最佳處理策略</p>
 </blockquote>
@@ -399,15 +415,15 @@ pre:hover > .expand-button {
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 智能數據整合流程</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> function</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> generateDataDrivenContent</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">topic</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">dataFiles</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 1. 數據檔案智能掃描</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> relevantData</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> filesystem.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">scanRelevantFiles</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(topic);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> relevantData</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> filesystem.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">scanRelevantFiles</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(topic)</span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 2. 內容深度分析</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> insights</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> thinking.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">analyzeDataInsights</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(relevantData);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> insights</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> thinking.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">analyzeDataInsights</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(relevantData)</span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">  // 3. 結構化簡報生成</span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> presentation</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> createStructuredSlides</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(insights);</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  </span></span>
-<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> presentation;</span></span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> presentation</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> createStructuredSlides</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(insights)</span></span>
+<span data-line> </span>
+<span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">  return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> presentation</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
 <p><strong>技術亮點</strong>：</p>
 <ul>
@@ -415,32 +431,28 @@ pre:hover > .expand-button {
 <li>📊 <strong>深度數據分析</strong>：提取關鍵洞察與趨勢</li>
 <li>🎨 <strong>結構化呈現</strong>：將數據轉化為視覺化簡報</li>
 </ul>
-<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    subgraph 📂 [\&quot;數據發現\&quot;]\n        A[🔍 掃描data目錄] \n        B[📋 讀取README.txt]\n        C[🎯 智能匹配主題]\n    end\n    \n    subgraph 🧠 [\&quot;深度分析\&quot;]\n        D[📊 解析數據結構]\n        E[💡 提取關鍵洞察]\n        F[📈 識別重要趨勢]\n    end\n    \n    subgraph ✨ [\&quot;智能生成\&quot;]\n        G[🎨 設計簡報架構]\n        H[📝 創建文字內容]\n        I[📊 整合視覺元素]\n    end\n    \n    A --> B --> C\n    C --> D --> E --> F\n    F --> G --> H --> I\n    \n    style A fill:#e3f2fd\n    style E fill:#e8f5e8\n    style I fill:#fff3e0&quot;">flowchart LR
-    subgraph 📂 [&quot;數據發現&quot;]
-        A[🔍 掃描data目錄] 
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    subgraph discover [\&quot;📂 數據發現\&quot;]\n        A[🔍 掃描data目錄]\n        B[📋 讀取README.txt]\n        C[🎯 智能匹配主題]\n    end\n\n    subgraph analyze [\&quot;🧠 深度分析\&quot;]\n        D[📊 解析數據結構]\n        E[💡 提取關鍵洞察]\n        F[📈 識別重要趨勢]\n    end\n\n    subgraph generate [\&quot;✨ 智能生成\&quot;]\n        G[🎨 設計簡報架構]\n        H[📝 創建文字內容]\n        I[📊 整合視覺元素]\n    end\n\n    A --> B --> C\n    C --> D --> E --> F\n    F --> G --> H --> I&quot;">flowchart LR
+    subgraph discover [&quot;📂 數據發現&quot;]
+        A[🔍 掃描data目錄]
         B[📋 讀取README.txt]
         C[🎯 智能匹配主題]
     end
-    
-    subgraph 🧠 [&quot;深度分析&quot;]
+
+    subgraph analyze [&quot;🧠 深度分析&quot;]
         D[📊 解析數據結構]
         E[💡 提取關鍵洞察]
         F[📈 識別重要趨勢]
     end
-    
-    subgraph ✨ [&quot;智能生成&quot;]
+
+    subgraph generate [&quot;✨ 智能生成&quot;]
         G[🎨 設計簡報架構]
         H[📝 創建文字內容]
         I[📊 整合視覺元素]
     end
-    
+
     A --> B --> C
     C --> D --> E --> F
     F --> G --> H --> I
-    
-    style A fill:#e3f2fd
-    style E fill:#e8f5e8
-    style I fill:#fff3e0
 </code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
 <blockquote>
 <p>🔄 <strong>核心優勢</strong>：從真實檔案到專業簡報的全自動化智能轉換</p>
@@ -449,37 +461,53 @@ pre:hover > .expand-button {
 <p><strong>創新概念</strong>：AI具備記憶與學習能力，持續改進簡報品質</p>
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="javascript" data-theme="github-light github-dark"><code data-language="javascript" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 多維度評分學習</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">const</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> ratingDimensions</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;內容品質&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,      </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 資訊準確性、豐富度</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  design: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;設計美觀&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,       </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 視覺效果、排版</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  structure: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;結構邏輯&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">,    </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 組織架構、流程</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  practical: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;實用性&quot;</span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">       // 實際應用價值</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">};</span></span></code></pre></figure>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  content: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;內容品質&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 資訊準確性、豐富度</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  design: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;設計美觀&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 視覺效果、排版</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  structure: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;結構邏輯&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 組織架構、流程</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  practical: </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;實用性&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 實際應用價值</span></span>
+<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></figure>
 <p><strong>學習機制</strong>：</p>
 <ul>
 <li>🧠 <strong>模式識別</strong>：分析高評分簡報的成功要素</li>
 <li>🚫 <strong>錯誤避免</strong>：記住並避免低評分的問題模式</li>
 <li>🔄 <strong>持續優化</strong>：每次生成都應用學習經驗</li>
 </ul>
-<pre><code>┌─────────────────────────────────────────────────────────────┐
-│  ⭐ 簡報評分與學習系統                                         │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  📊 整體評分：  ⭐⭐⭐⭐⭐  (5/5)                           │
-│                                                             │
-│  📋 分項評分：                                               │
-│  🎯 內容品質：  ⭐⭐⭐⭐⭐  │  🎨 設計美觀：  ⭐⭐⭐⭐⚫     │
-│  🧩 結構邏輯：  ⭐⭐⭐⭐⭐  │  💡 實用性：    ⭐⭐⭐⭐⭐     │
-│                                                             │
-│  💭 評價回饋：                                               │
-│  ┌─────────────────────────────────────────────────────────┐ │
-│  │ 數據整合得很好，圖表清晰易懂，建議設計更現代化一些        │ │
-│  └─────────────────────────────────────────────────────────┘ │
-│                                                             │
-│  🧠 AI學習中：正在記錄成功模式和改進建議...                   │
-│                                                             │
-│          [✅ 提交評分]     [📚 查看學習記錄]                  │
-└─────────────────────────────────────────────────────────────┘
-</code></pre>
+<h3 id="-簡報評分與學習系統界面">⭐ 簡報評分與學習系統界面<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-簡報評分與學習系統界面" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+<blockquote>
+<p><strong>⭐ 簡報評分與學習系統</strong></p>
+</blockquote>
+<p><strong>📊 整體評分：</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+<p><strong>📋 分項評分：</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:center;">🎯 內容品質</th><th style="text-align:center;">🎨 設計美觀</th><th style="text-align:center;">🧩 結構邏輯</th><th style="text-align:center;">💡 實用性</th></tr></thead><tbody><tr><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⚫</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td><td style="text-align:center;">⭐⭐⭐⭐⭐</td></tr></tbody></table></div>
+<p><strong>💭 評價回饋：</strong></p>
+<blockquote>
+<p>數據整合得很好，圖表清晰易懂，建議設計更現代化一些</p>
+</blockquote>
+<p><strong>🧠 AI學習狀態：</strong></p>
+<ul>
+<li>正在記錄成功模式和改進建議…</li>
+</ul>
+<p><strong>操作選項：</strong></p>
+<ul>
+<li>[<code>✅ 提交評分</code>] [<code>📚 查看學習記錄</code>]</li>
+</ul>
 <blockquote>
 <p>🔄 <strong>持續進化</strong>：每一次評分都是AI成長的養料，讓系統越來越懂您的需求</p>
 </blockquote>
@@ -589,31 +617,52 @@ pre:hover > .expand-button {
 </ul>
 </li>
 </ol>
-<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;timeline\n    title 🚀 技術架構演進歷程\n    \n    section 🌱 概念期\n        2024-01 : 識別問題\n               : 🎯 傳統PPT工具局限\n               : 💡 提出數據驅動概念\n    \n    section 🔧 開發期  \n        2024-Q1 : 核心架構\n               : 🏗️ MCP協議整合\n               : 🧠 思維鏈系統\n               : 📊 數據讀取功能\n    \n    section 🧠 優化期\n        2024-Q2 : 突破性改進\n               : ⚡ 提示詞簡化74%\n               : 🎯 動態複雜度檢測\n               : 📈 效能提升300%\n    \n    section 🌟 成熟期\n        2024-Q3 : 智能化完善\n               : ⭐ 用戶評分學習\n               : 🔄 持續自我優化\n               : 🎨 體驗極致打磨&quot;">timeline
-    title 🚀 技術架構演進歷程
-    
-    section 🌱 概念期
-        2024-01 : 識別問題
-               : 🎯 傳統PPT工具局限
-               : 💡 提出數據驅動概念
-    
-    section 🔧 開發期  
-        2024-Q1 : 核心架構
-               : 🏗️ MCP協議整合
-               : 🧠 思維鏈系統
-               : 📊 數據讀取功能
-    
-    section 🧠 優化期
-        2024-Q2 : 突破性改進
-               : ⚡ 提示詞簡化74%
-               : 🎯 動態複雜度檢測
-               : 📈 效能提升300%
-    
-    section 🌟 成熟期
-        2024-Q3 : 智能化完善
-               : ⭐ 用戶評分學習
-               : 🔄 持續自我優化
-               : 🎨 體驗極致打磨
+<h3 id="-技術架構演進歷程">🚀 技術架構演進歷程<a role="anchor" aria-hidden="true" tabindex="-1" data-no-popover="true" href="#-技術架構演進歷程" class="internal"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></a></h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="table-container"><table><thead><tr><th style="text-align:center;">階段</th><th style="text-align:center;">時間</th><th style="text-align:left;">🎯 核心成果</th><th style="text-align:left;">📈 突破性改進</th></tr></thead><tbody><tr><td style="text-align:center;">🌱 <strong>概念期</strong></td><td style="text-align:center;">2024-01</td><td style="text-align:left;">識別傳統PPT工具局限</td><td style="text-align:left;">💡 提出數據驅動概念</td></tr><tr><td style="text-align:center;">🔧 <strong>開發期</strong></td><td style="text-align:center;">2024-Q1</td><td style="text-align:left;">MCP協議整合架構</td><td style="text-align:left;">🧠 思維鏈系統 + 📊 數據讀取</td></tr><tr><td style="text-align:center;">🧠 <strong>優化期</strong></td><td style="text-align:center;">2024-Q2</td><td style="text-align:left;">提示詞簡化74%</td><td style="text-align:left;">⚡ 動態複雜度檢測 + 📈 效能提升300%</td></tr><tr><td style="text-align:center;">🌟 <strong>成熟期</strong></td><td style="text-align:center;">2024-Q3</td><td style="text-align:left;">用戶評分學習系統</td><td style="text-align:left;">⭐ 持續自我優化 + 🎨 體驗極致打磨</td></tr></tbody></table></div>
+<pre><button class="expand-button" aria-label="Expand mermaid diagram" data-view-component="true"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path fill-rule="evenodd" d="M3.72 3.72a.75.75 0 011.06 1.06L2.56 7h10.88l-2.22-2.22a.75.75 0 011.06-1.06l3.5 3.5a.75.75 0 010 1.06l-3.5 3.5a.75.75 0 11-1.06-1.06l2.22-2.22H2.56l2.22 2.22a.75.75 0 11-1.06 1.06l-3.5-3.5a.75.75 0 010-1.06l3.5-3.5z"></path></svg></button><code class="mermaid" data-clipboard="&quot;flowchart LR\n    A[🌱 概念期&lt;br/>2024-01] --> B[🔧 開發期&lt;br/>2024-Q1]\n    B --> C[🧠 優化期&lt;br/>2024-Q2]\n    C --> D[🌟 成熟期&lt;br/>2024-Q3]\n\n    A -.-> A1[💡 數據驅動概念]\n    B -.-> B1[🧠 MCP整合]\n    C -.-> C1[⚡ 效能提升300%]\n    D -.-> D1[⭐ 智能學習系統]&quot;">flowchart LR
+    A[🌱 概念期&lt;br/>2024-01] --> B[🔧 開發期&lt;br/>2024-Q1]
+    B --> C[🧠 優化期&lt;br/>2024-Q2]
+    C --> D[🌟 成熟期&lt;br/>2024-Q3]
+
+    A -.-> A1[💡 數據驅動概念]
+    B -.-> B1[🧠 MCP整合]
+    C -.-> C1[⚡ 效能提升300%]
+    D -.-> D1[⭐ 智能學習系統]
 </code><div id="mermaid-container" role="dialog"><div id="mermaid-space"><div class="mermaid-content"></div></div></div></pre>
 <blockquote>
 <p>🎯 <strong>進化軌跡</strong>：從概念到成熟產品的技術突破之路</p>
@@ -695,7 +744,7 @@ pre:hover > .expand-button {
                 C46.042,11.405,47.451,12,49,12c3.309,0,6-2.691,6-6S52.309,0,49,0z M11,9c0-1.103,0.897-2,2-2s2,0.897,2,2s-0.897,2-2,2
                 S11,10.103,11,9z M6,51c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S8.206,51,6,51z M33,49c0,2.206-1.794,4-4,4s-4-1.794-4-4
                 s1.794-4,4-4S33,46.794,33,49z M29,31c-3.309,0-6-2.691-6-6s2.691-6,6-6s6,2.691,6,6S32.309,31,29,31z M47,41c0,1.103-0.897,2-2,2
-                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-革命性ai驅動ppt生成系統" data-for="-革命性ai驅動ppt生成系統">🎯 革命性AI驅動PPT生成系統</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#專案資料夾結構" data-for="專案資料夾結構">專案資料夾結構</a></li><li class="depth-1"><a href="#背景與問題" data-for="背景與問題">背景與問題</a></li><li class="depth-2"><a href="#傳統ppt生成工具的局限" data-for="傳統ppt生成工具的局限">傳統PPT生成工具的局限</a></li><li class="depth-2"><a href="#我們的革命性解決方案" data-for="我們的革命性解決方案">我們的革命性解決方案</a></li><li class="depth-1"><a href="#技術方案" data-for="技術方案">技術方案</a></li><li class="depth-2"><a href="#-核心技術突破" data-for="-核心技術突破">🌟 核心技術突破</a></li><li class="depth-2"><a href="#️-創新架構設計" data-for="️-創新架構設計">🏗️ 創新架構設計</a></li><li class="depth-1"><a href="#核心實作" data-for="核心實作">核心實作</a></li><li class="depth-2"><a href="#-智能需求理解系統" data-for="-智能需求理解系統">🎯 智能需求理解系統</a></li><li class="depth-2"><a href="#-基於真實數據的內容生成" data-for="-基於真實數據的內容生成">📊 基於真實數據的內容生成</a></li><li class="depth-2"><a href="#-用戶評分學習系統" data-for="-用戶評分學習系統">⭐ 用戶評分學習系統</a></li><li class="depth-1"><a href="#效果與學習" data-for="效果與學習">效果與學習</a></li><li class="depth-2"><a href="#-突破性成果" data-for="-突破性成果">🏆 突破性成果</a></li><li class="depth-1"><a href="#-突破性效果驗證" data-for="-突破性效果驗證">📊 突破性效果驗證</a></li><li class="depth-2"><a href="#-複雜任務處理能力對比" data-for="-複雜任務處理能力對比">🎯 複雜任務處理能力對比</a></li><li class="depth-2"><a href="#-系統效能提升" data-for="-系統效能提升">⚡ 系統效能提升</a></li><li class="depth-2"><a href="#-技術洞察與學習" data-for="-技術洞察與學習">💡 技術洞察與學習</a></li><li class="depth-1"><a href="#時間軸" data-for="時間軸">時間軸</a></li><li class="depth-2"><a href="#2024-01--專案啟動" data-for="2024-01--專案啟動">2024-01 🌱 專案啟動</a></li><li class="depth-2"><a href="#2024-02-2024-05--核心開發" data-for="2024-02-2024-05--核心開發">2024-02-2024-05 🔧 核心開發</a></li><li class="depth-2"><a href="#2024-06-2024-08--智能優化" data-for="2024-06-2024-08--智能優化">2024-06-2024-08 🧠 智能優化</a></li><li class="depth-2"><a href="#2024-09-2024-11--功能完善" data-for="2024-09-2024-11--功能完善">2024-09-2024-11 🚀 功能完善</a></li><li class="depth-2"><a href="#2024-12-2025-07--持續優化" data-for="2024-12-2025-07--持續優化">2024-12-2025-07 ⭐ 持續優化</a></li><li class="depth-1"><a href="#專案映射" data-for="專案映射">專案映射</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
+                s-2-0.897-2-2s0.897-2,2-2S47,39.897,47,41z M49,10c-2.206,0-4-1.794-4-4s1.794-4,4-4s4,1.794,4,4S51.206,10,49,10z"></path></svg></button></div><div class="global-graph-outer"><div class="global-graph-container" data-cfg="{&quot;drag&quot;:true,&quot;zoom&quot;:true,&quot;depth&quot;:-1,&quot;scale&quot;:0.9,&quot;repelForce&quot;:0.5,&quot;centerForce&quot;:0.2,&quot;linkDistance&quot;:30,&quot;fontSize&quot;:0.6,&quot;opacityScale&quot;:1,&quot;showTags&quot;:true,&quot;removeTags&quot;:[],&quot;focusOnHover&quot;:true,&quot;enableRadial&quot;:true}"></div></div></div><div class="toc desktop-only"><button type="button" class="toc-header" aria-controls="toc-content" aria-expanded="true"><h3>目錄</h3><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="fold"><polyline points="6 9 12 15 18 9"></polyline></svg></button><ul class="toc-content overflow" id="list-1"><li class="depth-0"><a href="#-革命性ai驅動ppt生成系統" data-for="-革命性ai驅動ppt生成系統">🎯 革命性AI驅動PPT生成系統</a></li><li class="depth-1"><a href="#專案概述" data-for="專案概述">專案概述</a></li><li class="depth-1"><a href="#專案資料夾結構" data-for="專案資料夾結構">專案資料夾結構</a></li><li class="depth-1"><a href="#背景與問題" data-for="背景與問題">背景與問題</a></li><li class="depth-2"><a href="#傳統ppt生成工具的局限" data-for="傳統ppt生成工具的局限">傳統PPT生成工具的局限</a></li><li class="depth-2"><a href="#我們的革命性解決方案" data-for="我們的革命性解決方案">我們的革命性解決方案</a></li><li class="depth-1"><a href="#技術方案" data-for="技術方案">技術方案</a></li><li class="depth-2"><a href="#-核心技術突破" data-for="-核心技術突破">🌟 核心技術突破</a></li><li class="depth-2"><a href="#️-創新架構設計" data-for="️-創新架構設計">🏗️ 創新架構設計</a></li><li class="depth-1"><a href="#核心實作" data-for="核心實作">核心實作</a></li><li class="depth-2"><a href="#-智能需求理解系統" data-for="-智能需求理解系統">🎯 智能需求理解系統</a></li><li class="depth-2"><a href="#-智能需求理解界面" data-for="-智能需求理解界面">🎯 智能需求理解界面</a></li><li class="depth-2"><a href="#-基於真實數據的內容生成" data-for="-基於真實數據的內容生成">📊 基於真實數據的內容生成</a></li><li class="depth-2"><a href="#-用戶評分學習系統" data-for="-用戶評分學習系統">⭐ 用戶評分學習系統</a></li><li class="depth-2"><a href="#-簡報評分與學習系統界面" data-for="-簡報評分與學習系統界面">⭐ 簡報評分與學習系統界面</a></li><li class="depth-1"><a href="#效果與學習" data-for="效果與學習">效果與學習</a></li><li class="depth-2"><a href="#-突破性成果" data-for="-突破性成果">🏆 突破性成果</a></li><li class="depth-1"><a href="#-突破性效果驗證" data-for="-突破性效果驗證">📊 突破性效果驗證</a></li><li class="depth-2"><a href="#-複雜任務處理能力對比" data-for="-複雜任務處理能力對比">🎯 複雜任務處理能力對比</a></li><li class="depth-2"><a href="#-系統效能提升" data-for="-系統效能提升">⚡ 系統效能提升</a></li><li class="depth-2"><a href="#-技術洞察與學習" data-for="-技術洞察與學習">💡 技術洞察與學習</a></li><li class="depth-2"><a href="#-技術架構演進歷程" data-for="-技術架構演進歷程">🚀 技術架構演進歷程</a></li><li class="depth-1"><a href="#時間軸" data-for="時間軸">時間軸</a></li><li class="depth-2"><a href="#2024-01--專案啟動" data-for="2024-01--專案啟動">2024-01 🌱 專案啟動</a></li><li class="depth-2"><a href="#2024-02-2024-05--核心開發" data-for="2024-02-2024-05--核心開發">2024-02-2024-05 🔧 核心開發</a></li><li class="depth-2"><a href="#2024-06-2024-08--智能優化" data-for="2024-06-2024-08--智能優化">2024-06-2024-08 🧠 智能優化</a></li><li class="depth-2"><a href="#2024-09-2024-11--功能完善" data-for="2024-09-2024-11--功能完善">2024-09-2024-11 🚀 功能完善</a></li><li class="depth-2"><a href="#2024-12-2025-07--持續優化" data-for="2024-12-2025-07--持續優化">2024-12-2025-07 ⭐ 持續優化</a></li><li class="depth-1"><a href="#專案映射" data-for="專案映射">專案映射</a></li><li class="overflow-end"></li></ul></div><div class="backlinks"><h3>反向連結</h3><ul id="list-2" class="overflow"><li><a href="../../navigation/" class="internal">網站導航索引</a></li><li class="overflow-end"></li></ul></div></div><footer class><p>Created with <a href="https://quartz.jzhao.xyz/">Quartz v4.5.1</a> © 2025</p><ul><li><a href="https://github.com/pekora-tech/selfpagesource">GitHub</a></li><li><a href="https://discord.gg/cRFFHYye7t">Discord Community</a></li><li><button class="pekora-license-btn" data-pekora-trigger="true">PEKORA-LICENSE 🐰</button></li></ul><dialog id="pekora-dialog" class="pekora-dialog" style="border: none; border-radius: 12px; padding: 0; max-width: 90vw; width: 800px; height: 70vh; min-height: 500px; background: var(--light); color: var(--dark); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);"><div class="pekora-dialog-content" style="display: flex; flex-direction: column; height: 100%;"><header class="pekora-dialog-header" style="display: flex; justify-content: space-between; align-items: center; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #ff6b9d, #ffa500); color: white; border-radius: 12px 12px 0 0; flex-shrink: 0;"><h2 style="margin: 0; font-size: 1.4rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);">🐰 PEKORA-LICENSE</h2><button class="pekora-dialog-close" data-pekora-close="true" style="background: rgba(255, 255, 255, 0.2); border: none; color: white; font-size: 1.2rem; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button></header><main class="pekora-dialog-body" style="flex: 1; padding: 1rem; overflow-y: auto;"><pre class="pekora-license-text" style="font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-line; word-wrap: break-word; margin: 0; padding: 1rem; background: var(--lightgray); border-radius: 8px; border-left: 4px solid #ff6b9d; max-width: 100%; overflow-wrap: break-word;">[Hololive Fan Community Guideline] - ホロライブ粉絲社群規範 - ホロライブファンコミュニティガイドライン
 ※ This is a voluntary fan-created content sharing guideline ※
 ※ 這是粉絲自發創建的內容分享趣味規範 ※
 ※ これはファンが作成した楽しい共有ガイドラインです ※

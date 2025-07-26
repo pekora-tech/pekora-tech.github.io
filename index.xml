@@ -6,65 +6,65 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
-    <title>README</title>
-    <link>https://pekora-tech.github.io/README</link>
-    <guid>https://pekora-tech.github.io/README</guid>
-    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-26 v2.5 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
-    <pubDate>Sat, 26 Jul 2025 01:02:22 GMT</pubDate>
+    <title>日常開發記錄</title>
+    <link>https://pekora-tech.github.io/daily-code/</link>
+    <guid>https://pekora-tech.github.io/daily-code/</guid>
+    <description>時間軸組織的開發經驗與技術心得記錄</description>
+    <pubDate>Sat, 26 Jul 2025 03:05:00 GMT</pubDate>
   </item><item>
-    <title>革命性AI驅動PPT生成系統</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/test-ppt-page</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/test-ppt-page</guid>
-    <description>基於MCP協議的革命性AI簡報生成系統，實現真實數據驅動的智能PPT創建</description>
-    <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>PekoraTech 🚀 技術知識庫</title>
-    <link>https://pekora-tech.github.io/</link>
-    <guid>https://pekora-tech.github.io/</guid>
-    <description>專精收斂而非擴散 - 從第一性原理思考的技術探索之旅</description>
-    <pubDate>Sun, 20 Jul 2025 09:21:02 GMT</pubDate>
-  </item><item>
-    <title>專案建置與分析</title>
-    <link>https://pekora-tech.github.io/projects/</link>
-    <guid>https://pekora-tech.github.io/projects/</guid>
-    <description>深度技術分析與專案經驗整合，從實踐中提煉架構智慧</description>
-    <pubDate>Sun, 20 Jul 2025 09:21:02 GMT</pubDate>
-  </item><item>
-    <title>SelfPageSource 技術文件化專案</title>
-    <link>https://pekora-tech.github.io/index-formal</link>
-    <guid>https://pekora-tech.github.io/index-formal</guid>
-    <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
-    <pubDate>Sat, 12 Jul 2025 15:19:25 GMT</pubDate>
+    <title>網站導航索引</title>
+    <link>https://pekora-tech.github.io/navigation/</link>
+    <guid>https://pekora-tech.github.io/navigation/</guid>
+    <description>PekoraTech 技術知識庫完整導航</description>
+    <pubDate>Sat, 26 Jul 2025 03:05:00 GMT</pubDate>
   </item><item>
     <title>README</title>
     <link>https://pekora-tech.github.io/component/README</link>
     <guid>https://pekora-tech.github.io/component/README</guid>
     <description>可重用元件庫 從各專案提取的核心功能元件，便於快速開發新應用 元件清單 AI長期記憶系統 檔案: ai-long-term-memory-system.md 技術: Python, SQLite, OpenAI API 用途: 為AI應用加入長期記憶能力 來源: test-love-memory-system 應用場景: Helpdesk、客服系統、個人助理 使用指南 選擇元件: 根據需求選擇合適的元件 複製程式碼: 從元件文檔中複製所需程式碼 客製化調整: 根據專案需求調整參數和邏輯 整合測試: 確保元件正確整合到你的應用 元件標準 每個元件都應包含： 核心價值說明 完整的程式碼實作 整合範...</description>
-    <pubDate>Mon, 07 Jul 2025 03:11:23 GMT</pubDate>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
+  </item><item>
+    <title>可重用技術元件庫</title>
+    <link>https://pekora-tech.github.io/component/</link>
+    <guid>https://pekora-tech.github.io/component/</guid>
+    <description>從專案經驗中提煉的標準化技術元件與設計模式</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
+  </item><item>
+    <title>SA系統專案映射與維護記錄</title>
+    <link>https://pekora-tech.github.io/doc/SA-project-mapping</link>
+    <guid>https://pekora-tech.github.io/doc/SA-project-mapping</guid>
+    <description>系統分析師內部使用 - 專案文檔映射與維護追蹤</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
+  </item><item>
+    <title>技術文件中心</title>
+    <link>https://pekora-tech.github.io/doc/</link>
+    <guid>https://pekora-tech.github.io/doc/</guid>
+    <description>標準化技術文件與操作程序庫</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
+  </item><item>
+    <title>SelfPageSource 技術文件化專案</title>
+    <link>https://pekora-tech.github.io/doc/project-documentation-guide</link>
+    <guid>https://pekora-tech.github.io/doc/project-documentation-guide</guid>
+    <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item><item>
     <title>圖片管理指南</title>
     <link>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</link>
     <guid>https://pekora-tech.github.io/doc/%E5%9C%96%E7%89%87%E7%AE%A1%E7%90%86%E6%8C%87%E5%8D%97</guid>
     <description>📸 圖片管理指南 內部技術文件 - 圖片資源標準化管理方案 最後更新：2025-07-06 v1.0 🗂️ 資料夾結構 content/ ├── assets/ # 靜態資源根目錄 │ └── images/ # 圖片資源 │ ├── ai-tools/ # AI工具領域圖片 │ │ ├── test-ai-memory/ # test-ai-memory專案圖片 │ │ └── [其他AI專案]/ │ ├── development-tools/ # 開發工具領域圖片 │ │ ├── calu-app/ # calu-app專案圖片 │ │ └── [其他開發工具]/ │ ├── bro...</description>
-    <pubDate>Mon, 07 Jul 2025 03:11:23 GMT</pubDate>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item><item>
-    <title>Help-Agnet - 智能客服系統</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/help-agnet</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/help-agnet</guid>
-    <description>基於 OpenAI Function Calling 的企業級智能客服系統</description>
-    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+    <title>PekoraTech 🚀 技術知識庫</title>
+    <link>https://pekora-tech.github.io/</link>
+    <guid>https://pekora-tech.github.io/</guid>
+    <description>專精收斂而非擴散 - 從第一性原理思考的技術探索之旅</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item><item>
-    <title>Help_app - Flutter客服移動應用</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/help_app</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/help_app</guid>
-    <description>Flutter 客服移動應用基礎模板，尚未開始實際開發</description>
-    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>GitLab CI Peko - AI驅動配置生成器</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</guid>
-    <description>基於 AI 的 GitLab CI/CD 配置生成器，智能分析專案並生成最佳化配置</description>
-    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
+    <title>專案建置與分析</title>
+    <link>https://pekora-tech.github.io/projects/</link>
+    <guid>https://pekora-tech.github.io/projects/</guid>
+    <description>深度技術分析與專案經驗整合，從實踐中提煉架構智慧</description>
+    <pubDate>Sat, 26 Jul 2025 02:57:26 GMT</pubDate>
   </item>
     </channel>
   </rss>

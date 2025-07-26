@@ -216,7 +216,7 @@ pre:hover > .expand-button {
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> migrate_memory_to_knowledge</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(old_db: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, new_db: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &quot;&quot;&quot;</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    記憶資料 → 知識庫文章</span></span>
-<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    人格特質 → 專業特質  </span></span>
+<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    人格特質 → 專業特質</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    系統提示詞 → 角色配置</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    思考日誌 → 分析日誌</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    &quot;&quot;&quot;</span></span>
@@ -285,20 +285,20 @@ pre:hover > .expand-button {
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.openai_client </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> OpenAI()</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.current_role </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;通用客服&quot;</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.knowledge_system </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> KnowledgeSystem()</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> process_support_request</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, message: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) -> </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">dict</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        # 1. 分析問題類型</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        analysis </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.analyze_question(message)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        # 2. 推薦專業角色</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        recommended_role </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.recommend_role(analysis)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        # 3. 搜尋知識庫</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        knowledge </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.knowledge_system.search(message)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        # 4. 生成回應</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        response </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.generate_response(message, knowledge)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;response&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: response,</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">            &quot;recommended_role&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">: recommended_role,</span></span>
@@ -308,7 +308,7 @@ pre:hover > .expand-button {
 <figure data-rehype-pretty-code-figure><pre tabindex="0" data-language="python" data-theme="github-light github-dark"><code data-language="python" data-theme="github-light github-dark" style="display:grid;"><span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> KnowledgeSystem</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    def</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> __init__</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, db_path: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">):</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.db </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> sqlite3.connect(db_path)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> search</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, query: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, search_type: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> =</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;semantic&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) -> List[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">dict</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]:</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> search_type </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">==</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;semantic&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">            # 使用 OpenAI embeddings 進行語義搜尋</span></span>
@@ -316,7 +316,7 @@ pre:hover > .expand-button {
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        else</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">            # 傳統關鍵字搜尋</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">            return</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> await</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.keyword_search(query)</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    async</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> semantic_search</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, query: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) -> List[</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">dict</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]:</span></span>
 <span data-line><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        # 實作語義化搜尋邏輯</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        pass</span></span></code></pre></figure>
@@ -325,13 +325,13 @@ pre:hover > .expand-button {
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    def</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> __init__</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self):</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.roles </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> load_role_presets()</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.current_role </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> &quot;通用客服&quot;</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> switch_role</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, role_name: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) -> </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">bool</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> role_name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">in</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.roles:</span></span>
 <span data-line><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">            self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.current_role </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> role_name</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">            return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> True</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> False</span></span>
-<span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    def</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> get_role_prompt</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(self, role_name: </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) -> </span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">str</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">:</span></span>
 <span data-line><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        role_config </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> self</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.roles.get(role_name)</span></span>
 <span data-line><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">        return</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> role_config.get(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;system_prompt&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span></code></pre></figure>
@@ -382,11 +382,11 @@ pre:hover > .expand-button {
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    1. 過度模仿原系統</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - 強行套用記憶系統概念</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - 忽略客服系統特殊需求</span></span>
-<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    2. 模組耦合度過高</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - 角色系統與知識庫過度綁定</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - API 路由與業務邏輯混合</span></span>
-<span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    </span></span>
+<span data-line> </span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">    3. 錯誤處理不足</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - 缺乏完整的異常處理機制</span></span>
 <span data-line><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">       - API 錯誤回應不規範</span></span>
@@ -395,7 +395,7 @@ pre:hover > .expand-button {
 <p><strong>3. 功能完整性問題</strong></p>
 <pre><code>缺失的關鍵功能:
 ✗ 用戶認證系統
-✗ 權限管理機制  
+✗ 權限管理機制
 ✗ 即時通訊支援
 ✗ 檔案上傳處理
 ✗ 工單狀態追蹤
