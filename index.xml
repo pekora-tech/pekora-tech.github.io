@@ -6,6 +6,18 @@
       <description>最近的 10 條筆記 on PekoraTech</description>
       <generator>Quartz -- quartz.jzhao.xyz</generator>
       <item>
+    <title>README</title>
+    <link>https://pekora-tech.github.io/README</link>
+    <guid>https://pekora-tech.github.io/README</guid>
+    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-07-26 v2.5 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
+    <pubDate>Sat, 26 Jul 2025 01:02:22 GMT</pubDate>
+  </item><item>
+    <title>革命性AI驅動PPT生成系統</title>
+    <link>https://pekora-tech.github.io/projects/ai-tools/test-ppt-page</link>
+    <guid>https://pekora-tech.github.io/projects/ai-tools/test-ppt-page</guid>
+    <description>基於MCP協議的革命性AI簡報生成系統，實現真實數據驅動的智能PPT創建</description>
+    <pubDate>Sat, 26 Jul 2025 00:00:00 GMT</pubDate>
+  </item><item>
     <title>PekoraTech 🚀 技術知識庫</title>
     <link>https://pekora-tech.github.io/</link>
     <guid>https://pekora-tech.github.io/</guid>
@@ -23,12 +35,6 @@
     <guid>https://pekora-tech.github.io/index-formal</guid>
     <description>透過系統分析師視角，將專案理解轉換為可持續的開發歷程文件</description>
     <pubDate>Sat, 12 Jul 2025 15:19:25 GMT</pubDate>
-  </item><item>
-    <title>README</title>
-    <link>https://pekora-tech.github.io/README</link>
-    <guid>https://pekora-tech.github.io/README</guid>
-    <description>selfpagesource Content 專案對照表 內部維護文件 - 專案映射與維護記錄 最後更新：2025-01-19 v2.4 專案映射表 專案名稱文檔路徑實際資料夾位置領域狀態最後檢查Calu-appprojects/development-tools/calu-app-gradio-toolkit.md/Volumes/Code/Calu-appdevelopment-tools✅ Active2025-07-05test-ai-memoryprojects/ai-tools/test-ai-memory.md/Volumes/Code/test-ai-memoryai-tool...</description>
-    <pubDate>Sat, 12 Jul 2025 13:47:43 GMT</pubDate>
   </item><item>
     <title>README</title>
     <link>https://pekora-tech.github.io/component/README</link>
@@ -58,12 +64,6 @@
     <link>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</link>
     <guid>https://pekora-tech.github.io/projects/ai-tools/test-gitlab-ci-peko</guid>
     <description>基於 AI 的 GitLab CI/CD 配置生成器，智能分析專案並生成最佳化配置</description>
-    <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
-  </item><item>
-    <title>Test-Helper-Memory-System - AI客服記憶系統</title>
-    <link>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</link>
-    <guid>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</guid>
-    <description>基於 test-ai-memory 架構的客服系統實驗，嘗試將記憶系統轉化為技術支援平台</description>
     <pubDate>Mon, 07 Jul 2025 00:00:00 GMT</pubDate>
   </item>
     </channel>

@@ -1,6 +1,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml"><url>
     <loc>https://pekora-tech.github.io/README</loc>
-    <lastmod>2025-07-12T13:47:43.000Z</lastmod>
+    <lastmod>2025-07-26T01:02:22.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/component/README</loc>
     <lastmod>2025-07-07T03:11:23.000Z</lastmod>
@@ -64,6 +64,9 @@
   </url><url>
     <loc>https://pekora-tech.github.io/projects/ai-tools/test-helper-memory-system</loc>
     <lastmod>2025-07-07T00:00:00.000Z</lastmod>
+  </url><url>
+    <loc>https://pekora-tech.github.io/projects/ai-tools/test-ppt-page</loc>
+    <lastmod>2025-07-26T00:00:00.000Z</lastmod>
   </url><url>
     <loc>https://pekora-tech.github.io/projects/browser-extension-ecosystem</loc>
     <lastmod>2025-06-28T00:00:00.000Z</lastmod>
